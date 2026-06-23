@@ -1,0 +1,14 @@
+# 임시 파일 / 시스템 파일
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 에디터/IDE
+.vscode/
+.idea/
+
+# 개발 도구
+.antigravityignore
+
+# 원본 백업 파일
+index_original_portion.txt

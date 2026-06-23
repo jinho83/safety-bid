@@ -1,0 +1,2887 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>종합평가제 최저가 낙찰 심사 시뮬레이터</title>
+    <!-- Tailwind CSS (Local) -->
+    <script src="./lib/tailwind.min.js"></script>
+    <!-- React 18 (Local) -->
+    <script src="./lib/react.production.min.js"></script>
+    <script src="./lib/react-dom.production.min.js"></script>
+    <style>
+        /* Apple SF Pro & system font configuration */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            letter-spacing: -0.011em;
+        }
+        th, td {
+            white-space: nowrap;
+        }
+        /* Custom premium scrollbar for light theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c7c7cc;
+            border-radius: 9999px;
+            border: 2px solid #ffffff;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #acacb0;
+        }
+    </style>
+</head>
+<body class="bg-[#f4f5f7] text-zinc-900 font-sans antialiased overflow-hidden">
+    <div id="root"></div>
+    <script>
+        const { useState, useMemo } = React, CalculatorIcon = ({ className, size = 22 }) => /* @__PURE__ */ React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", className }, /* @__PURE__ */ React.createElement("rect", { width: "16", height: "20", x: "4", y: "2", rx: "2.5" }), /* @__PURE__ */ React.createElement("line", { x1: "8", x2: "16", y1: "6", y2: "6" }), /* @__PURE__ */ React.createElement("line", { x1: "16", x2: "16", y1: "14", y2: "18" }), /* @__PURE__ */ React.createElement("path", { d: "M16 10h.01" }), /* @__PURE__ */ React.createElement("path", { d: "M12 10h.01" }), /* @__PURE__ */ React.createElement("path", { d: "M8 10h.01" }), /* @__PURE__ */ React.createElement("path", { d: "M12 14h.01" }), /* @__PURE__ */ React.createElement("path", { d: "M8 14h.01" }), /* @__PURE__ */ React.createElement("path", { d: "M12 18h.01" }), /* @__PURE__ */ React.createElement("path", { d: "M8 18h.01" })), RotateCcwIcon = ({ className, size = 18 }) => /* @__PURE__ */ React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", className }, /* @__PURE__ */ React.createElement("path", { d: "M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" }), /* @__PURE__ */ React.createElement("path", { d: "M3 3v5h5" })), SearchIcon = ({ className, size = 18 }) => /* @__PURE__ */ React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", className }, /* @__PURE__ */ React.createElement("circle", { cx: "11", cy: "11", r: "8" }), /* @__PURE__ */ React.createElement("path", { d: "m21 21-4.3-4.3" })), ChevronRightIcon = ({ className, size = 18 }) => /* @__PURE__ */ React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round", className }, /* @__PURE__ */ React.createElement("path", { d: "m9 18 6-6-6-6" })), CoinsIcon = ({ className, size = 18 }) => /* @__PURE__ */ React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", className }, /* @__PURE__ */ React.createElement("circle", { cx: "8", cy: "8", r: "6" }), /* @__PURE__ */ React.createElement("circle", { cx: "18", cy: "18", r: "4" }), /* @__PURE__ */ React.createElement("path", { d: "M12 18a6 6 0 0 0-6-6" })), CheckCircle2Icon = ({ className, size = 18 }) => /* @__PURE__ */ React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", className }, /* @__PURE__ */ React.createElement("circle", { cx: "12", cy: "12", r: "10" }), /* @__PURE__ */ React.createElement("path", { d: "m9 12 2 2 4-4" })), DownloadIcon = ({ className, size = 18 }) => /* @__PURE__ */ React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", className }, /* @__PURE__ */ React.createElement("path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" }), /* @__PURE__ */ React.createElement("polyline", { points: "7 10 12 15 17 10" }), /* @__PURE__ */ React.createElement("line", { x1: "12", x2: "12", y1: "15", y2: "3" })), XIcon = ({ className, size = 18 }) => /* @__PURE__ */ React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round", className }, /* @__PURE__ */ React.createElement("line", { x1: "18", y1: "6", x2: "6", y2: "18" }), /* @__PURE__ */ React.createElement("line", { x1: "6", y1: "6", x2: "18", y2: "18" })), INITIAL_CONTRACTS = [
+  {
+    "id": "2025C0134",
+    "type": "강구조물",
+    "budget": 542200000,
+    "companyNames": [
+      "(주)경수제철건설",
+      "가야이에스씨",
+      "대주중공업(주)",
+      "(주)유진건철",
+      "인창기건(주)",
+      "삼원중공업(주)"
+    ],
+    "bids": [
+      380000000,
+      410000000,
+      430000000,
+      535000000,
+      242000000,
+      322000000
+    ],
+    "safetyGrades": [
+      "SA1",
+      "SH3",
+      "SH2",
+      "SH1",
+      "SH2",
+      "SH2"
+    ],
+    "safetyEvalScores": [
+      39.2,
+      0.0,
+      0.0,
+      36.9,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C0178",
+    "type": "토공(건축)",
+    "budget": 14330000000,
+    "companyNames": [
+      "금강건설(주)",
+      "건영디엔씨(주)",
+      "씨이에프건설(주)",
+      "(주)제일공사",
+      "장한건설(주)",
+      "엘티삼보(주)",
+      "인성개발(주)",
+      "(주)영신디엔씨"
+    ],
+    "bids": [
+      12898000000,
+      13157000000,
+      13350000000,
+      14100000000,
+      14630000000,
+      16771000000,
+      17308000000,
+      null
+    ],
+    "safetyGrades": [
+      "SH2",
+      "SH2",
+      "SH2",
+      "SH2(만료)",
+      "SH2",
+      "SA1",
+      "SH1",
+      "SH1"
+    ],
+    "safetyEvalScores": [
+      37.82,
+      0.0,
+      39.6,
+      0.0,
+      37.9,
+      0.0,
+      0.0,
+      39.4
+    ]
+  },
+  {
+    "id": "2025C0260",
+    "type": "강구조물",
+    "budget": 4227153985,
+    "companyNames": [
+      "(주)약동산업",
+      "케이지이앤씨(주)",
+      "(주)포스코모빌리티솔루션",
+      "(주)유진건철",
+      "(주)해성기공",
+      "(주)신한에스엔지",
+      "(주)경수제철건설",
+      "(주)씨제이드",
+      "대혁산업(주)",
+      "현대스틸산업㈜",
+      "(주)대현엔지니어링",
+      "(주)동성중공업"
+    ],
+    "bids": [
+      3727000000,
+      3810000000,
+      4198000000,
+      4451000000,
+      4650000000,
+      4776000000,
+      4815000000,
+      4890000000,
+      4995000000,
+      5000000000,
+      5140000000,
+      7090000000
+    ],
+    "safetyGrades": [
+      "SH3",
+      "SA3",
+      "SH4",
+      "SH1",
+      "SH1",
+      "SH1",
+      "SA1",
+      "SH2",
+      "SH2",
+      "SH1",
+      "SH2",
+      "SA1"
+    ],
+    "safetyEvalScores": [
+      34.6,
+      0.0,
+      38.0,
+      36.9,
+      0.0,
+      33.0,
+      39.2,
+      0.0,
+      39.1,
+      0.0,
+      40.0,
+      37.0
+    ]
+  },
+  {
+    "id": "2025C0331",
+    "type": "철근콘크리트(건축)",
+    "budget": 19446588000,
+    "companyNames": [
+      "예인건설(주)",
+      "(주)진도토건",
+      "신두건설(주)",
+      "(유)건향개발",
+      "(주)브라더건설",
+      "광영개발(주)",
+      "여흥건설(주)",
+      "(주)오주건설",
+      "(주)올레건설",
+      "금웅건설(주)",
+      "흥석건설(주)",
+      "태영건업(주)",
+      "두송건설(주)"
+    ],
+    "bids": [
+      17370000000,
+      18290000000,
+      18350000000,
+      18455000000,
+      18700000000,
+      19080000000,
+      19195000000,
+      19310000000,
+      19743000000,
+      20965000000,
+      21684000000,
+      22186000000,
+      25325449478
+    ],
+    "safetyGrades": [
+      "SH2",
+      "SH3",
+      "SH2",
+      "SA3(만료)",
+      "SH2",
+      "SH2",
+      "SH4",
+      "SH1",
+      "SA1",
+      "SH3",
+      "SA3",
+      "SH2(만료)",
+      "SA1"
+    ],
+    "safetyEvalScores": [
+      39.4,
+      0.0,
+      38.0,
+      40.0,
+      0.0,
+      0.0,
+      40.0,
+      0.0,
+      0.0,
+      38.4,
+      0.0,
+      40.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C0332",
+    "type": "철근콘크리트(건축)",
+    "budget": 32750000000,
+    "companyNames": [
+      "(주)케이세웅건설"
+    ],
+    "bids": [
+      32730000000
+    ],
+    "safetyGrades": [
+      "SA1"
+    ],
+    "safetyEvalScores": [
+      35.2
+    ]
+  },
+  {
+    "id": "2025C0580",
+    "type": "토공(건축)",
+    "budget": 11587000000,
+    "companyNames": [
+      "씨이에프건설(주)",
+      "(주)이테크건설산업",
+      "금강건설(주)",
+      "엘티삼보(주)",
+      "건영디엔씨(주)",
+      "마천건설(주)",
+      "화엄토건(주)",
+      "인성개발(주)"
+    ],
+    "bids": [
+      10370000000,
+      12780000000,
+      12800000000,
+      12860500000,
+      13188000000,
+      13290000000,
+      13969000000,
+      15831000000
+    ],
+    "safetyGrades": [
+      "SH2",
+      "SH2",
+      "SH2",
+      "SA1",
+      "SH2",
+      "SH3",
+      "SH2",
+      "SH1"
+    ],
+    "safetyEvalScores": [
+      39.6,
+      35.75,
+      37.82,
+      0.0,
+      0.0,
+      0.0,
+      40.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C0634",
+    "type": "토공(건축)",
+    "budget": 5714000000,
+    "companyNames": [
+      "(주)진덕건설",
+      "(주)삼마토건",
+      "(주)공진산업개발",
+      "시재건설(주)",
+      "동주건설(주)",
+      "씨이에프건설(주)",
+      "금강건설(주)",
+      "태룡토건(주)",
+      "대성건설(주)",
+      "제이에이치건설(주)",
+      "인성개발(주)",
+      "(주)서호개발"
+    ],
+    "bids": [
+      5588000000,
+      5856000000,
+      6560000000,
+      6988000000,
+      7320000000,
+      7597000000,
+      7888000000,
+      7966000000,
+      7973200000,
+      8940000000,
+      null,
+      4623000000
+    ],
+    "safetyGrades": [
+      "SH1",
+      "SH2",
+      "SH1",
+      "SH1",
+      "SH2",
+      "SH2",
+      "SH2",
+      "SA2",
+      "SH3",
+      "SH3",
+      "SH1",
+      "SH4"
+    ],
+    "safetyEvalScores": [
+      36.88,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      39.6,
+      37.82,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      35.2
+    ]
+  },
+  {
+    "id": "2025C0637",
+    "type": "철근콘크리트(건축)",
+    "budget": 16214108000,
+    "companyNames": [
+      "신두건설(주)",
+      "여흥건설(주)",
+      "(유)건향개발",
+      "(주)진도토건",
+      "(주)오주건설",
+      "(주)브라더건설",
+      "광영개발(주)",
+      "금웅건설(주)",
+      "태영건업(주)",
+      "흥석건설(주)",
+      "두송건설(주)",
+      "(주)올레건설"
+    ],
+    "bids": [
+      14830000000,
+      15090000000,
+      15157000000,
+      15290000000,
+      15750000000,
+      15973811737,
+      16483000000,
+      16887000000,
+      18214000000,
+      18316000000,
+      18485492989,
+      null
+    ],
+    "safetyGrades": [
+      "SH2",
+      "SH4",
+      "SA3(만료)",
+      "SH3",
+      "SH1",
+      "SH2",
+      "SH2",
+      "SH3",
+      "SH2(만료)",
+      "SA3",
+      "SA1",
+      "SA1"
+    ],
+    "safetyEvalScores": [
+      38.0,
+      40.0,
+      40.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      38.4,
+      40.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C0712",
+    "type": "철근콘크리트(건축)",
+    "budget": 15355000000,
+    "companyNames": [
+      "(주)오주건설"
+    ],
+    "bids": [
+      15355000000
+    ],
+    "safetyGrades": [
+      "SH1"
+    ],
+    "safetyEvalScores": [
+      0.0
+    ]
+  },
+  {
+    "id": "2025C0843",
+    "type": "강구조물",
+    "budget": 23473000000,
+    "companyNames": [
+      "(주)유진건철",
+      "(주)약동산업",
+      "대주중공업(주)",
+      "(주)경수제철건설",
+      "삼원중공업(주)",
+      "(주)신한에스엔지",
+      "현대스틸산업㈜",
+      "(주)해성기공",
+      "(주)대현엔지니어링"
+    ],
+    "bids": [
+      23378000000,
+      23610000000,
+      23616000000,
+      23850000000,
+      23930000000,
+      24185000000,
+      24200000000,
+      24230000000,
+      24230000000
+    ],
+    "safetyGrades": [
+      "SH1",
+      "SH3",
+      "SH2",
+      "SA1",
+      "SH2",
+      "SH1",
+      "SH1",
+      "SH1",
+      "SH2"
+    ],
+    "safetyEvalScores": [
+      36.9,
+      34.6,
+      0.0,
+      39.2,
+      0.0,
+      33.0,
+      0.0,
+      0.0,
+      40.0
+    ]
+  },
+  {
+    "id": "2025C0960",
+    "type": "철근콘크리트(건축)",
+    "budget": 1538986592,
+    "companyNames": [
+      "리드종합건설(주)"
+    ],
+    "bids": [
+      1489220000
+    ],
+    "safetyGrades": [
+      ""
+    ],
+    "safetyEvalScores": [
+      0.0
+    ]
+  },
+  {
+    "id": "2025C1003",
+    "type": "강구조물",
+    "budget": 10682000000,
+    "companyNames": [
+      "(주)포스코모빌리티솔루션",
+      "(주)씨제이드",
+      "(주)포유이엔지",
+      "인창기건(주)",
+      "한맥중공업(주)",
+      "(주)영화엔지니어링",
+      "(주)대현엔지니어링",
+      "(주)경수제철건설",
+      "삼원중공업(주)",
+      "(주)동성중공업",
+      "(주)유진건철",
+      "(주)신한에스엔지",
+      "현대스틸산업㈜",
+      "(주)해성기공",
+      "대주중공업(주)",
+      "(합자)대창강업",
+      "가야이에스씨"
+    ],
+    "bids": [
+      9100000000,
+      9400000000,
+      9594000000,
+      9596000000,
+      9880000000,
+      9882000000,
+      9970000000,
+      10276000000,
+      10310000000,
+      10665000000,
+      10680000000,
+      10715000000,
+      10800000000,
+      11000000000,
+      11170000000,
+      11425000000,
+      null
+    ],
+    "safetyGrades": [
+      "SH4",
+      "SH2",
+      "SA1",
+      "SH2",
+      "SH4",
+      "SH2",
+      "SH2",
+      "SA1",
+      "SH2",
+      "SA1",
+      "SH1",
+      "SH1",
+      "SH1",
+      "SH1",
+      "SH2",
+      "SH2",
+      "SH3"
+    ],
+    "safetyEvalScores": [
+      38.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      40.0,
+      39.2,
+      0.0,
+      37.0,
+      36.9,
+      33.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C1093",
+    "type": "철근콘크리트(건축)",
+    "budget": 74258569000,
+    "companyNames": [
+      "(주)월드플랜",
+      "(주)우창건설",
+      "(주)오주건설",
+      "(주)올레건설",
+      "(유)건향개발",
+      "(주)브라더건설",
+      "월드건영(주)",
+      "두송건설(주)"
+    ],
+    "bids": [
+      60825000000,
+      61883000000,
+      65295000000,
+      65900000000,
+      66400000000,
+      67700000000,
+      67911000000,
+      80505717764
+    ],
+    "safetyGrades": [
+      "SH3",
+      "SH1",
+      "SH1",
+      "SA1",
+      "SA3(만료)",
+      "SH2",
+      "SH3",
+      "SA1"
+    ],
+    "safetyEvalScores": [
+      40.0,
+      0.0,
+      0.0,
+      0.0,
+      40.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C1110",
+    "type": "토공(건축)",
+    "budget": 1388422000,
+    "companyNames": [
+      "금강건설(주)",
+      "(주)영신디엔씨",
+      "시재건설(주)",
+      "엘티삼보(주)",
+      "(주)제일공사",
+      "화엄토건(주)",
+      "(주)이테크건설산업"
+    ],
+    "bids": [
+      938000000,
+      947000000,
+      1198000000,
+      1266000000,
+      2017000000,
+      null,
+      750000000
+    ],
+    "safetyGrades": [
+      "SH2",
+      "SH1",
+      "SH1",
+      "SA1",
+      "SH2(만료)",
+      "SH2",
+      "SH2"
+    ],
+    "safetyEvalScores": [
+      37.82,
+      39.4,
+      0.0,
+      0.0,
+      0.0,
+      40.0,
+      35.75
+    ]
+  },
+  {
+    "id": "2025C1111",
+    "type": "철근콘크리트(건축)",
+    "budget": 11783300170,
+    "companyNames": [
+      "신두건설(주)",
+      "오엔건설(주)",
+      "(주)보미엔지니어링",
+      "여흥건설(주)",
+      "대용건설(주)",
+      "(주)오주건설",
+      "(주)두성",
+      "강남건설(주)",
+      "태운건설(주)",
+      "두송건설(주)",
+      "금웅건설(주)"
+    ],
+    "bids": [
+      11180000000,
+      11880000000,
+      11960418651,
+      12806000000,
+      12989000000,
+      13096000000,
+      13420000000,
+      13691000000,
+      14818000000,
+      14870254156,
+      15467000000
+    ],
+    "safetyGrades": [
+      "SH2",
+      "SH2",
+      "SA1",
+      "SH4",
+      "SA3",
+      "SH1",
+      "SA2",
+      "SH1",
+      "SH2",
+      "SA1",
+      "SH3"
+    ],
+    "safetyEvalScores": [
+      38.0,
+      40.0,
+      0.0,
+      40.0,
+      0.0,
+      0.0,
+      0.0,
+      36.95,
+      37.97,
+      0.0,
+      38.4
+    ]
+  },
+  {
+    "id": "2025C1391",
+    "type": "강구조물",
+    "budget": 27369330000,
+    "companyNames": [
+      "대주중공업(주)",
+      "(주)경수제철건설",
+      "(주)약동산업",
+      "(주)대현엔지니어링",
+      "(주)신한에스엔지",
+      "삼원중공업(주)",
+      "(주)유진건철",
+      "(주)해성기공",
+      "(주)동성중공업"
+    ],
+    "bids": [
+      26822000000,
+      27289000000,
+      27700000000,
+      28240000000,
+      28368000000,
+      28500000000,
+      28700000000,
+      30100000000,
+      30500000000
+    ],
+    "safetyGrades": [
+      "SH2",
+      "SA1",
+      "SH3",
+      "SH2",
+      "SH1",
+      "SH2",
+      "SH1",
+      "SH1",
+      "SA1"
+    ],
+    "safetyEvalScores": [
+      0.0,
+      39.2,
+      34.6,
+      40.0,
+      33.0,
+      0.0,
+      36.9,
+      0.0,
+      37.0
+    ]
+  },
+  {
+    "id": "2025C1592",
+    "type": "철근콘크리트(건축)",
+    "budget": 13552518000,
+    "companyNames": [
+      "(주)보미엔지니어링",
+      "신두건설(주)",
+      "(주)혜림건설",
+      "월드건영(주)",
+      "(유)건향개발",
+      "오엔건설(주)",
+      "(주)브라더건설",
+      "(주)두성",
+      "발해건설(주)",
+      "(주)진도토건",
+      "(주)월드플랜",
+      "태운건설(주)"
+    ],
+    "bids": [
+      11642565968,
+      12450000000,
+      13475000000,
+      14411000000,
+      14448000000,
+      14690000000,
+      15090000000,
+      16000000000,
+      16200000000,
+      16490000000,
+      16505000000,
+      17665000000
+    ],
+    "safetyGrades": [
+      "SA1",
+      "SH2",
+      "SH4",
+      "SH3",
+      "SA3(만료)",
+      "SH2",
+      "SH2",
+      "SA2",
+      "SH2",
+      "SH3",
+      "SH3",
+      "SH2"
+    ],
+    "safetyEvalScores": [
+      0.0,
+      38.0,
+      35.1,
+      0.0,
+      40.0,
+      40.0,
+      0.0,
+      0.0,
+      39.0,
+      0.0,
+      40.0,
+      37.97
+    ]
+  },
+  {
+    "id": "2025C1711",
+    "type": "강구조물",
+    "budget": 147000000,
+    "companyNames": [
+      "삼원중공업(주)",
+      "(주)동성중공업",
+      "케이지이앤씨(주)",
+      "(주)포스코모빌리티솔루션",
+      "(주)약동산업",
+      "대혁산업(주)",
+      "(주)포유이엔지",
+      "인창기건(주)",
+      "(주)대현엔지니어링",
+      "(주)씨제이드",
+      "한맥중공업(주)"
+    ],
+    "bids": [
+      121000000,
+      139500000,
+      152000000,
+      160000000,
+      165000000,
+      181000000,
+      182000000,
+      198800000,
+      200000000,
+      230000000,
+      null
+    ],
+    "safetyGrades": [
+      "SH2",
+      "SA1",
+      "SA3",
+      "SH4",
+      "SH3",
+      "SH2",
+      "SA1",
+      "SH2",
+      "SH2",
+      "SH2",
+      "SH4"
+    ],
+    "safetyEvalScores": [
+      0.0,
+      37.0,
+      0.0,
+      38.0,
+      34.6,
+      39.1,
+      0.0,
+      0.0,
+      40.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C1886",
+    "type": "강구조물",
+    "budget": 14770340000,
+    "companyNames": [
+      "(주)신한에스엔지",
+      "(주)유진건철",
+      "(주)대현엔지니어링",
+      "삼원중공업(주)",
+      "(주)해성기공",
+      "(주)경수제철건설",
+      "(주)동성중공업"
+    ],
+    "bids": [
+      14616000000,
+      14893000000,
+      14900000000,
+      15089000000,
+      15180000000,
+      15200000000,
+      15419000000
+    ],
+    "safetyGrades": [
+      "SH1",
+      "SH1",
+      "SH2",
+      "SH2",
+      "SH1",
+      "SA1",
+      "SA1"
+    ],
+    "safetyEvalScores": [
+      33.0,
+      36.9,
+      40.0,
+      0.0,
+      0.0,
+      39.2,
+      37.0
+    ]
+  },
+  {
+    "id": "2025C1969",
+    "type": "철근콘크리트(건축)",
+    "budget": 30845960000,
+    "companyNames": [
+      "삼지토건(주)",
+      "신두건설(주)",
+      "(주)우창건설",
+      "(주)태흥건설",
+      "(주)케이세웅건설",
+      "(주)태민건설",
+      "태운건설(주)",
+      "태영건업(주)",
+      "(주)엠지건설",
+      "(주)범강",
+      "(주)남양토건",
+      "금웅건설(주)"
+    ],
+    "bids": [
+      28728500000,
+      29750000000,
+      30368000000,
+      30668000000,
+      32857000000,
+      33186000000,
+      33660000000,
+      34156000000,
+      34265000000,
+      34371885397,
+      34900000000,
+      35917000000
+    ],
+    "safetyGrades": [
+      "SH3",
+      "SH2",
+      "SH1",
+      "SH3",
+      "SA1",
+      "SH2",
+      "SH2",
+      "SH2(만료)",
+      "SH2",
+      "SH2",
+      "SA2",
+      "SH3"
+    ],
+    "safetyEvalScores": [
+      40.0,
+      38.0,
+      0.0,
+      0.0,
+      35.2,
+      0.0,
+      37.97,
+      40.0,
+      0.0,
+      0.0,
+      0.0,
+      38.4
+    ]
+  },
+  {
+    "id": "2025C2059",
+    "type": "토공(건축)",
+    "budget": 57957069000,
+    "companyNames": [
+      "금강건설(주)",
+      "(주)영신디엔씨",
+      "(주)제일공사",
+      "씨이에프건설(주)",
+      "장한건설(주)",
+      "마천건설(주)",
+      "시재건설(주)",
+      "(주)이테크건설산업",
+      "엘티삼보(주)",
+      "인성개발(주)",
+      "화엄토건(주)"
+    ],
+    "bids": [
+      50800000000,
+      57448000000,
+      63000000000,
+      63390000000,
+      64300000000,
+      66330000000,
+      66470000000,
+      68200000000,
+      69395000000,
+      71823000000,
+      71958000000
+    ],
+    "safetyGrades": [
+      "SH2",
+      "SH1",
+      "SH2(만료)",
+      "SH2",
+      "SH2",
+      "SH3",
+      "SH1",
+      "SH2",
+      "SA1",
+      "SH1",
+      "SH2"
+    ],
+    "safetyEvalScores": [
+      37.82,
+      39.4,
+      0.0,
+      39.6,
+      37.9,
+      0.0,
+      0.0,
+      35.75,
+      0.0,
+      0.0,
+      40.0
+    ]
+  },
+  {
+    "id": "2025C2398",
+    "type": "철근콘크리트(건축)",
+    "budget": 10344385000,
+    "companyNames": [
+      "(주)오주건설",
+      "(주)두성",
+      "대용건설(주)",
+      "금웅건설(주)",
+      "오엔건설(주)",
+      "(주)남양토건",
+      "(주)우설건설",
+      "(주)보미엔지니어링",
+      "(유)건향개발",
+      "여흥건설(주)",
+      "삼지토건(주)",
+      "흥석건설(주)"
+    ],
+    "bids": [
+      9759000000,
+      10140000000,
+      10250000000,
+      10440000000,
+      10462000000,
+      10734000000,
+      10773000000,
+      10832840505,
+      10950000000,
+      10970000000,
+      11330000000,
+      11798000000
+    ],
+    "safetyGrades": [
+      "SH1",
+      "SA2",
+      "SA3",
+      "SH3",
+      "SH2",
+      "SA2",
+      "SH3",
+      "SA1",
+      "SA3(만료)",
+      "SH4",
+      "SH3",
+      "SA3"
+    ],
+    "safetyEvalScores": [
+      0.0,
+      0.0,
+      0.0,
+      38.4,
+      40.0,
+      0.0,
+      0.0,
+      0.0,
+      40.0,
+      40.0,
+      40.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C3142",
+    "type": "토공(건축)",
+    "budget": 13634173000,
+    "companyNames": [
+      "(주)진덕건설",
+      "(주)제이엘건설",
+      "장한건설(주)",
+      "대성건설(주)",
+      "대양건설(주)",
+      "시재건설(주)",
+      "건영디엔씨(주)",
+      "인성개발(주)",
+      "동주건설(주)",
+      "(주)영신디엔씨",
+      "금강건설(주)",
+      "영인산업(주)",
+      "태룡토건(주)",
+      "(주)보흥건설"
+    ],
+    "bids": [
+      12688000000,
+      12770000000,
+      13570000000,
+      14649200000,
+      14800000000,
+      14800000000,
+      15080000000,
+      15463000000,
+      15950000000,
+      15988000000,
+      16838000000,
+      16980000000,
+      17700210141,
+      17800000000
+    ],
+    "safetyGrades": [
+      "SH1",
+      "SH3",
+      "SH2",
+      "SH3",
+      "SH2",
+      "SH1",
+      "SH2",
+      "SH1",
+      "SH2",
+      "SH1",
+      "SH2",
+      "SH2",
+      "SA2",
+      "SH3"
+    ],
+    "safetyEvalScores": [
+      36.88,
+      0.0,
+      37.9,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      39.4,
+      37.82,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C3152",
+    "type": "철근콘크리트(건축)",
+    "budget": 4250000000,
+    "companyNames": [
+      "금오건설주식회사",
+      "(주)흥원건설",
+      "(주)한영건설",
+      "광영개발(주)",
+      "(주)아이엘이앤씨",
+      "중현테크(주)",
+      "오엔건설(주)",
+      "신건설(주)",
+      "예인건설(주)",
+      "주식회사 휘강건설",
+      "서용건설(주)",
+      "흥석건설(주)"
+    ],
+    "bids": [
+      4222419536,
+      4590000000,
+      5100000000,
+      5597000000,
+      5787000000,
+      5790000000,
+      5996000000,
+      6000000000,
+      6057000000,
+      6538613173,
+      6616000000,
+      7208000000
+    ],
+    "safetyGrades": [
+      "",
+      "SH2(만료)",
+      "SH3(만료)",
+      "SH2",
+      "SA1(만료)",
+      "SH1",
+      "SH2",
+      "SA1",
+      "SH2",
+      "SH2(만료)",
+      "SH4(만료)",
+      "SA3"
+    ],
+    "safetyEvalScores": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      40.0,
+      0.0,
+      39.4,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C3173",
+    "type": "토공(건축)",
+    "budget": 22131543000,
+    "companyNames": [
+      "태룡토건(주)",
+      "(주)공진산업개발",
+      "(주)진림건설",
+      "(주)영신디엔씨",
+      "(주)이테크건설산업",
+      "인성개발(주)",
+      "시재건설(주)",
+      "마천건설(주)",
+      "화엄토건(주)",
+      "건영디엔씨(주)",
+      "씨이에프건설(주)",
+      "장한건설(주)",
+      "(주)제일공사"
+    ],
+    "bids": [
+      18935000000,
+      19697000000,
+      21444444281,
+      22366000000,
+      22900000000,
+      23400000000,
+      24070000000,
+      24090000000,
+      24288000000,
+      24442000000,
+      24528000000,
+      24700000000,
+      25922000000
+    ],
+    "safetyGrades": [
+      "SA2",
+      "SH1",
+      "",
+      "SH1",
+      "SH2",
+      "SH1",
+      "SH1",
+      "SH3",
+      "SH2",
+      "SH2",
+      "SH2",
+      "SH2",
+      "SH2(만료)"
+    ],
+    "safetyEvalScores": [
+      0.0,
+      0.0,
+      0.0,
+      39.4,
+      35.75,
+      0.0,
+      0.0,
+      0.0,
+      40.0,
+      0.0,
+      39.6,
+      37.9,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C3301",
+    "type": "토공(건축)",
+    "budget": 580000000,
+    "companyNames": [
+      "영인산업(주)",
+      "동주건설(주)",
+      "(주)공진산업개발",
+      "시재건설(주)",
+      "금강건설(주)",
+      "(주)성진산업개발",
+      "태룡토건(주)",
+      "씨이에프건설(주)",
+      "(주)영신디엔씨",
+      "화엄토건(주)",
+      "(주)이테크건설산업",
+      "신한주식회사"
+    ],
+    "bids": [
+      471000000,
+      510000000,
+      561880467,
+      610000000,
+      620000000,
+      656000000,
+      721000000,
+      786000000,
+      820000000,
+      988000000,
+      1100000000,
+      2380000000
+    ],
+    "safetyGrades": [
+      "SH2",
+      "SH2",
+      "SH1",
+      "SH1",
+      "SH2",
+      "SH2",
+      "SA2",
+      "SH2",
+      "SH1",
+      "SH2",
+      "SH2",
+      "SH2"
+    ],
+    "safetyEvalScores": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      37.82,
+      0.0,
+      0.0,
+      39.6,
+      39.4,
+      40.0,
+      35.75,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C3615",
+    "type": "강구조물",
+    "budget": 39464508227,
+    "companyNames": [
+      "(주)경수제철건설",
+      "(주)대현엔지니어링",
+      "(주)약동산업",
+      "대주중공업(주)",
+      "(주)유진건철",
+      "삼원중공업(주)",
+      "(주)동성중공업",
+      "(주)신한에스엔지",
+      "(주)해성기공",
+      "현대스틸산업㈜"
+    ],
+    "bids": [
+      39368000000,
+      39987000000,
+      40550000000,
+      41049000000,
+      41800000000,
+      41928000000,
+      43724000000,
+      44748000000,
+      44800000000,
+      45500000000
+    ],
+    "safetyGrades": [
+      "SA1",
+      "SH2",
+      "SH3",
+      "SH2",
+      "SH1",
+      "SH2",
+      "SA1",
+      "SH1",
+      "SH1",
+      "SH1"
+    ],
+    "safetyEvalScores": [
+      39.2,
+      40.0,
+      34.6,
+      0.0,
+      36.9,
+      0.0,
+      37.0,
+      33.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C3861",
+    "type": "강구조물",
+    "budget": 42148318522,
+    "companyNames": [
+      "(주)대현엔지니어링",
+      "(주)동성중공업",
+      "(주)약동산업",
+      "(주)유진건철",
+      "(주)해성기공",
+      "(주)신한에스엔지",
+      "삼원중공업(주)",
+      "대주중공업(주)",
+      "현대스틸산업㈜"
+    ],
+    "bids": [
+      41780000000,
+      41993000000,
+      42434000000,
+      42999000000,
+      43000000000,
+      43037000000,
+      43058000000,
+      43239000000,
+      43370000000
+    ],
+    "safetyGrades": [
+      "SH2",
+      "SA1",
+      "SH3",
+      "SH1",
+      "SH1",
+      "SH1",
+      "SH2",
+      "SH2",
+      "SH1"
+    ],
+    "safetyEvalScores": [
+      40.0,
+      37.0,
+      34.6,
+      36.9,
+      0.0,
+      33.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C4133",
+    "type": "강구조물",
+    "budget": 11792195000,
+    "companyNames": [
+      "(주)동성중공업",
+      "(주)약동산업",
+      "(주)유진건철",
+      "현대스틸산업㈜",
+      "(주)신한에스엔지",
+      "삼원중공업(주)",
+      "대주중공업(주)",
+      "(주)해성기공"
+    ],
+    "bids": [
+      10945000000,
+      11700000000,
+      11850000000,
+      11924000000,
+      11968000000,
+      11980000000,
+      12240000000,
+      12550000000
+    ],
+    "safetyGrades": [
+      "SA1",
+      "SH3",
+      "SH1",
+      "SH1",
+      "SH1",
+      "SH2",
+      "SH2",
+      "SH1"
+    ],
+    "safetyEvalScores": [
+      37.0,
+      34.6,
+      36.9,
+      0.0,
+      33.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C4350",
+    "type": "토공(건축)",
+    "budget": 5779520000,
+    "companyNames": [
+      "인성개발(주)",
+      "(주)진덕건설",
+      "(주)태안토건",
+      "(주)공진산업개발",
+      "(주)신영토건",
+      "건영디엔씨(주)",
+      "(주)제이엘건설",
+      "(주)성원토건"
+    ],
+    "bids": [
+      4850000000,
+      5648000000,
+      5767000000,
+      6118000000,
+      6606000000,
+      6699000000,
+      7038000000,
+      4584000000
+    ],
+    "safetyGrades": [
+      "SH1",
+      "SH1",
+      "SH2",
+      "SH1",
+      "SH1",
+      "SH2",
+      "SH3",
+      "SH2"
+    ],
+    "safetyEvalScores": [
+      0.0,
+      36.88,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C4473",
+    "type": "토공(건축)",
+    "budget": 6695000000,
+    "companyNames": [
+      "화엄토건(주)",
+      "(주)보흥건설",
+      "(주)공진산업개발",
+      "(주)제이엘건설",
+      "(주)태정종합건설",
+      "(주)신영토건"
+    ],
+    "bids": [
+      6689000000,
+      6700000000,
+      6810000000,
+      7233000000,
+      7490000000,
+      8400000000
+    ],
+    "safetyGrades": [
+      "SH2",
+      "SH3",
+      "SH1",
+      "SH3",
+      "SH3",
+      "SH1"
+    ],
+    "safetyEvalScores": [
+      40.0,
+      0.0,
+      0.0,
+      0.0,
+      36.6,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C4496",
+    "type": "철근콘크리트(건축)",
+    "budget": 31464958000,
+    "companyNames": [
+      "(주)대양건설",
+      "오엔건설(주)",
+      "(주)보미엔지니어링",
+      "금웅건설(주)",
+      "(주)오주건설",
+      "(주)범강",
+      "첨단개발(주)",
+      "중현테크(주)"
+    ],
+    "bids": [
+      26878900000,
+      27439000000,
+      27990822483,
+      29170000000,
+      29699000000,
+      30470222484,
+      30899000000,
+      31340000000
+    ],
+    "safetyGrades": [
+      "SH2",
+      "SH2",
+      "SA1",
+      "SH3",
+      "SH1",
+      "SH2",
+      "SH2",
+      "SH1"
+    ],
+    "safetyEvalScores": [
+      0.0,
+      40.0,
+      0.0,
+      38.4,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C4568",
+    "type": "토공(건축)",
+    "budget": 8094000000,
+    "companyNames": [
+      "(주)성원토건",
+      "영인산업(주)",
+      "(주)제이엘건설",
+      "(주)진덕건설",
+      "(주)공진산업개발",
+      "(주)이테크건설산업",
+      "(주)지산이앤씨",
+      "건영디엔씨(주)"
+    ],
+    "bids": [
+      7040000000,
+      7956000000,
+      8005000000,
+      8569000000,
+      8920000000,
+      9190000000,
+      9290000000,
+      9393000000
+    ],
+    "safetyGrades": [
+      "SH2",
+      "SH2",
+      "SH3",
+      "SH1",
+      "SH1",
+      "SH2",
+      "SA3",
+      "SH2"
+    ],
+    "safetyEvalScores": [
+      0.0,
+      0.0,
+      0.0,
+      36.88,
+      0.0,
+      35.75,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C4606",
+    "type": "철근콘크리트(건축)",
+    "budget": 41127398000,
+    "companyNames": [
+      "금웅건설(주)",
+      "중현테크(주)",
+      "남웅건설(주)",
+      "(주)월드플랜",
+      "오엔건설(주)",
+      "(주)우설건설",
+      "예인건설(주)",
+      "(주)우인건설"
+    ],
+    "bids": [
+      33345000000,
+      33790000000,
+      33830000000,
+      34140000000,
+      34877000000,
+      35552000000,
+      37077000000,
+      28900000000
+    ],
+    "safetyGrades": [
+      "SH3",
+      "SH1",
+      "SH4",
+      "SH3",
+      "SH2",
+      "SH3",
+      "SH2",
+      "SH4"
+    ],
+    "safetyEvalScores": [
+      38.4,
+      0.0,
+      0.0,
+      40.0,
+      40.0,
+      0.0,
+      39.4,
+      39.4
+    ]
+  },
+  {
+    "id": "2025C4773",
+    "type": "토공(건축)",
+    "budget": 9250000000,
+    "companyNames": [
+      "(주)성진산업개발",
+      "(주)공진산업개발",
+      "(주)영신디엔씨",
+      "(주)제이엘건설",
+      "(주)삼마토건",
+      "국영건설(주)",
+      "화엄토건(주)",
+      "제이에이치건설(주)"
+    ],
+    "bids": [
+      9090000000,
+      9820000000,
+      10088000000,
+      10139000000,
+      10548000000,
+      11360000000,
+      12290000000,
+      13094000000
+    ],
+    "safetyGrades": [
+      "SH2",
+      "SH1",
+      "SH1",
+      "SH3",
+      "SH2",
+      "SH4",
+      "SH2",
+      "SH3"
+    ],
+    "safetyEvalScores": [
+      0.0,
+      0.0,
+      39.4,
+      0.0,
+      0.0,
+      0.0,
+      40.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C4793",
+    "type": "강구조물",
+    "budget": 5175000000,
+    "companyNames": [
+      "(주)동성중공업"
+    ],
+    "bids": [
+      5175000000
+    ],
+    "safetyGrades": [
+      "SA1"
+    ],
+    "safetyEvalScores": [
+      37.0
+    ]
+  },
+  {
+    "id": "2025C4795",
+    "type": "토공(건축)",
+    "budget": 4020000000,
+    "companyNames": [
+      "(주)공진산업개발"
+    ],
+    "bids": [
+      4020000000
+    ],
+    "safetyGrades": [
+      "SH1"
+    ],
+    "safetyEvalScores": [
+      0.0
+    ]
+  },
+  {
+    "id": "2025C4874",
+    "type": "강구조물",
+    "budget": 4237748000,
+    "companyNames": [
+      "(주)유진건철",
+      "(주)영화엔지니어링",
+      "(주)포유이엔지",
+      "인창기건(주)",
+      "(주)약동산업",
+      "(주)신한에스엔지",
+      "(주)대현엔지니어링",
+      "한맥중공업(주)"
+    ],
+    "bids": [
+      4184000000,
+      4275000000,
+      4292000000,
+      4299000000,
+      4345000000,
+      4383000000,
+      4394000000,
+      4449000000
+    ],
+    "safetyGrades": [
+      "SH1",
+      "SH2",
+      "SA1",
+      "SH2",
+      "SH3",
+      "SH1",
+      "SH2",
+      "SH4"
+    ],
+    "safetyEvalScores": [
+      36.9,
+      0.0,
+      0.0,
+      0.0,
+      34.6,
+      33.0,
+      40.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C5088",
+    "type": "토공(건축)",
+    "budget": 640293000,
+    "companyNames": [
+      "(주)신영토건",
+      "동주건설(주)",
+      "(주)공진산업개발",
+      "영인산업(주)",
+      "(주)제이엘건설",
+      "태룡토건(주)",
+      "(주)성원토건",
+      "신한주식회사"
+    ],
+    "bids": [
+      450000000,
+      470000000,
+      497000000,
+      500000000,
+      539600000,
+      570000000,
+      688000000,
+      800000000
+    ],
+    "safetyGrades": [
+      "SH1",
+      "SH2",
+      "SH1",
+      "SH2",
+      "SH3",
+      "SA2",
+      "SH2",
+      "SH2"
+    ],
+    "safetyEvalScores": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "2025C5188",
+    "type": "철근콘크리트(건축)",
+    "budget": 19430000000,
+    "companyNames": [
+      "태영건업(주)",
+      "오엔건설(주)",
+      "중현테크(주)",
+      "(주)태흥건설",
+      "(주)케이세웅건설",
+      "흥석건설(주)",
+      "금웅건설(주)",
+      "두송건설(주)"
+    ],
+    "bids": [
+      18725000000,
+      19304351623,
+      19580000000,
+      20172843454,
+      20436000000,
+      20600000000,
+      21813000000,
+      22546944273
+    ],
+    "safetyGrades": [
+      "SH2(만료)",
+      "SH2",
+      "SH1",
+      "SH3",
+      "SA1",
+      "SA3",
+      "SH3",
+      "SA1"
+    ],
+    "safetyEvalScores": [
+      40.0,
+      40.0,
+      0.0,
+      0.0,
+      35.2,
+      0.0,
+      38.4,
+      0.0
+    ]
+  }
+], getSafetyScore = (safetyGrade, safetyEvalScore, safetyConfig) => {
+  const normalized = (safetyGrade || "").trim().toUpperCase();
+  const isValid = !normalized.includes("만료");
+  const isTargetGrade = normalized === "SH1" || normalized === "SA1";
+  if (!isValid || !isTargetGrade) return 0;
+  const cfg = safetyConfig || { rules: [{ minScore: 38, points: 2 }] };
+  // 규칙을 minScore 내림차순 정렬 후 첫 번째 충족 규칙 반환
+  const sorted = [...cfg.rules].sort((a, b) => b.minScore - a.minScore);
+  for (const rule of sorted) {
+    if (safetyEvalScore >= rule.minScore) return rule.points;
+  }
+  return cfg.defaultPoints ?? 0;
+};
+function App() {
+  const [contracts, setContracts] = useState(INITIAL_CONTRACTS), [selectedId, setSelectedId] = useState(INITIAL_CONTRACTS[0]?.id || ""), [searchQuery, setSearchQuery] = useState(""), [sortConfig, setSortConfig] = useState({ key: "rank", direction: "asc" }), [dbSortConfig, setDbSortConfig] = useState({ key: "id", direction: "asc" }), [activeTab, setActiveTab] = useState("simulation"), [expandedTypes, setExpandedTypes] = useState({}),
+  [safetyConfig, setSafetyConfig] = useState({ rules: [{ minScore: 38, points: 2 }], defaultPoints: 0 }),
+  [safetyConfigEditing, setSafetyConfigEditing] = useState(false),
+  [safetyConfigDraft, setSafetyConfigDraft] = useState(null),
+  evaluate = (contract, sortConfig2) => {
+    const budget = contract.budget, validBids = contract.bids.map((price, idx) => ({
+      id: idx + 1,
+      companyName: contract.companyNames?.[idx] || `업체 ${idx + 1}`,
+      price,
+      safetyGrade: contract.safetyGrades?.[idx] || "",
+      safetyEvalScore: contract.safetyEvalScores?.[idx] || 0
+    })).filter((b) => b.price !== null && b.price !== void 0 && b.price > 0), withinBudget = validBids.filter((b) => b.price <= budget);
+    
+    let lowestPriceWinner = null;
+    if (withinBudget.length > 0) {
+      lowestPriceWinner = withinBudget.reduce((prev, curr) => curr.price < prev.price ? curr : prev);
+    }
+
+    if (withinBudget.length === 0)
+      return {
+        status: "\uC720\uCC30",
+        reason: "\uC608\uC0B0\uCD08\uACFC",
+        winner: null,
+        lowestPriceWinner: null,
+        refPrice: 0,
+        avgPrice: 0,
+        lowestBids: [],
+        calcBids: [],
+        withinBudget,
+        scoredBids: [],
+        minEligiblePrice: 0
+      };
+    let refPrice = 0, avgPrice = 0, lowestBids = [], calcBids = [];
+    if (withinBudget.length === 1) {
+      const single = withinBudget[0];
+      refPrice = single.price * 0.85, avgPrice = single.price, lowestBids = [single], calcBids = [single];
+    } else {
+      const minPrice = Math.min(...withinBudget.map((b) => b.price));
+      lowestBids = withinBudget.filter((b) => b.price === minPrice), calcBids = withinBudget.filter((b) => b.price !== minPrice), calcBids.length === 0 && (calcBids = withinBudget), avgPrice = calcBids.reduce((acc, curr) => acc + curr.price, 0) / calcBids.length, refPrice = avgPrice * 0.85;
+    }
+    const eligibleBids = withinBudget.filter((b) => b.price >= refPrice), minEligiblePrice = eligibleBids.length > 0 ? Math.min(...eligibleBids.map((b) => b.price)) : 0;
+    
+    let reasonablePriceWinner = null;
+    if (eligibleBids.length > 0) {
+      reasonablePriceWinner = eligibleBids.reduce((prev, curr) => curr.price < prev.price ? curr : prev);
+    }
+
+    // 안전 점수 최대값 계산: rules의 최대 points 와 defaultPoints 중 최대값
+    const maxSafetyPoints = Math.max(
+      ...( (safetyConfig?.rules || [{ points: 2 }]).map(r => r.points) ),
+      safetyConfig?.defaultPoints ?? 0
+    );
+    const maxPriceScore = 100 - maxSafetyPoints;
+    const scoredBids = validBids.map((b) => {
+      const safetyScore = getSafetyScore(b.safetyGrade, b.safetyEvalScore, safetyConfig);
+      let priceScore = 0, isOverBudget = b.price > budget, isBelowRef = b.price < refPrice, diffPercent = 0;
+      isOverBudget || isBelowRef ? priceScore = 0 : minEligiblePrice > 0 ? (diffPercent = (b.price - minEligiblePrice) / minEligiblePrice * 100, priceScore = Math.max(0, maxPriceScore - diffPercent)) : priceScore = maxPriceScore;
+      const totalScore = safetyScore + priceScore;
+      let status = "\uC801\uACA9 \uB300\uAE35";
+      return isOverBudget ? status = "\uC608\uC0B0 \uCD08\uACFC" : isBelowRef ? status = "\uAE30\uC900\uAC00 \uBBF8\uB2EC" : b.price === minEligiblePrice && (status = "\uAC00\uACA9 \uB9CC\uC810"), {
+        ...b,
+        safetyScore,
+        priceScore,
+        diffPercent,
+        totalScore,
+        status,
+        isOverBudget,
+        isBelowRef
+      };
+    }), rankSorted = [...scoredBids].sort((a, b) => b.totalScore !== a.totalScore ? b.totalScore - a.totalScore : a.price - b.price), bidsWithRank = scoredBids.map((b) => {
+      const rankIndex = rankSorted.findIndex((r) => r.id === b.id);
+      return {
+        ...b,
+        rank: rankIndex + 1
+      };
+    }), qualifiedBids = bidsWithRank.filter((b) => !b.isOverBudget && !b.isBelowRef);
+    let winner = null;
+    qualifiedBids.length > 0 && (winner = qualifiedBids.reduce((prev, curr) => curr.totalScore > prev.totalScore ? curr : curr.totalScore < prev.totalScore ? prev : curr.price < prev.price ? curr : curr.price > prev.price ? prev : curr.id < prev.id ? curr : prev));
+    const sortedBids = [...bidsWithRank].sort((a, b) => {
+      const { key, direction } = sortConfig2, isAsc = direction === "asc";
+      if (key === "rank")
+        return isAsc ? a.rank - b.rank : b.rank - a.rank;
+      let valA, valB;
+      return key === "bidder" ? (valA = a.id, valB = b.id) : key === "price" ? (valA = a.price, valB = b.price) : key === "safetyGrade" ? (valA = a.safetyGrade, valB = b.safetyGrade) : key === "safetyEval" ? (valA = a.safetyEvalScore, valB = b.safetyEvalScore) : key === "safety" ? (valA = a.safetyScore, valB = b.safetyScore) : key === "priceScore" ? (valA = a.priceScore, valB = b.priceScore) : key === "totalScore" && (valA = a.totalScore, valB = b.totalScore), valA < valB ? isAsc ? -1 : 1 : valA > valB ? isAsc ? 1 : -1 : a.rank - b.rank;
+    });
+    return {
+      status: winner ? "\uB099\uCC30" : "\uC720\uCC30",
+      reason: winner ? `\uC5C5\uCCB4 ${winner.id} \uB099\uCC30` : "\uC801\uACA9 \uC5C5\uCCB4 \uC5C6\uC74C",
+      winner,
+      lowestPriceWinner,
+      reasonablePriceWinner,
+      refPrice,
+      avgPrice,
+      lowestBids,
+      calcBids,
+      withinBudget,
+      scoredBids: sortedBids,
+      minEligiblePrice
+    };
+  }, simulatedContracts = useMemo(() => contracts.map((c) => ({
+    ...c,
+    evaluation: evaluate(c, sortConfig)
+  })), [contracts, sortConfig, safetyConfig]), sortedDbContracts = useMemo(() => {
+    const sorted = [...simulatedContracts];
+    const { key, direction } = dbSortConfig;
+    const isAsc = direction === "asc";
+    
+    sorted.sort((a, b) => {
+      const hasVal = (contract, sortKey) => {
+        switch (sortKey) {
+          case "lowestWinnerCompany":
+          case "lowestWinnerPrice":
+            return contract.evaluation.lowestPriceWinner !== null && contract.evaluation.lowestPriceWinner !== undefined;
+          case "reasonableWinnerCompany":
+          case "reasonableWinnerPrice":
+            return contract.evaluation.reasonablePriceWinner !== null && contract.evaluation.reasonablePriceWinner !== undefined;
+          case "compWinnerCompany":
+          case "compWinnerPrice":
+            return contract.evaluation.winner !== null && contract.evaluation.winner !== undefined;
+          default:
+            return true;
+        }
+      };
+      
+      const hasA = hasVal(a, key);
+      const hasB = hasVal(b, key);
+      
+      if (!hasA && !hasB) return 0;
+      if (!hasA) return 1;
+      if (!hasB) return -1;
+      
+      let valA, valB;
+      switch (key) {
+        case "id":
+          valA = a.id;
+          valB = b.id;
+          break;
+        case "type":
+          valA = a.type || "";
+          valB = b.type || "";
+          break;
+        case "budget":
+          valA = a.budget || 0;
+          valB = b.budget || 0;
+          break;
+        case "lowestWinnerCompany":
+          valA = a.evaluation.lowestPriceWinner.companyName;
+          valB = b.evaluation.lowestPriceWinner.companyName;
+          break;
+        case "lowestWinnerPrice":
+          valA = a.evaluation.lowestPriceWinner.price;
+          valB = b.evaluation.lowestPriceWinner.price;
+          break;
+        case "reasonableWinnerCompany":
+          valA = a.evaluation.reasonablePriceWinner.companyName;
+          valB = b.evaluation.reasonablePriceWinner.companyName;
+          break;
+        case "reasonableWinnerPrice":
+          valA = a.evaluation.reasonablePriceWinner.price;
+          valB = b.evaluation.reasonablePriceWinner.price;
+          break;
+        case "compWinnerCompany":
+          valA = a.evaluation.winner.companyName;
+          valB = b.evaluation.winner.companyName;
+          break;
+        case "compWinnerPrice":
+          valA = a.evaluation.winner.price;
+          valB = b.evaluation.winner.price;
+          break;
+        case "comparison": {
+          const getCompStatus = (contract) => {
+            const reasonableW = contract.evaluation.reasonablePriceWinner;
+            const compW = contract.evaluation.winner;
+            if (!reasonableW || !compW) return 0;
+            if (reasonableW.companyName !== compW.companyName) return 2;
+            return 1;
+          };
+          valA = getCompStatus(a);
+          valB = getCompStatus(b);
+          break;
+        }
+        default:
+          valA = a.id;
+          valB = b.id;
+      }
+      
+      if (typeof valA === "string") {
+        return isAsc ? valA.localeCompare(valB) : valB.localeCompare(valA);
+      } else {
+        if (valA === valB) return 0;
+        return isAsc ? (valA < valB ? -1 : 1) : (valA > valB ? -1 : 1);
+      }
+    });
+    
+    return sorted;
+  }, [simulatedContracts, dbSortConfig]), selectedContract = useMemo(() => simulatedContracts.find((c) => c.id === selectedId) || simulatedContracts[0], [simulatedContracts, selectedId]), filteredContracts = useMemo(() => {
+    const query = searchQuery.toLowerCase().trim();
+    return simulatedContracts.filter(
+      (c) => c.id.toLowerCase().includes(query) || 
+             (c.companyNames && c.companyNames.some(name => name.toLowerCase().includes(query)))
+    );
+  }, [simulatedContracts, searchQuery]), groupedContracts = useMemo(() => {
+    const groups = {};
+    filteredContracts.forEach(c => {
+      if (!groups[c.type]) {
+        groups[c.type] = [];
+      }
+      groups[c.type].push(c);
+    });
+    return groups;
+  }, [filteredContracts]), groupTypes = useMemo(() => {
+    return Object.keys(groupedContracts).sort();
+  }, [groupedContracts]), toggleType = (type) => {
+    setExpandedTypes(prev => ({
+      ...prev,
+      [type]: prev[type] === false ? true : false
+    }));
+  }, handlePriceChange = (contractId, bidIndex, value) => {
+    setContracts((prev) => prev.map((c) => {
+      if (c.id === contractId) {
+        const newBids = [...c.bids];
+        return newBids[bidIndex] = value === "" ? null : Number(value), { ...c, bids: newBids };
+      }
+      return c;
+    }));
+  }, handleGradeChange = (contractId, bidIndex, newGrade) => {
+    setContracts((prev) => prev.map((c) => {
+      if (c.id === contractId) {
+        const newGrades = c.safetyGrades ? [...c.safetyGrades] : Array(c.bids.length).fill("");
+        newGrades[bidIndex] = newGrade;
+        return { ...c, safetyGrades: newGrades };
+      }
+      return c;
+    }));
+  }, handleReset = () => {
+    setContracts(INITIAL_CONTRACTS);
+    setSelectedId(INITIAL_CONTRACTS[0]?.id || "");
+    setSearchQuery("");
+    setSortConfig({ key: "rank", direction: "asc" });
+    setDbSortConfig({ key: "id", direction: "asc" });
+    setActiveTab("simulation");
+    setExpandedTypes({});
+    setSafetyConfig({ rules: [{ minScore: 38, points: 2 }], defaultPoints: 0 });
+    setSafetyConfigEditing(false);
+    setSafetyConfigDraft(null);
+  }, handleSortRequest = (key) => {
+    let direction = "desc";
+    sortConfig.key === key ? direction = sortConfig.direction === "desc" ? "asc" : "desc" : (key === "rank" || key === "price" || key === "bidder" || key === "safetyGrade" || key === "safetyEval") && (direction = "asc"), setSortConfig({ key, direction });
+  }, handleDownloadHTML = () => {
+    const currentDoc = document.documentElement.outerHTML, blob = new Blob([`<!DOCTYPE html>
+` + currentDoc], { type: "text/html" }), url = URL.createObjectURL(blob), a = document.createElement("a");
+    a.href = url, a.download = "\uCD5C\uC800\uAC00_\uB099\uCC30_\uC2EC\uC0AC_\uC2DC\uBBAC\uB808\uC774\uD130.html", document.body.appendChild(a), a.click(), document.body.removeChild(a), URL.revokeObjectURL(url);
+  }, getHeaderStyleAndIndicator = (key, text, align = "center") => {
+    const isActive = sortConfig.key === key;
+    let indicator = " \u2195";
+    return isActive && (indicator = sortConfig.direction === "asc" ? " \u25B2" : " \u25BC"), /* @__PURE__ */ React.createElement(
+      "th",
+      {
+        onClick: () => handleSortRequest(key),
+        className: `p-4 font-bold cursor-pointer hover:bg-[#05507D]/10 hover:text-[#05507D] transition select-none text-[13px] tracking-tight whitespace-nowrap ${align === "left" ? "text-left" : align === "right" ? "text-right" : "text-center"} ${isActive ? "text-[#05507D] font-extrabold bg-[#05507D]/15 border-b-2 border-b-[#05507D]" : "text-zinc-700"}`
+      },
+      /* @__PURE__ */ React.createElement("span", { className: `flex items-center ${align === "left" ? "justify-start" : align === "right" ? "justify-end" : "justify-center"} gap-1.5` }, text, /* @__PURE__ */ React.createElement("span", { className: "text-[11px] font-mono opacity-80" }, indicator))
+    );
+  }, handleDbSortRequest = (key) => {
+    let direction = "asc";
+    if (dbSortConfig.key === key) {
+      direction = dbSortConfig.direction === "asc" ? "desc" : "asc";
+    }
+    setDbSortConfig({ key, direction });
+  }, getDbHeaderStyleAndIndicator = (key, text, align = "center", baseTextColor = "text-zinc-700", bgClass = "", borderLeft = false) => {
+    const isActive = dbSortConfig.key === key;
+    let indicator = " \u2195";
+    if (isActive) {
+      indicator = dbSortConfig.direction === "asc" ? " \u25B2" : " \u25BC";
+    }
+    const borderLeftClass = borderLeft ? "border-l border-zinc-250" : "";
+    const alignmentClass = align === "left" ? "text-left" : align === "right" ? "text-right" : "text-center";
+    const activeClass = isActive 
+      ? "text-[#05507D] font-extrabold bg-[#05507D]/15 border-b-2 border-b-[#05507D]" 
+      : `${baseTextColor} ${bgClass}`;
+
+    return /* @__PURE__ */ React.createElement(
+      "th",
+      {
+        onClick: () => handleDbSortRequest(key),
+        className: `p-3 font-bold cursor-pointer hover:bg-[#05507D]/10 hover:text-[#05507D] transition select-none text-[12px] whitespace-nowrap ${alignmentClass} ${borderLeftClass} ${activeClass}`
+      },
+      /* @__PURE__ */ React.createElement(
+        "span",
+        { className: `flex items-center ${align === "left" ? "justify-start" : align === "right" ? "justify-end" : "justify-center"} gap-1` },
+        text,
+        /* @__PURE__ */ React.createElement("span", { className: "text-[10px] font-mono opacity-80" }, indicator)
+      )
+    );
+  };
+
+  const comparisonStats = useMemo(() => {
+    let totalLowestPrice = 0;
+    let totalReasonablePrice = 0;
+    let totalComprehensivePrice = 0;
+    
+    let totalLowestPriceForReasonable = 0;
+    let totalReasonablePriceForReasonable = 0;
+    let totalReasonablePriceForComp = 0;
+    let totalComprehensivePriceForReasonable = 0;
+
+    let totalContractsCount = simulatedContracts.length;
+    let affectedContractsCount = 0;
+    let priceIncreaseContractsCount = 0;
+    let successLowestCount = 0;
+    let successReasonableCount = 0;
+    let successComprehensiveCount = 0;
+
+    simulatedContracts.forEach(c => {
+      const lowestWinner = c.evaluation.lowestPriceWinner;
+      const reasonableWinner = c.evaluation.reasonablePriceWinner;
+      const compWinner = c.evaluation.winner;
+
+      if (lowestWinner) {
+        successLowestCount++;
+      }
+      if (reasonableWinner) {
+        successReasonableCount++;
+      }
+      if (compWinner) {
+        successComprehensiveCount++;
+      }
+
+      if (lowestWinner && compWinner) {
+        totalLowestPrice += lowestWinner.price;
+        totalComprehensivePrice += compWinner.price;
+
+        if (lowestWinner.companyName !== compWinner.companyName) {
+          affectedContractsCount++;
+        }
+        if (compWinner.price > lowestWinner.price) {
+          priceIncreaseContractsCount++;
+        }
+      }
+      
+      if (lowestWinner && reasonableWinner) {
+        totalLowestPriceForReasonable += lowestWinner.price;
+        totalReasonablePriceForReasonable += reasonableWinner.price;
+      }
+
+      if (reasonableWinner && compWinner) {
+        totalReasonablePriceForComp += reasonableWinner.price;
+        totalComprehensivePriceForReasonable += compWinner.price;
+      }
+      
+      if (reasonableWinner) {
+        totalReasonablePrice += reasonableWinner.price;
+      }
+    });
+
+    const diffCost = totalComprehensivePrice - totalLowestPrice;
+    const increaseRate = totalLowestPrice > 0 ? (diffCost / totalLowestPrice) * 100 : 0;
+
+    const reasonableDiffCost = totalReasonablePriceForReasonable - totalLowestPriceForReasonable;
+    const reasonableIncreaseRate = totalLowestPriceForReasonable > 0 ? (reasonableDiffCost / totalLowestPriceForReasonable) * 100 : 0;
+
+    const compReasonableDiffCost = totalComprehensivePriceForReasonable - totalReasonablePriceForComp;
+    const compReasonableIncreaseRate = totalReasonablePriceForComp > 0 ? (compReasonableDiffCost / totalReasonablePriceForComp) * 100 : 0;
+
+    let totalBudget = 0;
+    simulatedContracts.forEach(c => {
+      totalBudget += c.budget;
+    });
+
+    return {
+      totalLowestPrice,
+      totalReasonablePrice,
+      totalComprehensivePrice,
+      diffCost,
+      increaseRate,
+      reasonableDiffCost,
+      reasonableIncreaseRate,
+      compReasonableDiffCost,
+      compReasonableIncreaseRate,
+      totalContractsCount,
+      totalBudget,
+      affectedContractsCount,
+      priceIncreaseContractsCount,
+      successLowestCount,
+      successReasonableCount,
+      successComprehensiveCount
+    };
+  }, [simulatedContracts]);
+  return /* @__PURE__ */ React.createElement("div", { className: "h-screen flex flex-col bg-[#f4f5f7] text-zinc-900 font-sans antialiased overflow-hidden selection:bg-[#05507D]/30 selection:text-zinc-900 text-[14px]" }, /* @__PURE__ */ React.createElement("header", { className: "h-16 border-b border-[#044064] bg-gradient-to-r from-[#05507D] to-[#076299] text-white px-6 flex items-center justify-between shrink-0 shadow-md" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-3" }, /* @__PURE__ */ React.createElement("div", { className: "bg-white/10 p-2.5 rounded-lg border border-white/20 text-white" }, /* @__PURE__ */ React.createElement(CalculatorIcon, { size: 22 })), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h1", { className: "text-lg font-bold text-white tracking-tight flex items-center gap-3" }, "\uC885\uD569\uD3C9\uAC00\uC81C \uCD5C\uC800\uAC00 \uC2EC\uC0AC \uC2DC\uBBAC\uB808\uC774\uD130", /* @__PURE__ */ React.createElement("span", { className: "text-[13px] text-blue-100/90 font-normal border-l border-blue-400/30 pl-3 ml-1.5" }, "\uC548\uC804 + \uAC00\uACA9 \uBC18\uC601 \uC885\uD569\uD3C9\uAC00")))), /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-3" }, /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      onClick: handleDownloadHTML,
+      className: "flex items-center gap-1.5 bg-white hover:bg-blue-50 text-[#05507D] text-[14px] px-4.5 py-2 rounded-full font-bold transition duration-200 cursor-pointer shadow-sm"
+    },
+    /* @__PURE__ */ React.createElement(DownloadIcon, { size: 14 }),
+    "\uB300\uC2DC\uBCF4\uB4DC \uB2E4\uC6B4\uB85C\uB4DC"
+  ), /* @__PURE__ */ React.createElement(
+    "button",
+    {
+      onClick: handleReset,
+      className: "flex items-center gap-1.5 bg-white/10 hover:bg-white/20 active:bg-white/30 text-white text-[14px] px-4.5 py-2 rounded-full border border-white/30 transition duration-200 cursor-pointer"
+    },
+    /* @__PURE__ */ React.createElement(RotateCcwIcon, { size: 14 }),
+    "\uCD08\uAE30\uD654"
+  ))), 
+  /* 탭 네비게이션 추가 */
+  /* @__PURE__ */ React.createElement("div", { className: "bg-[#eef2f6] border-b border-zinc-250 px-6 py-2.5 flex items-center gap-4 shrink-0" }, 
+    /* @__PURE__ */ React.createElement("button", {
+      onClick: () => setActiveTab("simulation"),
+      className: `px-4 py-2.5 rounded-lg text-sm font-semibold tracking-tight transition duration-200 ${activeTab === "simulation" ? "bg-[#05507D] text-white font-bold shadow-sm" : "text-zinc-600 hover:text-zinc-900 hover:bg-white border border-transparent hover:border-zinc-200"}`
+    }, "개별 심사 시뮬레이션"),
+    /* @__PURE__ */ React.createElement("button", {
+      onClick: () => setActiveTab("dashboard"),
+      className: `px-4 py-2.5 rounded-lg text-sm font-semibold tracking-tight transition duration-200 ${activeTab === "dashboard" ? "bg-[#05507D] text-white font-bold shadow-sm" : "text-zinc-600 hover:text-zinc-900 hover:bg-white border border-transparent hover:border-zinc-200"}`
+    }, "종합 비교 대시보드 (추가비용)")
+  ),
+  /* @__PURE__ */ React.createElement("main", { className: "flex-1 overflow-hidden p-5 grid grid-cols-12 gap-5 min-h-0 bg-[#f4f5f7]" }, 
+  activeTab === "simulation" ? React.createElement(React.Fragment, null,
+    /* @__PURE__ */ React.createElement("section", { className: "col-span-12 lg:col-span-2 bg-white border border-zinc-200 border-t-4 border-t-zinc-400 rounded-2xl p-4.5 flex flex-col h-full overflow-hidden shadow-sm" }, 
+      /* @__PURE__ */ React.createElement("div", { className: "relative mb-4 shrink-0" }, 
+        /* @__PURE__ */ React.createElement(SearchIcon, { size: 16, className: "absolute left-4 top-3.5 text-zinc-400" }), 
+        /* @__PURE__ */ React.createElement("input", {
+          type: "text",
+          placeholder: "계약번호 또는 업체명 검색...",
+          value: searchQuery,
+          onChange: (e) => setSearchQuery(e.target.value),
+          className: "w-full bg-zinc-50 border border-zinc-200 rounded-lg pl-11 pr-10 py-2.5 text-[15px] text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-[#05507D] focus:bg-white transition duration-200"
+        }),
+        searchQuery && /* @__PURE__ */ React.createElement(
+          "button",
+          {
+            onClick: () => setSearchQuery(""),
+            className: "absolute right-3.5 top-3.5 text-zinc-400 hover:text-zinc-650 transition-colors cursor-pointer focus:outline-none",
+            title: "검색어 지우기"
+          },
+          /* @__PURE__ */ React.createElement(XIcon, { size: 16 })
+        )
+      ), 
+      /* @__PURE__ */ React.createElement("div", { className: "flex-1 overflow-y-auto space-y-3 pr-1 scrollbar-thin scrollbar-thumb-zinc-350 scrollbar-track-transparent" }, 
+        groupTypes.map((type) => {
+          const items = groupedContracts[type] || [];
+          if (items.length === 0) return null;
+          const isExpanded = expandedTypes[type] !== false;
+          
+          return /* @__PURE__ */ React.createElement("div", { key: type, className: "space-y-1.5" },
+            /* @__PURE__ */ React.createElement("div", {
+              onClick: () => toggleType(type),
+              className: "flex items-center justify-between p-2.5 rounded-lg bg-zinc-100 hover:bg-zinc-200/80 cursor-pointer select-none transition-colors border border-zinc-200"
+            },
+              /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-2 min-w-0" },
+                /* @__PURE__ */ React.createElement("span", { className: `text-zinc-500 transition-transform duration-200 shrink-0 inline-block ${isExpanded ? "rotate-90" : ""}` },
+                  /* @__PURE__ */ React.createElement(ChevronRightIcon, { size: 14 })
+                ),
+                /* @__PURE__ */ React.createElement("span", { className: "font-semibold text-zinc-700 text-[13px] truncate" }, type)
+              ),
+              /* @__PURE__ */ React.createElement("span", { className: "bg-zinc-200 text-zinc-600 text-[11px] px-2 py-0.5 rounded-full font-bold font-mono border border-zinc-300" }, items.length)
+            ),
+            isExpanded && /* @__PURE__ */ React.createElement("div", { className: "space-y-1.5 pl-2 transition-all duration-200" },
+              items.map((c) => {
+                const isSelected = c.id === selectedId;
+                return /* @__PURE__ */ React.createElement("div", {
+                  key: c.id,
+                  onClick: () => setSelectedId(c.id),
+                  className: `p-3 rounded-xl border transition-all duration-200 cursor-pointer text-left flex items-center justify-between text-[13px] ${isSelected ? "bg-[#05507D]/10 border-[#05507D]/30 shadow-sm" : "bg-white hover:bg-zinc-50 border-zinc-150"}`
+                },
+                  /* @__PURE__ */ React.createElement("div", { className: "flex flex-col gap-0.5 min-w-0 flex-1 justify-center" }, 
+                    /* @__PURE__ */ React.createElement("h4", { className: `font-bold font-mono tracking-tight text-[14px] ${isSelected ? "text-[#05507D]" : "text-zinc-700"} truncate` }, c.id)
+                  ),
+                  /* @__PURE__ */ React.createElement("div", { className: "flex items-center shrink-0" }, 
+                    /* @__PURE__ */ React.createElement(ChevronRightIcon, { size: 14, className: isSelected ? "text-[#05507D]" : "text-zinc-400" })
+                  )
+                );
+              })
+            )
+          );
+        })
+      )
+    ), 
+    /* @__PURE__ */ React.createElement("section", { className: "col-span-12 lg:col-span-10 flex flex-col gap-5 h-full overflow-hidden" }, 
+      /* @__PURE__ */ React.createElement("div", { className: "bg-white border border-zinc-200 border-t-4 border-t-[#05507D] rounded-2xl p-5 shrink-0 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4.5 shadow-sm" }, 
+        /* @__PURE__ */ React.createElement("div", null, 
+          /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-2" }, 
+            /* @__PURE__ */ React.createElement("span", { className: "text-[11px] text-[#05507D] font-semibold tracking-wider uppercase bg-[#05507D]/10 px-2.5 py-0.5 rounded-md border border-[#05507D]/20" }, "Active Contract"), 
+            /* @__PURE__ */ React.createElement("h2", { className: "text-lg font-extrabold text-zinc-800 font-mono tracking-tight" }, selectedContract.id)
+          ), 
+          /* @__PURE__ */ React.createElement("p", { className: "text-[14px] text-zinc-500 mt-2" }, "\uBC1C\uC8FC \uC608\uC0B0: ", 
+            /* @__PURE__ */ React.createElement("span", { className: "text-zinc-800 font-semibold" }, "\u20A9", selectedContract.budget.toLocaleString(), "\uC6D0"), 
+            " (", (selectedContract.budget / 1e8).toFixed(2), "\uC5B5\uC6D0)"
+          )
+        ), 
+        /* @__PURE__ */ React.createElement("div", { className: "flex flex-wrap items-center gap-4 w-full sm:w-auto" }, 
+          /* @__PURE__ */ React.createElement("div", { className: "bg-zinc-50 border border-zinc-200 px-4 py-2.5 rounded-xl text-left" }, 
+            /* @__PURE__ */ React.createElement("span", { className: "text-[11px] text-zinc-500 block mb-0.5" }, "\uC2EC\uC0AC \uAE30\uC900\uAC00\uACA9 (85% \uD558\uD55C\uC120)"), 
+            /* @__PURE__ */ React.createElement("span", { className: "text-[15px] font-bold text-[#D97706] font-mono" }, "\u20A9", Math.round(selectedContract.evaluation.refPrice).toLocaleString(), "\uC6D0")
+          ), 
+          /* @__PURE__ */ React.createElement("div", { className: "bg-zinc-50 border border-zinc-200 px-4 py-2.5 rounded-xl text-left" }, 
+            /* @__PURE__ */ React.createElement("span", { className: "text-[11px] text-zinc-500 block mb-0.5" }, "\uAC00\uACA9\uB9CC\uC810 \uAE30\uC900 \uC5C5\uCCB4 \uD22C\uCC30\uAC00"), 
+            /* @__PURE__ */ React.createElement("span", { className: "text-[15px] font-bold text-[#16A34A] font-mono" }, selectedContract.evaluation.minEligiblePrice > 0 ? `\u20A9${selectedContract.evaluation.minEligiblePrice.toLocaleString()}\uC6D0` : "-")
+          )
+        )
+      ), 
+      /* @__PURE__ */ React.createElement("div", { className: "flex-1 grid grid-cols-12 gap-5 overflow-hidden min-h-0" }, 
+        /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-8 flex flex-col bg-white border border-zinc-200 border-t-4 border-t-[#05507D] rounded-2xl p-4.5 overflow-hidden h-full shadow-sm" }, 
+          /* @__PURE__ */ React.createElement("div", { className: "flex justify-between items-center mb-4 shrink-0" }, 
+            /* @__PURE__ */ React.createElement("h3", { className: "text-[15px] font-bold text-zinc-800 tracking-tight flex items-center gap-2" }, 
+              /* @__PURE__ */ React.createElement(CoinsIcon, { size: 16, className: "text-[#05507D]" }), 
+              "\uC885\uD569\uC810\uC218 \uC815\uB82C \uB9AC\uC2A4\uD2B8"
+            ), 
+            /* @__PURE__ */ React.createElement("span", { className: "text-[12px] text-zinc-500 font-normal" }, "\uCEEC\uB7FC \uD5E4\uB354\uB97C \uB20C\uB7EC \uB0B4\uB9BC/\uC624\uB984\uCC28\uC21C\uC73C\uB85C \uC815\uB82C\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.")
+          ), 
+          /* @__PURE__ */ React.createElement("div", { className: "flex-1 overflow-y-auto border border-zinc-200 rounded-xl bg-zinc-50/30 scrollbar-thin scrollbar-thumb-zinc-300 scrollbar-track-transparent" }, 
+            /* @__PURE__ */ React.createElement("table", { className: "w-full text-[14px] text-left border-collapse" }, 
+              /* @__PURE__ */ React.createElement("thead", null, 
+                /* @__PURE__ */ React.createElement("tr", { className: "bg-[#eef4f8] text-zinc-755 border-b-2 border-zinc-350 sticky top-0 z-10 whitespace-nowrap" }, 
+                  getHeaderStyleAndIndicator("rank", "\uC21C\uC704", "center"), 
+                  getHeaderStyleAndIndicator("bidder", "\uC785\uCC30 \uC5C5\uCCB4", "left"), 
+                  /* @__PURE__ */ React.createElement("th", { 
+                    className: `p-4 font-bold text-right min-w-[175px] cursor-pointer hover:bg-[#05507D]/10 hover:text-[#05507D] transition select-none text-[13px] whitespace-nowrap ${sortConfig.key === "price" ? "text-[#05507D] font-extrabold bg-[#05507D]/15 border-b-2 border-b-[#05507D]" : "text-zinc-700"}`, 
+                    onClick: () => handleSortRequest("price") 
+                  }, 
+                    /* @__PURE__ */ React.createElement("span", { className: "flex items-center justify-end gap-1.5" }, "\uD22C\uCC30\uAE08\uC561 (\u20A9)", 
+                      /* @__PURE__ */ React.createElement("span", { className: "text-[11px] font-mono opacity-80" }, sortConfig.key === "price" ? sortConfig.direction === "asc" ? " \u25B2" : " \u25BC" : " \u2195")
+                    )
+                  ), 
+                  getHeaderStyleAndIndicator("safetyGrade", "\uC548\uC804\uB4F1\uAE09"), 
+                  getHeaderStyleAndIndicator("safetyEval", "\uC2EC\uC0AC \uAE30\uC900 \uBC0F \uC218\uC2DD"), 
+                  getHeaderStyleAndIndicator("safety", "\uC548\uC804 \uC810\uC218"), 
+                  /* @__PURE__ */ React.createElement("th", { 
+                    className: `p-4 font-bold text-right cursor-pointer hover:bg-[#05507D]/10 hover:text-[#05507D] transition select-none text-[13px] whitespace-nowrap ${sortConfig.key === "priceScore" ? "text-[#05507D] font-extrabold bg-[#05507D]/15 border-b-2 border-b-[#05507D]" : "text-zinc-700"}`, 
+                    onClick: () => handleSortRequest("priceScore") 
+                  }, 
+                    /* @__PURE__ */ React.createElement("span", { className: "flex items-center justify-end gap-1.5" }, "\uAC00\uACA9 \uC810\uC218", 
+                      /* @__PURE__ */ React.createElement("span", { className: "text-[11px] font-mono opacity-80" }, sortConfig.key === "priceScore" ? sortConfig.direction === "asc" ? " \u25B2" : " \u25BC" : " \u2195")
+                    )
+                  ), 
+                  /* @__PURE__ */ React.createElement("th", { 
+                    className: `p-4 font-bold text-right cursor-pointer hover:bg-[#05507D]/10 hover:text-[#05507D] transition select-none text-[13px] whitespace-nowrap ${sortConfig.key === "totalScore" ? "text-[#05507D] font-extrabold bg-[#05507D]/15 border-b-2 border-b-[#05507D]" : "text-zinc-700"}`, 
+                    onClick: () => handleSortRequest("totalScore") 
+                  }, 
+                    /* @__PURE__ */ React.createElement("span", { className: "flex items-center justify-end gap-1.5" }, "\uC885\uD569 \uC810\uC218", 
+                      /* @__PURE__ */ React.createElement("span", { className: "text-[11px] font-mono opacity-80" }, sortConfig.key === "totalScore" ? sortConfig.direction === "asc" ? " \u25B2" : " \u25BC" : " \u2195")
+                    )
+                  )
+                )
+              ), 
+              /* @__PURE__ */ React.createElement("tbody", null, 
+                selectedContract.evaluation.scoredBids.map((b) => {
+                  const isWinner = selectedContract.evaluation.winner && selectedContract.evaluation.winner.id === b.id;
+                  return /* @__PURE__ */ React.createElement("tr", {
+                    key: b.id,
+                    className: `border-b border-zinc-200/80 transition hover:bg-zinc-50/80 ${isWinner ? "bg-[#05507D]/5" : ""}`
+                  },
+                    /* @__PURE__ */ React.createElement("td", { className: "p-4 text-center font-bold text-zinc-500" }, b.rank),
+                    /* @__PURE__ */ React.createElement("td", { className: "p-4 text-left font-semibold text-zinc-800" }, b.companyName),
+                    /* @__PURE__ */ React.createElement("td", { className: "p-4 text-right font-mono text-zinc-650" }, b.price !== null ? b.price.toLocaleString() : "-"),
+                    /* @__PURE__ */ React.createElement("td", { className: "p-4 text-center text-zinc-500" }, b.safetyGrade || "-"),
+                    /* @__PURE__ */ React.createElement("td", { className: "p-4 text-right font-mono text-zinc-500" }, b.safetyEvalScore),
+                    /* @__PURE__ */ React.createElement("td", { className: "p-4 text-right font-mono text-zinc-700 font-semibold" }, b.safetyScore),
+                    /* @__PURE__ */ React.createElement("td", { className: "p-4 text-right font-mono text-zinc-650" }, 
+                      /* @__PURE__ */ React.createElement("div", null, b.priceScore.toFixed(2)),
+                      b.priceScore === 0 && /* @__PURE__ */ React.createElement("div", { className: "text-[11px] text-red-500 font-sans font-medium mt-0.5" }, 
+                        b.isOverBudget ? "예산 초과" : b.isBelowRef ? "기준가격 미만" : "점수 감점"
+                      )
+                    ),
+                    /* @__PURE__ */ React.createElement("td", { className: "p-4 text-right font-mono font-bold text-[#05507D]" }, b.totalScore.toFixed(2))
+                  );
+                })
+              )
+            )
+          )
+        ), 
+        /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-4 flex flex-col bg-white border border-zinc-200 border-t-4 border-t-zinc-400 rounded-2xl p-4.5 overflow-hidden h-full shadow-sm" }, 
+          /* @__PURE__ */ React.createElement("h3", { className: "text-[15px] font-bold text-zinc-800 tracking-tight flex items-center gap-2 mb-4 shrink-0" }, 
+            /* @__PURE__ */ React.createElement(CheckCircle2Icon, { size: 16, className: "text-[#05507D]" }), 
+            "\uC2EC\uC0AC \uAE30\uC900 \uBC0F \uC218\uC2DD"
+          ), 
+          /* @__PURE__ */ React.createElement("div", { className: "flex-1 overflow-y-auto bg-zinc-50 p-4.5 rounded-xl border border-zinc-200 text-[13px] leading-relaxed text-zinc-700 space-y-4 min-h-0 scrollbar-thin scrollbar-thumb-zinc-300 scrollbar-track-transparent" }, 
+            /* @__PURE__ */ React.createElement("div", { className: "space-y-4" }, 
+              /* 안전 평가 점수 설정 패널 */
+              React.createElement("div", { className: "p-3 bg-white rounded-lg border border-zinc-200/80" },
+                React.createElement("div", { className: "flex items-center justify-between mb-2" },
+                  React.createElement("h4", { className: "font-semibold text-zinc-800 text-[13px]" },
+                    "1. 안전 평가 점수 설정"
+                  ),
+                  !safetyConfigEditing
+                    ? React.createElement("button", {
+                        onClick: () => { setSafetyConfigDraft(JSON.parse(JSON.stringify(safetyConfig))); setSafetyConfigEditing(true); },
+                        className: "text-[11px] px-2.5 py-1 rounded-md bg-[#05507D]/10 text-[#05507D] font-semibold hover:bg-[#05507D]/20 transition-colors flex items-center gap-1",
+                        title: "기준 수정"
+                      },
+                      React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: 11, height: 11, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2.5, strokeLinecap: "round", strokeLinejoin: "round" },
+                        React.createElement("path", { d: "M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" }),
+                        React.createElement("path", { d: "M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" })
+                      ),
+                      "수정"
+                    )
+                    : React.createElement("div", { className: "flex gap-1" },
+                        React.createElement("button", {
+                            onClick: () => {
+                              // 유효성 검사
+                              const draft = safetyConfigDraft;
+                              const valid = draft.rules.every(r => !isNaN(r.minScore) && !isNaN(r.points) && r.points >= 0 && r.minScore >= 0);
+                              if (!valid) { alert("모든 값을 올바르게 입력해주세요."); return; }
+                              setSafetyConfig(JSON.parse(JSON.stringify(draft)));
+                              setSafetyConfigEditing(false);
+                            },
+                            className: "text-[11px] px-2.5 py-1 rounded-md bg-[#05507D] text-white font-semibold hover:bg-[#044470] transition-colors"
+                          }, "저장"
+                        ),
+                        React.createElement("button", {
+                            onClick: () => { setSafetyConfigEditing(false); setSafetyConfigDraft(null); },
+                            className: "text-[11px] px-2.5 py-1 rounded-md bg-zinc-100 text-zinc-600 font-semibold hover:bg-zinc-200 transition-colors"
+                          }, "취소"
+                        )
+                      )
+                ),
+                /* 기준 설명 (보기 모드) */
+                !safetyConfigEditing
+                  ? React.createElement("div", { className: "space-y-1" },
+                      /* 규칙 목록 */
+                      [...safetyConfig.rules]
+                        .sort((a, b) => b.minScore - a.minScore)
+                        .map((rule, idx) =>
+                          React.createElement("div", { key: idx, className: "flex items-center justify-between text-xs py-1 px-2 rounded bg-[#05507D]/5 border border-[#05507D]/10" },
+                            React.createElement("span", { className: "text-zinc-600" },
+                              `SH1/SA1 등급 + 수행도평가 ${rule.minScore}점 이상`
+                            ),
+                            React.createElement("span", { className: "font-bold text-[#05507D]" }, `→ ${rule.points}점`)
+                          )
+                        ),
+                      React.createElement("div", { className: "flex items-center justify-between text-xs py-1 px-2 rounded bg-zinc-50 border border-zinc-100" },
+                        React.createElement("span", { className: "text-zinc-500" }, "그 외 (기본)"),
+                        React.createElement("span", { className: "font-bold text-zinc-500" }, `→ ${safetyConfig.defaultPoints ?? 0}점`)
+                      )
+                    )
+                  /* 편집 모드 */
+                  : React.createElement("div", { className: "space-y-2" },
+                      /* 규칙 행 편집 */
+                      React.createElement("div", { className: "text-[10px] text-zinc-400 font-semibold mb-1 grid gap-1", style: { gridTemplateColumns: "1fr 1fr auto" } },
+                        React.createElement("span", null, "수행도평가 기준점수 (점 이상)"),
+                        React.createElement("span", null, "부여 점수"),
+                        React.createElement("span", null)
+                      ),
+                      (safetyConfigDraft?.rules || []).map((rule, idx) =>
+                        React.createElement("div", { key: idx, className: "grid gap-1 items-center", style: { gridTemplateColumns: "1fr 1fr auto" } },
+                          React.createElement("input", {
+                            type: "number", min: 0, max: 100, step: 0.1,
+                            value: rule.minScore,
+                            onChange: (e) => {
+                              const next = JSON.parse(JSON.stringify(safetyConfigDraft));
+                              next.rules[idx].minScore = parseFloat(e.target.value) || 0;
+                              setSafetyConfigDraft(next);
+                            },
+                            className: "border border-zinc-300 rounded px-2 py-1 text-xs text-zinc-800 focus:outline-none focus:ring-1 focus:ring-[#05507D] w-full"
+                          }),
+                          React.createElement("input", {
+                            type: "number", min: 0, max: 100, step: 0.5,
+                            value: rule.points,
+                            onChange: (e) => {
+                              const next = JSON.parse(JSON.stringify(safetyConfigDraft));
+                              next.rules[idx].points = parseFloat(e.target.value) || 0;
+                              setSafetyConfigDraft(next);
+                            },
+                            className: "border border-zinc-300 rounded px-2 py-1 text-xs text-zinc-800 focus:outline-none focus:ring-1 focus:ring-[#05507D] w-full"
+                          }),
+                          React.createElement("button", {
+                            onClick: () => {
+                              const next = JSON.parse(JSON.stringify(safetyConfigDraft));
+                              next.rules.splice(idx, 1);
+                              setSafetyConfigDraft(next);
+                            },
+                            className: "text-red-400 hover:text-red-600 transition-colors",
+                            title: "삭제",
+                            disabled: (safetyConfigDraft?.rules?.length || 0) <= 1
+                          },
+                            React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: 13, height: 13, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2.5, strokeLinecap: "round", strokeLinejoin: "round" },
+                              React.createElement("line", { x1: 18, y1: 6, x2: 6, y2: 18 }),
+                              React.createElement("line", { x1: 6, y1: 6, x2: 18, y2: 18 })
+                            )
+                          )
+                        )
+                      ),
+                      /* 기본(그 외) 점수 */
+                      React.createElement("div", { className: "grid gap-1 items-center mt-1", style: { gridTemplateColumns: "1fr 1fr auto" } },
+                        React.createElement("span", { className: "text-[10px] text-zinc-500 font-semibold" }, "그 외 (기본)"),
+                        React.createElement("input", {
+                          type: "number", min: 0, max: 100, step: 0.5,
+                          value: safetyConfigDraft?.defaultPoints ?? 0,
+                          onChange: (e) => {
+                            const next = JSON.parse(JSON.stringify(safetyConfigDraft));
+                            next.defaultPoints = parseFloat(e.target.value) || 0;
+                            setSafetyConfigDraft(next);
+                          },
+                          className: "border border-zinc-300 rounded px-2 py-1 text-xs text-zinc-800 focus:outline-none focus:ring-1 focus:ring-[#05507D] w-full"
+                        }),
+                        React.createElement("span", null)
+                      ),
+                      /* 규칙 추가 버튼 */
+                      React.createElement("button", {
+                        onClick: () => {
+                          const next = JSON.parse(JSON.stringify(safetyConfigDraft));
+                          next.rules.push({ minScore: 0, points: 0 });
+                          setSafetyConfigDraft(next);
+                        },
+                        className: "mt-1 w-full text-[11px] py-1 rounded border border-dashed border-[#05507D]/40 text-[#05507D] hover:bg-[#05507D]/5 transition-colors font-semibold"
+                      }, "+ 구간 추가")
+                    )
+              ), 
+              /* @__PURE__ */ React.createElement("div", { className: "p-3 bg-white rounded-lg border border-zinc-200/80" }, 
+                React.createElement("h4", { className: "font-semibold text-[#D97706] mb-1" },
+                  (() => {
+                    const maxSafety = Math.max(
+                      ...( (safetyConfig?.rules || [{ points: 2 }]).map(r => r.points) ),
+                      safetyConfig?.defaultPoints ?? 0
+                    );
+                    const maxPrice = 100 - maxSafety;
+                    return `2. 가격 평가 점수 (${maxPrice}점)`;
+                  })()
+                ),
+                /* @__PURE__ */ React.createElement("p", { className: "text-zinc-500 text-xs mb-1" }, "기준가격(발주 예산 내 투찰가 중 최저가 제외 평균 * 85%) 이상 입찰 대상 중 최저가 대비 비율에 따라 감점 산출"), 
+                React.createElement("p", { className: "text-zinc-400 font-mono text-[11px]" },
+                  (() => {
+                    const maxSafety = Math.max(
+                      ...( (safetyConfig?.rules || [{ points: 2 }]).map(r => r.points) ),
+                      safetyConfig?.defaultPoints ?? 0
+                    );
+                    const maxPrice = 100 - maxSafety;
+                    return `점수 = ${maxPrice} - ((투찰금액 - 기준가격) / 기준가격 * 100)`;
+                  })()
+                )
+              ), 
+              /* @__PURE__ */ React.createElement("div", { className: "p-3 bg-white rounded-lg border border-zinc-200/80" }, 
+                /* @__PURE__ */ React.createElement("h4", { className: "font-semibold text-zinc-800 mb-1" }, "3. 최종 낙찰자 결정"), 
+                /* @__PURE__ */ React.createElement("p", { className: "text-zinc-500 text-xs" }, "안전 점수 + 가격 점수 합산 종합 점수 1위 업체를 낙찰자로 선정 (동점 시 저가 투찰자 우선)")
+              )
+            )
+          )
+        )
+      )
+    )
+  ): /* @__PURE__ */ React.createElement("div", { className: "col-span-12 flex flex-col gap-6 h-full overflow-hidden" }, 
+        /* @__PURE__ */ React.createElement("div", { className: "flex flex-col md:flex-row gap-4 shrink-0 w-full" }, 
+          /* @__PURE__ */ React.createElement("div", { className: "bg-[#f8fafc] border border-zinc-200 border-t-4 border-t-zinc-400 p-4 rounded-2xl shadow-sm text-left flex flex-col justify-between", style: { flex: "25 25 0%" } }, 
+            /* @__PURE__ */ React.createElement("span", { className: "text-zinc-500 text-xs font-bold block mb-1.5 uppercase tracking-wider" }, "전체 시뮬레이션 공고"),
+            /* @__PURE__ */ React.createElement("div", { className: "flex items-baseline gap-2" }, 
+              /* @__PURE__ */ React.createElement("span", { className: "text-2xl font-extrabold text-zinc-800" }, comparisonStats.totalContractsCount),
+              /* @__PURE__ */ React.createElement("span", { className: "text-xs text-zinc-500" }, "개 공고")
+            ),
+            /* @__PURE__ */ React.createElement("span", { className: "text-zinc-500 text-xs mt-1 block" }, `총 예산: ₩${(comparisonStats.totalBudget / 1e8).toFixed(1)}억`)
+          ),
+          /* @__PURE__ */ React.createElement("div", { className: "bg-[#f8fafc] border border-zinc-200 border-t-4 border-t-zinc-500 p-4 rounded-2xl shadow-sm text-left flex flex-col justify-between", style: { flex: "22 22 0%" } }, 
+            /* @__PURE__ */ React.createElement("span", { className: "text-zinc-500 text-xs font-bold block mb-1.5 uppercase tracking-wider" }, "기존 최저가 낙찰 총액"),
+            /* @__PURE__ */ React.createElement("div", { className: "flex items-baseline gap-2" }, 
+              /* @__PURE__ */ React.createElement("span", { className: "text-xl font-extrabold text-zinc-700 font-mono" }, `₩${(comparisonStats.totalLowestPrice / 1e8).toFixed(1)}억`),
+              /* @__PURE__ */ React.createElement("span", { className: "text-[11px] text-zinc-500" }, `(${comparisonStats.successLowestCount}건 성공)`)
+            ),
+            /* @__PURE__ */ React.createElement("span", { className: "text-zinc-500 text-xs mt-1 block" }, "최저가 기준 총액")
+          ),
+          /* @__PURE__ */ React.createElement("div", { className: "bg-[#16A34A]/5 border border-zinc-200 border-t-4 border-t-[#16A34A] p-4 rounded-2xl shadow-sm text-left flex flex-col justify-between", style: { flex: "23 23 0%" } }, 
+            /* @__PURE__ */ React.createElement("span", { className: "text-[#15803D] text-xs font-bold block mb-1.5 uppercase tracking-wider" }, "적정가 낙찰제 총액"),
+            /* @__PURE__ */ React.createElement("div", { className: "flex items-baseline gap-2" }, 
+              /* @__PURE__ */ React.createElement("span", { className: "text-xl font-extrabold text-[#16A34A] font-mono" }, `₩${(comparisonStats.totalReasonablePrice / 1e8).toFixed(1)}억`),
+              /* @__PURE__ */ React.createElement("span", { className: "text-[11px] text-zinc-500" }, `(${comparisonStats.successReasonableCount}건 성공)`)
+            ),
+            /* @__PURE__ */ React.createElement("span", { className: "text-[#15803D] text-xs font-semibold mt-1 block" }, `최저가 대비 +₩${(comparisonStats.reasonableDiffCost / 1e8).toFixed(1)}억 (+${comparisonStats.reasonableIncreaseRate.toFixed(2)}%)`)
+          ),
+          /* @__PURE__ */ React.createElement("div", { className: "bg-[#05507D]/5 border border-[#05507D]/20 border-t-4 border-t-[#05507D] p-4 rounded-2xl shadow-sm text-left flex flex-col justify-between", style: { flex: "23 23 0%" } }, 
+            /* @__PURE__ */ React.createElement("span", { className: "text-[#05507D] text-xs font-bold block mb-1.5 uppercase tracking-wider" }, "종합낙찰제 총액 (안전)"),
+            /* @__PURE__ */ React.createElement("div", { className: "flex items-baseline gap-2" }, 
+              /* @__PURE__ */ React.createElement("span", { className: "text-xl font-extrabold text-[#05507D] font-mono" }, `₩${(comparisonStats.totalComprehensivePrice / 1e8).toFixed(1)}억`),
+              /* @__PURE__ */ React.createElement("span", { className: "text-[11px] text-zinc-500" }, `(${comparisonStats.successComprehensiveCount}건 성공)`)
+            ),
+            /* @__PURE__ */ React.createElement("span", { className: "text-[#05507D] text-xs font-semibold mt-1 block" }, `최저가 대비 +₩${(comparisonStats.diffCost / 1e8).toFixed(1)}억 (+${comparisonStats.increaseRate.toFixed(2)}%)`),
+            /* @__PURE__ */ React.createElement("span", { className: "text-[#05507D] text-xs font-semibold mt-0.5 block" }, `적정가 대비 ${comparisonStats.compReasonableDiffCost >= 0 ? "+" : "-"}₩${(Math.abs(comparisonStats.compReasonableDiffCost) / 1e8).toFixed(1)}억 (${comparisonStats.compReasonableIncreaseRate >= 0 ? "+" : "-"}${Math.abs(comparisonStats.compReasonableIncreaseRate).toFixed(2)}%)`)
+          ),
+          /* @__PURE__ */ React.createElement("div", { className: "hidden md:block", style: { flex: "7 7 0%" } })
+        ),
+        /* 표 영역 */
+        /* @__PURE__ */ React.createElement("div", { className: "flex-1 overflow-hidden flex flex-col bg-white border border-zinc-200 rounded-2xl p-4.5 shadow-sm" },
+          /* @__PURE__ */ React.createElement("div", { className: "flex-1 overflow-y-auto border border-zinc-200 rounded-xl bg-zinc-50/30 scrollbar-thin scrollbar-thumb-zinc-300 scrollbar-track-transparent" }, 
+            /* @__PURE__ */ React.createElement("table", { className: "w-full text-[13px] text-left border-collapse", style: { tableLayout: "fixed" } }, 
+              /* @__PURE__ */ React.createElement("colgroup", null,
+                /* @__PURE__ */ React.createElement("col", { style: { width: "7%" } }),
+                /* @__PURE__ */ React.createElement("col", { style: { width: "8%" } }),
+                /* @__PURE__ */ React.createElement("col", { style: { width: "10%" } }),
+                /* @__PURE__ */ React.createElement("col", { style: { width: "12%" } }),
+                /* @__PURE__ */ React.createElement("col", { style: { width: "10%" } }),
+                /* @__PURE__ */ React.createElement("col", { style: { width: "12%" } }),
+                /* @__PURE__ */ React.createElement("col", { style: { width: "11%" } }),
+                /* @__PURE__ */ React.createElement("col", { style: { width: "12%" } }),
+                /* @__PURE__ */ React.createElement("col", { style: { width: "11%" } }),
+                /* @__PURE__ */ React.createElement("col", { style: { width: "7%" } })
+              ),
+              /* @__PURE__ */ React.createElement("thead", null, 
+                /* @__PURE__ */ React.createElement("tr", { className: "bg-[#eef2f6] text-zinc-750 border-b-2 border-zinc-350 sticky top-0 z-10 whitespace-nowrap text-[12px]" }, 
+                  getDbHeaderStyleAndIndicator("id", "공고번호", "center", "text-zinc-700"),
+                  getDbHeaderStyleAndIndicator("type", "공종 유형", "left", "text-zinc-700"),
+                  getDbHeaderStyleAndIndicator("budget", "발주 예산(₩)", "right", "text-zinc-700"),
+                  
+                  /* 기존 최저가 */
+                  getDbHeaderStyleAndIndicator("lowestWinnerCompany", "기존 최저가 낙찰사", "left", "text-zinc-800", "bg-zinc-200/40", true),
+                  getDbHeaderStyleAndIndicator("lowestWinnerPrice", "낙찰금액(₩)", "right", "text-zinc-800", "bg-zinc-200/40"),
+                  
+                  /* 적정가 낙찰제 */
+                  getDbHeaderStyleAndIndicator("reasonableWinnerCompany", "적정가 낙찰사", "left", "text-[#15803D]", "bg-[#16A34A]/5", true),
+                  getDbHeaderStyleAndIndicator("reasonableWinnerPrice", "낙찰금액 / 추가액(₩)", "right", "text-[#15803D]", "bg-[#16A34A]/5"),
+                  
+                  /* 종합낙찰제 */
+                  getDbHeaderStyleAndIndicator("compWinnerCompany", "종합낙찰사 (안전)", "left", "text-[#044a73]", "bg-[#05507D]/5", true),
+                  getDbHeaderStyleAndIndicator("compWinnerPrice", "낙찰금액 / 추가액(₩)", "right", "text-[#044a73]", "bg-[#05507D]/5"),
+                  
+                  /* 분석 */
+                  getDbHeaderStyleAndIndicator("comparison", "종합 vs 적정가", "center", "text-zinc-700", "", true)
+                )
+              ),
+              /* @__PURE__ */ React.createElement("tbody", null, sortedDbContracts.map((c) => {
+                const lowestW = c.evaluation.lowestPriceWinner;
+                const reasonableW = c.evaluation.reasonablePriceWinner;
+                const compW = c.evaluation.winner;
+                
+                const isComprehensiveDisqualified = !compW;
+                const isLowestDisqualified = !lowestW;
+                const isReasonableDisqualified = !reasonableW;
+
+                let diffReasonable = null;
+                if (!isLowestDisqualified && !isReasonableDisqualified) {
+                  diffReasonable = reasonableW.price - lowestW.price;
+                }
+
+                let diffComp = null;
+                if (!isLowestDisqualified && !isComprehensiveDisqualified) {
+                  diffComp = compW.price - lowestW.price;
+                }
+
+                let diffCompReasonable = null;
+                if (!isReasonableDisqualified && !isComprehensiveDisqualified) {
+                  diffCompReasonable = compW.price - reasonableW.price;
+                }
+
+                let pct = 0;
+                let isDiffWinner = false;
+                if (!isReasonableDisqualified && !isComprehensiveDisqualified) {
+                  isDiffWinner = reasonableW.companyName !== compW.companyName;
+                  pct = reasonableW.price > 0 ? ((compW.price - reasonableW.price) / reasonableW.price) * 100 : 0;
+                }
+
+                return /* @__PURE__ */ React.createElement("tr", {
+                  key: c.id,
+                  className: `border-b border-zinc-200/80 transition-all duration-150 hover:bg-zinc-50/80 ${isDiffWinner ? "bg-[#F59E0B]/5" : ""}`
+                },
+                  /* @__PURE__ */ React.createElement("td", { className: "p-3 text-center font-bold font-mono text-zinc-600 truncate" }, c.id),
+                  /* @__PURE__ */ React.createElement("td", { className: "p-3 text-left text-zinc-550 truncate", title: c.type }, c.type),
+                  /* @__PURE__ */ React.createElement("td", { className: "p-3 text-right font-mono text-zinc-600" }, c.budget.toLocaleString()),
+                  
+                  /* 기존 최저가 정보 */
+                  /* @__PURE__ */ React.createElement("td", { className: `p-3 text-left border-l border-zinc-200 ${isLowestDisqualified ? "text-[#D32F2F] font-semibold" : "text-zinc-700 truncate"}`, title: isLowestDisqualified ? "" : lowestW.companyName }, 
+                    isLowestDisqualified ? "유찰 (예산초과)" : lowestW.companyName
+                  ),
+                  /* @__PURE__ */ React.createElement("td", { className: "p-3 text-right font-mono text-zinc-650" }, 
+                    isLowestDisqualified ? "-" : lowestW.price.toLocaleString()
+                  ),
+                  
+                  /* 적정가 낙찰제 정보 */
+                  /* @__PURE__ */ React.createElement("td", { className: `p-3 text-left border-l border-zinc-200 ${isReasonableDisqualified ? "text-[#D32F2F] font-semibold" : "text-[#16A34A] font-semibold truncate"}`, title: isReasonableDisqualified ? "" : reasonableW.companyName }, 
+                    isReasonableDisqualified ? "유찰 (기준가 미달)" : reasonableW.companyName
+                  ),
+                  /* @__PURE__ */ React.createElement("td", { className: "p-3 text-right font-mono text-zinc-650" }, 
+                    isReasonableDisqualified ? "-" : /* @__PURE__ */ React.createElement("div", null,
+                      /* @__PURE__ */ React.createElement("div", { className: "text-zinc-700 font-semibold" }, reasonableW.price.toLocaleString()),
+                      diffReasonable !== null && diffReasonable > 0 && /* @__PURE__ */ React.createElement("div", { className: "text-[11px] text-[#16A34A] font-bold mt-0.5" }, `최저가 +${diffReasonable.toLocaleString()}`)
+                    )
+                  ),
+                  
+                  /* 종합낙찰 정보 */
+                  /* @__PURE__ */ React.createElement("td", { className: `p-3 text-left border-l border-zinc-200 ${isComprehensiveDisqualified ? "text-[#D32F2F] font-semibold" : "text-[#05507D] font-bold truncate"}`, title: isComprehensiveDisqualified ? "" : compW.companyName }, 
+                    isComprehensiveDisqualified ? "유찰 (적격업체 없음)" : compW.companyName
+                  ),
+                  /* @__PURE__ */ React.createElement("td", { className: "p-3 text-right font-mono text-zinc-800 font-bold" }, 
+                    isComprehensiveDisqualified ? "-" : /* @__PURE__ */ React.createElement("div", null,
+                      /* @__PURE__ */ React.createElement("div", null, compW.price.toLocaleString()),
+                      diffComp !== null && diffComp > 0 && /* @__PURE__ */ React.createElement("div", { className: "text-[11px] text-zinc-500 font-semibold mt-0.5" }, `최저가 +${diffComp.toLocaleString()}`),
+                      diffCompReasonable !== null && diffCompReasonable > 0 && /* @__PURE__ */ React.createElement("div", { className: "text-[11px] text-[#05507D] font-bold mt-0.5" }, `적정가 +${diffCompReasonable.toLocaleString()}`)
+                    )
+                  ),
+                  
+                  /* 분석 태그 */
+                  /* @__PURE__ */ React.createElement("td", { className: "p-3 text-center" }, 
+                    (isReasonableDisqualified || isComprehensiveDisqualified) ? (
+                      /* @__PURE__ */ React.createElement("span", { className: "bg-[#FF453A]/10 text-[#D32F2F] text-[11px] px-2 py-0.5 rounded border border-[#FF453A]/20" }, "심사 불가")
+                    ) : isDiffWinner ? (
+                      /* @__PURE__ */ React.createElement("span", { className: "bg-[#F59E0B]/10 text-[#B45309] text-[11px] px-2.5 py-0.5 rounded-full font-semibold border border-[#F59E0B]/30" }, 
+                        `낙찰사 변경 (+\u0025${pct.toFixed(1)})`
+                      )
+                    ) : (
+                      /* @__PURE__ */ React.createElement("span", { className: "bg-zinc-150 text-zinc-600 text-[11px] px-2 py-0.5 rounded-full border border-zinc-250" }, "동일낙찰자 (변동없음)")
+                    )
+                  )
+                );
+              }))
+            )
+          )
+        )
+      )
+  ));
+}
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(/* @__PURE__ */ React.createElement(App, null));
+
+    </script>
+</body>
+</html>
