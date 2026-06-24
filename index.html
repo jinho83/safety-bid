@@ -59,7 +59,7 @@
   return cfg.defaultPoints ?? 0;
 };
 function App() {
-  const [contracts, setContracts] = useState(INITIAL_CONTRACTS), [selectedId, setSelectedId] = useState(INITIAL_CONTRACTS[0]?.id || ""), [searchQuery, setSearchQuery] = useState(""), [sortConfig, setSortConfig] = useState({ key: "rank", direction: "asc" }), [dbSortConfig, setDbSortConfig] = useState({ key: "id", direction: "asc" }), [isModalOpen, setIsModalOpen] = useState(false), [expandedTypes, setExpandedTypes] = useState({}),
+  const [contracts, setContracts] = useState(INITIAL_CONTRACTS), [selectedId, setSelectedId] = useState(INITIAL_CONTRACTS[0]?.id || ""), [searchQuery, setSearchQuery] = useState(""), [sortConfig, setSortConfig] = useState({ key: "price", direction: "asc" }), [dbSortConfig, setDbSortConfig] = useState({ key: "id", direction: "asc" }), [isModalOpen, setIsModalOpen] = useState(false), [expandedTypes, setExpandedTypes] = useState({}),
   [safetyConfig, setSafetyConfig] = useState({ rules: [{ minScore: 38, points: 2 }], defaultPoints: 0, targetGrades: ["SH1", "SA1", "SH2", "SA2"] }),
   [safetyConfigEditing, setSafetyConfigEditing] = useState(false),
   [safetyConfigDraft, setSafetyConfigDraft] = useState(null),
@@ -150,6 +150,10 @@ function App() {
       const { key, direction } = sortConfig2, isAsc = direction === "asc";
       if (key === "rank")
         return isAsc ? a.rank - b.rank : b.rank - a.rank;
+      if (key === "price") {
+        if (a.price === null && b.price !== null) return 1;
+        if (a.price !== null && b.price === null) return -1;
+      }
       let valA, valB;
       return key === "bidder" ? (valA = a.id, valB = b.id) : key === "price" ? (valA = a.price, valB = b.price) : key === "safetyGrade" ? (valA = a.safetyGrade, valB = b.safetyGrade) : key === "safetyEval" ? (valA = a.safetyEvalScore !== null && a.safetyEvalScore !== undefined ? a.safetyEvalScore : -999, valB = b.safetyEvalScore !== null && b.safetyEvalScore !== undefined ? b.safetyEvalScore : -999) : key === "safety" ? (valA = a.safetyScore, valB = b.safetyScore) : key === "priceScore" ? (valA = a.priceScore, valB = b.priceScore) : key === "totalScore" && (valA = a.totalScore, valB = b.totalScore), valA < valB ? isAsc ? -1 : 1 : valA > valB ? isAsc ? 1 : -1 : a.rank - b.rank;
     });
@@ -1023,7 +1027,7 @@ function App() {
               /* @__PURE__ */ React.createElement("table", { className: "w-full text-[13px] text-left border-collapse min-w-[850px]" },
                 /* @__PURE__ */ React.createElement("thead", null,
                   /* @__PURE__ */ React.createElement("tr", { className: "bg-[#eef4f8] text-zinc-755 border-b-2 border-zinc-350 sticky top-0 z-10 whitespace-nowrap" },
-                    getHeaderStyleAndIndicator("rank", "순위", "center"),
+                    getHeaderStyleAndIndicator("rank", "No.", "center"),
                     getHeaderStyleAndIndicator("bidder", "입찰 업체", "left"),
                     /* @__PURE__ */ React.createElement("th", {
                       className: `p-4 font-bold text-right min-w-[175px] cursor-pointer hover:bg-[#05507D]/10 hover:text-[#05507D] transition select-none text-[13px] whitespace-nowrap ${sortConfig.key === "price" ? "text-[#05507D] font-extrabold bg-[#05507D]/15 border-b-2 border-b-[#05507D]" : "text-zinc-700"}`,
