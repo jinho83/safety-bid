@@ -25212,7 +25212,7 @@
 };
 function App() {
   const [contracts, setContracts] = useState(INITIAL_CONTRACTS), [selectedId, setSelectedId] = useState(INITIAL_CONTRACTS[0]?.id || ""), [searchQuery, setSearchQuery] = useState(""), [sortConfig, setSortConfig] = useState({ key: "rank", direction: "asc" }), [dbSortConfig, setDbSortConfig] = useState({ key: "id", direction: "asc" }), [activeTab, setActiveTab] = useState("simulation"), [expandedTypes, setExpandedTypes] = useState({}),
-  [safetyConfig, setSafetyConfig] = useState({ rules: [{ minScore: 38, points: 2 }], defaultPoints: 0, targetGrades: ["SH1", "SA1"] }),
+  [safetyConfig, setSafetyConfig] = useState({ rules: [{ minScore: 38, points: 2 }], defaultPoints: 0, targetGrades: ["SH1", "SA1", "SH2", "SA2"] }),
   [safetyConfigEditing, setSafetyConfigEditing] = useState(false),
   [safetyConfigDraft, setSafetyConfigDraft] = useState(null),
   [selectedWorkTypes, setSelectedWorkTypes] = useState(() => {
@@ -25463,7 +25463,7 @@ function App() {
     setDbSortConfig({ key: "id", direction: "asc" });
     setActiveTab("simulation");
     setExpandedTypes({});
-    setSafetyConfig({ rules: [{ minScore: 38, points: 2 }], defaultPoints: 0, targetGrades: ["SH1", "SA1"] });
+    setSafetyConfig({ rules: [{ minScore: 38, points: 2 }], defaultPoints: 0, targetGrades: ["SH1", "SA1", "SH2", "SA2"] });
     setSafetyConfigEditing(false);
     setSafetyConfigDraft(null);
     const initialTypes = {};
