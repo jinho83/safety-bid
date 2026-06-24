@@ -25218,7 +25218,9 @@ function App() {
   [selectedWorkTypes, setSelectedWorkTypes] = useState(() => {
     const initialTypes = {};
     INITIAL_CONTRACTS.forEach(c => {
-      if (c.type) initialTypes[c.type] = true;
+      if (c.type) {
+        initialTypes[c.type] = (c.type === "토공(건축)" || c.type === "철근콘크리트(건축)" || c.type === "토공/철콘(토목)");
+      }
     });
     return initialTypes;
   }),
@@ -25466,7 +25468,9 @@ function App() {
     setSafetyConfigDraft(null);
     const initialTypes = {};
     INITIAL_CONTRACTS.forEach(c => {
-      if (c.type) initialTypes[c.type] = true;
+      if (c.type) {
+        initialTypes[c.type] = (c.type === "토공(건축)" || c.type === "철근콘크리트(건축)" || c.type === "토공/철콘(토목)");
+      }
     });
     setSelectedWorkTypes(initialTypes);
   }, handleSortRequest = (key) => {
