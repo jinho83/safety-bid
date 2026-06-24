@@ -137,7 +137,11 @@ function App() {
         isOverBudget,
         isBelowRef
       };
-    }), rankSorted = [...scoredBids].sort((a, b) => b.totalScore !== a.totalScore ? b.totalScore - a.totalScore : a.price - b.price), bidsWithRank = scoredBids.map((b) => {
+    }), rankSorted = [...scoredBids].sort((a, b) => {
+      if (a.price === null && b.price !== null) return 1;
+      if (a.price !== null && b.price === null) return -1;
+      return a.price - b.price;
+    }), bidsWithRank = scoredBids.map((b) => {
       const rankIndex = rankSorted.findIndex((r) => r.id === b.id);
       return {
         ...b,
