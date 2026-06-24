@@ -1070,7 +1070,7 @@ function App() {
                       className: `border-b border-zinc-200/80 transition hover:bg-zinc-50/80 ${isWinner ? "bg-emerald-50/60 hover:bg-emerald-100/70 border-l-4 border-l-[#10B981]" : ""}`
                     },
                       /* @__PURE__ */ React.createElement("td", { className: `p-4 text-center font-bold ${isWinner ? "text-emerald-700 font-extrabold" : "text-zinc-500"}` }, 
-                        isWinner ? "🏆 1" : b.rank
+                        isWinner ? `🏆 ${b.rank}` : b.rank
                       ),
                       /* @__PURE__ */ React.createElement("td", { className: `p-4 text-left font-semibold ${isWinner ? "text-emerald-900 font-bold" : "text-zinc-800"}` }, 
                         b.companyName,
