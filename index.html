@@ -25199,7 +25199,8 @@
 ], getSafetyScore = (safetyGrade, safetyEvalScore, safetyConfig) => {
   const normalized = (safetyGrade || "").trim().toUpperCase();
   const isValid = !normalized.includes("만료");
-  const isTargetGrade = normalized === "SH1" || normalized === "SA1";
+  const targetGrades = safetyConfig?.targetGrades || ["SH1", "SA1"];
+  const isTargetGrade = targetGrades.includes(normalized);
   if (!isValid || !isTargetGrade) return 0;
   const cfg = safetyConfig || { rules: [{ minScore: 38, points: 2 }] };
   // 규칙을 minScore 내림차순 정렬 후 첫 번째 충족 규칙 반환
@@ -25211,7 +25212,7 @@
 };
 function App() {
   const [contracts, setContracts] = useState(INITIAL_CONTRACTS), [selectedId, setSelectedId] = useState(INITIAL_CONTRACTS[0]?.id || ""), [searchQuery, setSearchQuery] = useState(""), [sortConfig, setSortConfig] = useState({ key: "rank", direction: "asc" }), [dbSortConfig, setDbSortConfig] = useState({ key: "id", direction: "asc" }), [activeTab, setActiveTab] = useState("simulation"), [expandedTypes, setExpandedTypes] = useState({}),
-  [safetyConfig, setSafetyConfig] = useState({ rules: [{ minScore: 38, points: 2 }], defaultPoints: 0 }),
+  [safetyConfig, setSafetyConfig] = useState({ rules: [{ minScore: 38, points: 2 }], defaultPoints: 0, targetGrades: ["SH1", "SA1"] }),
   [safetyConfigEditing, setSafetyConfigEditing] = useState(false),
   [safetyConfigDraft, setSafetyConfigDraft] = useState(null),
   [selectedWorkTypes, setSelectedWorkTypes] = useState(() => {
@@ -25460,7 +25461,7 @@ function App() {
     setDbSortConfig({ key: "id", direction: "asc" });
     setActiveTab("simulation");
     setExpandedTypes({});
-    setSafetyConfig({ rules: [{ minScore: 38, points: 2 }], defaultPoints: 0 });
+    setSafetyConfig({ rules: [{ minScore: 38, points: 2 }], defaultPoints: 0, targetGrades: ["SH1", "SA1"] });
     setSafetyConfigEditing(false);
     setSafetyConfigDraft(null);
     const initialTypes = {};
@@ -25905,10 +25906,10 @@ function App() {
                         .sort((a, b) => b.minScore - a.minScore)
                         .map((rule, idx) =>
                           React.createElement("div", { key: idx, className: "flex items-center justify-between text-xs py-1 px-2 rounded bg-[#05507D]/5 border border-[#05507D]/10" },
-                            React.createElement("span", { className: "text-zinc-600" },
-                              `SH1/SA1 등급 + 수행도평가 ${rule.minScore}점 이상`
+                            React.createElement("span", { className: "text-zinc-600 text-left leading-normal" },
+                              `${(safetyConfig.targetGrades || ["SH1", "SA1"]).join("/")} 등급 + 수행도평가 ${rule.minScore}점 이상`
                             ),
-                            React.createElement("span", { className: "font-bold text-[#05507D]" }, `→ ${rule.points}점`)
+                            React.createElement("span", { className: "font-bold text-[#05507D] shrink-0" }, `→ ${rule.points}점`)
                           )
                         ),
                       React.createElement("div", { className: "flex items-center justify-between text-xs py-1 px-2 rounded bg-zinc-50 border border-zinc-100" },
@@ -25918,6 +25919,33 @@ function App() {
                     )
                   /* 편집 모드 */
                   : React.createElement("div", { className: "space-y-2" },
+                      /* 대상 등급 선택 */
+                      React.createElement("div", { className: "p-2.5 bg-zinc-50 rounded-lg border border-zinc-200 mb-3 space-y-1.5" },
+                        React.createElement("div", { className: "text-[11px] text-zinc-500 font-bold" }, "대상 등급 지정 (복수 선택 가능)"),
+                        React.createElement("div", { className: "flex flex-wrap gap-x-3.5 gap-y-1.5" },
+                          ["SH1", "SA1", "SH2", "SA2", "SH3", "SA3"].map(grade => {
+                            const isChecked = (safetyConfigDraft?.targetGrades || ["SH1", "SA1"]).includes(grade);
+                            return React.createElement("label", { key: grade, className: "flex items-center gap-1.5 text-[12px] text-zinc-700 cursor-pointer select-none font-medium" },
+                              React.createElement("input", {
+                                type: "checkbox",
+                                checked: isChecked,
+                                onChange: () => {
+                                  const next = JSON.parse(JSON.stringify(safetyConfigDraft));
+                                  if (!next.targetGrades) next.targetGrades = ["SH1", "SA1"];
+                                  if (isChecked) {
+                                    next.targetGrades = next.targetGrades.filter(g => g !== grade);
+                                  } else {
+                                    next.targetGrades.push(grade);
+                                  }
+                                  setSafetyConfigDraft(next);
+                                },
+                                className: "w-3.5 h-3.5 text-[#05507D] border-zinc-300 rounded focus:ring-[#05507D] cursor-pointer"
+                              }),
+                              grade
+                            );
+                          })
+                        )
+                      ),
                       /* 규칙 행 편집 */
                       React.createElement("div", { className: "text-[10px] text-zinc-400 font-semibold mb-1 grid gap-1", style: { gridTemplateColumns: "1fr 1fr auto" } },
                         React.createElement("span", null, "수행도평가 기준점수 (점 이상)"),
