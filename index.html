@@ -25642,62 +25642,62 @@ function App() {
     }, "종합 비교 대시보드 (추가비용)")
   ),
   /* @__PURE__ */ React.createElement("main", { className: "flex-1 overflow-hidden p-5 grid grid-cols-12 gap-5 min-h-0 bg-[#f4f5f7]" }, 
-    /* @__PURE__ */ React.createElement("section", { className: "col-span-12 lg:col-span-2 bg-[#054064] border border-[#043352] rounded-2xl p-4.5 flex flex-col h-full overflow-hidden shadow-sm" }, 
+    /* @__PURE__ */ React.createElement("section", { className: "col-span-12 lg:col-span-2 bg-[#0f172a] border border-slate-800 rounded-2xl p-4 flex flex-col h-full overflow-hidden shadow-xl" }, 
       /* @__PURE__ */ React.createElement("div", { className: "relative mb-4 shrink-0" }, 
-        /* @__PURE__ */ React.createElement(SearchIcon, { size: 16, className: "absolute left-4 top-3.5 text-blue-200/60" }), 
+        /* @__PURE__ */ React.createElement(SearchIcon, { size: 15, className: "absolute left-4 top-3.5 text-slate-500" }), 
         /* @__PURE__ */ React.createElement("input", {
           type: "text",
           placeholder: "계약번호 또는 업체명 검색...",
           value: searchQuery,
           onChange: (e) => setSearchQuery(e.target.value),
-          className: "w-full bg-[#0a4e77] border border-[#0c5c8c] rounded-lg pl-11 pr-10 py-2.5 text-[15px] text-white placeholder-blue-200/50 focus:outline-none focus:border-blue-400 focus:bg-[#0c5c8c] transition duration-200"
+          className: "w-full bg-slate-900/60 border border-slate-800 rounded-lg pl-10 pr-9 py-2.5 text-[13.5px] text-slate-200 placeholder-slate-500 focus:outline-none focus:border-blue-500/50 focus:bg-slate-900 transition duration-200"
         }),
         searchQuery && /* @__PURE__ */ React.createElement(
           "button",
           {
             onClick: () => setSearchQuery(""),
-            className: "absolute right-3.5 top-3.5 text-blue-200/60 hover:text-white transition-colors cursor-pointer focus:outline-none",
+            className: "absolute right-3.5 top-3.5 text-slate-500 hover:text-slate-350 transition-colors cursor-pointer focus:outline-none",
             title: "검색어 지우기"
           },
-          /* @__PURE__ */ React.createElement(XIcon, { size: 16 })
+          /* @__PURE__ */ React.createElement(XIcon, { size: 15 })
         )
       ), 
-      /* @__PURE__ */ React.createElement("div", { className: "flex justify-between items-center mb-1.5 text-[12px] shrink-0 px-1" },
-        /* @__PURE__ */ React.createElement("span", { className: "text-blue-200/80 font-semibold" }, "공종 목록"),
-        /* @__PURE__ */ React.createElement("div", { className: "flex gap-2" },
+      /* @__PURE__ */ React.createElement("div", { className: "flex justify-between items-center mb-1.5 text-[11px] shrink-0 px-1" },
+        /* @__PURE__ */ React.createElement("span", { className: "text-slate-400/90 font-bold uppercase tracking-wider text-[10px]" }, "공종 목록"),
+        /* @__PURE__ */ React.createElement("div", { className: "flex gap-1.5" },
           /* @__PURE__ */ React.createElement("button", {
             onClick: () => {
               const allExpanded = {};
               groupTypes.forEach(t => { allExpanded[t] = true; });
               setExpandedTypes(allExpanded);
             },
-            className: "text-blue-200 hover:text-white hover:underline font-semibold cursor-pointer"
-          }, "모두 펼치기"),
-          /* @__PURE__ */ React.createElement("span", { className: "text-blue-200/40" }, "|"),
+            className: "text-slate-400 hover:text-slate-200 font-semibold transition-colors cursor-pointer"
+          }, "펼치기"),
+          /* @__PURE__ */ React.createElement("span", { className: "text-slate-700" }, "|"),
           /* @__PURE__ */ React.createElement("button", {
             onClick: () => setExpandedTypes({}),
-            className: "text-blue-200/80 hover:text-white hover:underline font-semibold cursor-pointer"
-          }, "모두 접기")
+            className: "text-slate-400 hover:text-slate-200 font-semibold transition-colors cursor-pointer"
+          }, "접기")
         )
       ),
-      /* @__PURE__ */ React.createElement("div", { className: "flex justify-end items-center mb-3 text-[11px] shrink-0 px-1 gap-2 border-b border-blue-900/40 pb-2" },
+      /* @__PURE__ */ React.createElement("div", { className: "flex justify-end items-center mb-3 text-[10px] shrink-0 px-1 gap-1.5 border-b border-slate-800/80 pb-2" },
         /* @__PURE__ */ React.createElement("button", {
           onClick: () => {
             const next = {};
             contracts.forEach(c => { if (c.type) next[c.type] = true; });
             setSelectedWorkTypes(next);
           },
-          className: "text-blue-200 hover:text-white hover:underline font-semibold cursor-pointer"
-        }, "공종 전체선택"),
-        /* @__PURE__ */ React.createElement("span", { className: "text-blue-200/40" }, "|"),
+          className: "text-slate-400 hover:text-slate-200 font-semibold transition-colors cursor-pointer"
+        }, "전체선택"),
+        /* @__PURE__ */ React.createElement("span", { className: "text-slate-700" }, "|"),
         /* @__PURE__ */ React.createElement("button", {
           onClick: () => {
             setSelectedWorkTypes({});
           },
-          className: "text-blue-200/80 hover:text-white hover:underline font-semibold cursor-pointer"
-        }, "공종 전체해제")
+          className: "text-slate-400 hover:text-slate-200 font-semibold transition-colors cursor-pointer"
+        }, "전체해제")
       ),
-      /* @__PURE__ */ React.createElement("div", { className: "flex-1 overflow-y-auto space-y-3 pr-1 scrollbar-thin scrollbar-thumb-[#0a4e77] scrollbar-track-transparent" }, 
+      /* @__PURE__ */ React.createElement("div", { className: "flex-1 overflow-y-auto space-y-2.5 pr-1 scrollbar-thin scrollbar-thumb-slate-800 scrollbar-track-transparent" }, 
         groupTypes.map((type) => {
           const items = groupedContracts[type] || [];
           if (items.length === 0) return null;
@@ -25707,14 +25707,14 @@ function App() {
           return /* @__PURE__ */ React.createElement("div", { key: type, className: "space-y-1.5" },
             /* @__PURE__ */ React.createElement("div", {
               onClick: () => toggleType(type),
-              className: `flex items-center justify-between p-2.5 rounded-lg bg-[#07527f] hover:bg-[#095f93] cursor-pointer select-none transition-colors border border-[#0a6296] ${isTypeChecked ? "" : "opacity-40 bg-transparent border-dashed border-white/20"}`
+              className: `flex items-center justify-between p-2.5 rounded-lg bg-slate-900/40 hover:bg-slate-800/50 cursor-pointer select-none transition-colors border border-slate-800/60 ${isTypeChecked ? "" : "opacity-45 bg-transparent border-dashed border-slate-800/50"}`
             },
               /* @__PURE__ */ React.createElement("div", { className: "flex items-center gap-2 min-w-0 flex-1" },
                 /* @__PURE__ */ React.createElement("span", {
                   onClick: (e) => { e.stopPropagation(); toggleType(type); },
-                  className: `text-blue-200/70 transition-transform duration-200 shrink-0 inline-block ${isExpanded ? "rotate-90" : ""}`
+                  className: `text-slate-500 transition-transform duration-200 shrink-0 inline-block ${isExpanded ? "rotate-90" : ""}`
                 },
-                  /* @__PURE__ */ React.createElement(ChevronRightIcon, { size: 14 })
+                  /* @__PURE__ */ React.createElement(ChevronRightIcon, { size: 13 })
                 ),
                 /* @__PURE__ */ React.createElement("input", {
                   type: "checkbox",
@@ -25726,11 +25726,11 @@ function App() {
                       [type]: !prev[type]
                     }));
                   },
-                  className: "w-3.5 h-3.5 text-[#05507D] border-blue-400 bg-blue-900 rounded focus:ring-blue-400 cursor-pointer shrink-0"
+                  className: "w-3.5 h-3.5 text-blue-600 border-slate-700 bg-slate-900 rounded focus:ring-blue-500 focus:ring-offset-slate-900 cursor-pointer shrink-0"
                 }),
-                /* @__PURE__ */ React.createElement("span", { className: "font-semibold text-white text-[13px] truncate" }, type)
+                /* @__PURE__ */ React.createElement("span", { className: "font-semibold text-slate-200 text-[12.5px] truncate" }, type)
               ),
-              /* @__PURE__ */ React.createElement("span", { className: "bg-[#05324e] text-blue-200 text-[11px] px-2 py-0.5 rounded-full font-bold font-mono border border-blue-800/40" }, items.length)
+              /* @__PURE__ */ React.createElement("span", { className: "bg-slate-950 text-slate-400 text-[10px] px-2 py-0.5 rounded-md font-mono border border-slate-800/80" }, items.length)
             ),
             isExpanded && /* @__PURE__ */ React.createElement("div", { className: `space-y-1.5 pl-2 transition-all duration-200 ${isTypeChecked ? "" : "opacity-40"}` },
               items.map((c) => {
@@ -25743,13 +25743,13 @@ function App() {
                       setActiveTab("simulation");
                     }
                   },
-                  className: `p-3 rounded-xl border transition-all duration-200 cursor-pointer text-left flex items-center justify-between text-[13px] ${isSelected ? "bg-[#095f93] border-[#0a6ea7] shadow-md" : "bg-[#06466d]/70 hover:bg-[#07527f] border-[#07527f]/60"}`
+                  className: `p-2.5 rounded-xl border transition-all duration-200 cursor-pointer text-left flex items-center justify-between text-[12.5px] ${isSelected ? "bg-blue-600/10 border-blue-500/30 text-blue-400 shadow-[0_0_12px_rgba(59,130,246,0.06)] font-semibold" : "bg-slate-900/10 hover:bg-slate-800/30 border-slate-800/40 text-slate-350"}`
                 },
                   /* @__PURE__ */ React.createElement("div", { className: "flex flex-col gap-0.5 min-w-0 flex-1 justify-center" }, 
-                    /* @__PURE__ */ React.createElement("h4", { className: `font-bold font-mono tracking-tight text-[14px] ${isSelected ? "text-white" : "text-blue-100/90"} truncate` }, c.id)
+                    /* @__PURE__ */ React.createElement("h4", { className: `font-bold font-mono tracking-tight text-[13px] ${isSelected ? "text-blue-450" : "text-slate-300"} truncate` }, c.id)
                   ),
                   /* @__PURE__ */ React.createElement("div", { className: "flex items-center shrink-0" }, 
-                    /* @__PURE__ */ React.createElement(ChevronRightIcon, { size: 14, className: isSelected ? "text-white" : "text-blue-200/50" })
+                    /* @__PURE__ */ React.createElement(ChevronRightIcon, { size: 13, className: isSelected ? "text-blue-400" : "text-slate-600" })
                   )
                 );
               })
