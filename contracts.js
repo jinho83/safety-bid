@@ -61,10 +61,10 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.8,
-      35.2,
-      null,
-      36.3,
+      38.2,
+      36.1,
+      37.5,
+      37.46,
       null,
       null
     ]
@@ -105,10 +105,10 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
+      35.1,
       null,
       null,
-      null,
-      37.6,
+      35.73,
       null,
       null,
       null
@@ -164,18 +164,18 @@ window.INITIAL_CONTRACTS = [
       "SA1"
     ],
     "safetyEvalScores": [
-      39.4,
+      39.43,
       37.6,
       null,
       null,
-      37.5,
-      38.2,
+      38.09,
+      38.12,
+      38.33,
       null,
       null,
-      null,
-      36.45,
-      38.8,
-      null,
+      38.82,
+      38.1,
+      36.5,
       null
     ]
   },
@@ -224,16 +224,16 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      36.12,
+      35.64,
       null,
+      39.02,
       40.0,
-      40.0,
-      37.44,
+      37.6,
       null,
-      30.4,
-      null,
-      null,
-      36.4
+      35.92,
+      39.9,
+      35.53,
+      36.93
     ]
   },
   {
@@ -289,16 +289,16 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      38.5,
-      38.8,
+      39.1,
+      38.1,
       null,
-      null,
-      null,
-      40.0,
+      37.95,
       null,
       40.0,
-      37.6,
-      38.2
+      null,
+      39.35,
+      37.35,
+      37.4
     ]
   },
   {
@@ -345,17 +345,17 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
+      38.95,
+      37.59,
       null,
-      40.0,
+      38.13,
       null,
-      37.6,
-      null,
-      40.0,
-      40.0,
-      36.7,
-      40.0,
-      38.8,
-      null
+      38.9,
+      38.69,
+      37.62,
+      37.73,
+      37.86,
+      35.57
     ]
   },
   {
@@ -439,17 +439,17 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      37.0,
-      37.18,
+      36.27,
+      36.19,
       38.2,
       null,
-      34.95,
-      35.2,
+      36.15,
+      36.55,
       null,
-      35.8,
+      35.6,
       null,
-      38.2,
-      null,
+      37.9,
+      40.0,
       null
     ]
   },
@@ -500,18 +500,18 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      34.75,
-      40.0,
-      37.9,
+      36.62,
+      39.09,
+      36.31,
+      null,
+      null,
+      32.6,
+      35.65,
+      36.39,
       null,
       null,
       null,
-      34.9,
-      38.2,
-      null,
-      null,
-      null,
-      38.8
+      38.7
     ]
   },
   {
@@ -561,16 +561,16 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.4,
+      38.87,
+      33.65,
+      35.6,
       null,
-      35.8,
-      null,
-      35.2,
-      37.18,
+      36.55,
+      36.19,
       38.2,
       null,
-      38.2,
-      34.95,
+      37.9,
+      36.15,
       null,
       null
     ]
@@ -607,12 +607,12 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.95,
+      35.58,
+      40.0,
       null,
-      null,
-      null,
+      34.5,
       37.0,
-      null,
+      40.0,
       null
     ]
   },
@@ -712,18 +712,18 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
-      34.9,
+      34.18,
+      40.0,
+      34.45,
       null,
-      32.5,
-      null,
-      36.4,
-      37.8,
-      37.0,
-      35.1,
+      38.13,
+      38.11,
+      38.37,
+      33.5,
       37.6,
-      38.2,
+      37.8,
       37.9,
-      32.8
+      33.27
     ]
   },
   {
@@ -762,11 +762,11 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
+      33.1,
       null,
       null,
       null,
-      null,
-      38.2,
+      36.39,
       null,
       null
     ]
@@ -818,18 +818,18 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      32.5,
-      36.4,
+      34.45,
+      38.13,
       37.6,
+      40.0,
+      33.5,
       null,
-      35.1,
-      null,
-      37.0,
+      38.37,
       37.9,
-      31.0,
-      38.2,
-      34.9,
-      37.8
+      34.44,
+      37.8,
+      34.18,
+      38.11
     ]
   },
   {
@@ -846,7 +846,7 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      38.92
+      37.75
     ]
   },
   {
@@ -894,15 +894,15 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       31.1,
-      38.2,
+      37.28,
+      39.0,
+      40.0,
+      37.73,
       null,
       null,
-      38.8,
-      null,
-      null,
-      39.4,
-      null,
-      37.6,
+      38.63,
+      37.77,
+      38.43,
       null
     ]
   },
@@ -959,20 +959,20 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
-      40.0,
-      37.7,
+      39.74,
+      37.61,
       null,
       null,
       null,
-      39.8,
-      40.0,
-      38.87,
-      40.0,
-      39.25,
-      null,
-      null,
+      38.48,
       38.8,
-      null
+      38.66,
+      40.0,
+      39.24,
+      null,
+      null,
+      34.83,
+      37.7
     ]
   },
   {
@@ -1016,15 +1016,15 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      34.9,
-      34.75,
+      35.65,
+      36.62,
       null,
-      40.0,
-      null,
-      null,
-      38.2,
+      39.09,
       null,
       null,
+      36.39,
+      33.0,
+      32.6,
       null
     ]
   },
@@ -1076,17 +1076,17 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      null,
+      37.4,
       null,
       36.6,
       null,
       null,
       null,
       null,
-      null,
-      null,
-      null,
-      null
+      36.0,
+      39.5,
+      36.4,
+      39.3
     ]
   },
   {
@@ -1124,14 +1124,14 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      27.9,
-      null,
-      35.17,
-      null,
-      37.0,
-      37.0,
-      36.4,
-      30.0
+      34.09,
+      35.5,
+      35.33,
+      35.85,
+      35.35,
+      35.8,
+      34.9,
+      34.24
     ]
   },
   {
@@ -1181,14 +1181,14 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      36.6,
+      36.85,
       null,
+      36.2,
+      36.88,
       null,
-      35.2,
+      37.28,
       null,
-      36.77,
-      null,
-      null,
+      32.6,
       null,
       null,
       null,
@@ -1242,17 +1242,17 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      36.3,
-      35.2,
-      null,
+      37.46,
+      36.1,
       null,
       37.5,
-      38.8,
-      37.68,
-      38.4,
+      35.83,
+      38.2,
+      37.12,
+      36.39,
       null,
       null,
-      36.95,
+      37.04,
       null
     ]
   },
@@ -1307,15 +1307,15 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       29.2,
-      38.8,
-      37.18,
-      35.2,
+      38.21,
+      36.19,
+      36.55,
       null,
+      33.65,
+      35.95,
       null,
-      34.0,
-      null,
-      38.2,
-      35.8,
+      37.9,
+      35.6,
       null,
       null,
       null
@@ -1356,9 +1356,9 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      34.9,
+      34.18,
       null,
-      36.05,
+      37.42,
       null
     ]
   },
@@ -1423,17 +1423,17 @@ window.INITIAL_CONTRACTS = [
       "SH4(만료)"
     ],
     "safetyEvalScores": [
+      38.2,
       36.4,
       null,
       null,
+      37.4,
+      null,
+      39.3,
       null,
       null,
       null,
-      null,
-      null,
-      null,
-      null,
-      null
+      36.0
     ]
   },
   {
@@ -1478,13 +1478,13 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       38.2,
-      37.18,
-      38.2,
-      34.95,
-      35.2,
-      35.8,
-      null,
-      38.8,
+      36.19,
+      37.9,
+      36.15,
+      36.55,
+      35.6,
+      40.0,
+      38.21,
       null,
       null
     ]
@@ -1536,18 +1536,18 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      null,
-      36.4,
-      38.42,
-      37.0,
-      null,
-      null,
-      null,
-      36.68,
+      34.63,
+      39.04,
+      37.5,
+      38.4,
       null,
       null,
-      38.2,
-      35.6
+      null,
+      36.14,
+      null,
+      null,
+      37.63,
+      35.73
     ]
   },
   {
@@ -1624,10 +1624,10 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      39.2,
+      38.71,
       null,
       null,
-      36.9,
+      38.3,
       null,
       null
     ]
@@ -1664,12 +1664,12 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      36.05,
+      37.42,
       null,
-      34.75,
-      null,
-      null,
-      34.9,
+      36.62,
+      32.6,
+      33.0,
+      35.65,
       null
     ]
   },
@@ -1722,16 +1722,16 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      null,
-      null,
-      null,
       36.4,
+      36.0,
+      null,
+      38.2,
       null,
       null,
-      null,
+      35.35,
       38.8,
-      null,
-      null
+      36.0,
+      37.4
     ]
   },
   {
@@ -1766,13 +1766,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      32.4,
+      31.2,
       30.4,
-      36.1,
-      34.25,
+      35.09,
+      32.26,
       null,
-      36.6,
-      null
+      35.25,
+      39.0
     ]
   },
   {
@@ -1813,12 +1813,12 @@ window.INITIAL_CONTRACTS = [
       "SH3(만료)"
     ],
     "safetyEvalScores": [
-      34.85,
-      34.9,
+      35.31,
+      37.87,
       null,
-      34.0,
+      31.75,
       null,
-      37.8,
+      37.93,
       null,
       null,
       null
@@ -1871,18 +1871,18 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      38.4,
-      38.92,
-      36.8,
+      38.95,
+      37.75,
+      37.01,
       null,
-      37.0,
+      37.47,
       null,
+      34.7,
       null,
-      null,
-      null,
-      37.0,
-      null,
-      39.4
+      34.7,
+      32.5,
+      37.37,
+      37.53
     ]
   },
   {
@@ -1917,13 +1917,13 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.6,
+      35.25,
       30.4,
-      36.1,
+      35.09,
       null,
-      32.4,
-      null,
-      34.25
+      31.2,
+      39.0,
+      32.26
     ]
   },
   {
@@ -1975,16 +1975,16 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      null,
+      39.3,
       null,
       40.0,
       null,
       null,
       null,
-      null,
-      null,
-      38.2,
-      null
+      37.4,
+      36.0,
+      38.0,
+      39.5
     ]
   },
   {
@@ -2034,15 +2034,15 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      34.9,
+      34.12,
+      36.6,
+      35.8,
       null,
-      40.0,
-      null,
-      null,
-      null,
-      38.2,
-      33.1,
-      null,
+      37.07,
+      34.4,
+      37.8,
+      36.37,
+      34.55,
       null,
       null,
       null
@@ -2099,14 +2099,14 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      38.2,
+      38.0,
       null,
-      null,
+      37.4,
       null,
       40.0,
       36.6,
-      null,
-      null
+      39.5,
+      36.0
     ]
   },
   {
@@ -2160,13 +2160,13 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      null,
+      36.0,
       null,
       null,
       36.6,
+      36.0,
       null,
-      null,
-      null,
+      35.35,
       38.8
     ]
   },
@@ -2207,7 +2207,7 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      36.4,
+      37.23,
       null
     ]
   },
@@ -2263,14 +2263,14 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
+      32.6,
+      null,
+      39.09,
+      35.65,
+      36.62,
       null,
       null,
-      40.0,
-      34.9,
-      34.75,
-      null,
-      null,
-      null
+      33.0
     ]
   },
   {
@@ -2309,11 +2309,11 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      37.6,
-      33.45,
+      38.13,
+      34.13,
       null,
       null,
-      null,
+      38.95,
       null,
       null
     ]
@@ -2368,17 +2368,17 @@ window.INITIAL_CONTRACTS = [
       "SH3(만료)"
     ],
     "safetyEvalScores": [
-      38.8,
-      39.25,
+      34.83,
+      39.24,
       37.2,
       null,
       40.0,
       null,
       null,
+      37.67,
       null,
-      null,
-      38.5,
-      40.0,
+      39.1,
+      39.74,
       null,
       null
     ]
@@ -2431,17 +2431,17 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       40.0,
-      36.12,
+      35.64,
       null,
-      40.0,
+      39.02,
       null,
       null,
-      null,
-      37.44,
+      39.9,
+      37.6,
       null,
       36.4,
-      null,
-      30.4
+      35.53,
+      35.92
     ]
   },
   {
@@ -2481,9 +2481,9 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
+      38.25,
       null,
-      null,
-      36.4,
+      38.41,
       null,
       null,
       null
@@ -2530,16 +2530,16 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.8,
-      37.0,
+      37.01,
+      37.47,
       null,
-      38.4,
-      null,
-      null,
+      38.95,
       null,
       null,
-      null,
-      38.92
+      34.7,
+      34.7,
+      37.37,
+      37.75
     ]
   },
   {
@@ -2630,14 +2630,14 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
-      37.68,
-      null,
-      39.7,
-      null,
+      37.12,
       37.9,
-      37.43,
+      39.03,
       null,
-      39.4
+      38.6,
+      37.56,
+      null,
+      39.2
     ]
   },
   {
@@ -2687,17 +2687,17 @@ window.INITIAL_CONTRACTS = [
       "SA3"
     ],
     "safetyEvalScores": [
-      36.12,
+      35.64,
       null,
       null,
-      37.44,
-      36.4,
+      37.6,
+      36.93,
+      39.9,
       null,
+      39.02,
       null,
-      40.0,
-      null,
-      null,
-      30.4,
+      35.53,
+      35.92,
       40.0
     ]
   },
@@ -2750,15 +2750,15 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       37.6,
       null,
-      38.2,
+      38.12,
       null,
-      38.8,
+      38.1,
       null,
+      38.33,
+      38.82,
+      36.5,
       null,
-      36.45,
-      null,
-      null,
-      37.5,
+      38.09,
       null
     ]
   },
@@ -2812,19 +2812,19 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
+      37.61,
+      null,
+      38.48,
+      null,
+      null,
+      38.8,
+      38.66,
+      null,
       37.7,
-      null,
-      39.8,
-      null,
-      null,
       40.0,
-      38.87,
+      39.24,
       null,
-      null,
-      40.0,
-      39.25,
-      null,
-      38.8
+      34.83
     ]
   },
   {
@@ -2875,15 +2875,15 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      38.2,
+      35.65,
       null,
       36.4,
+      39.3,
+      37.4,
+      null,
+      38.0,
+      36.0,
+      38.2,
       null,
       null
     ]
@@ -2936,12 +2936,12 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      null,
-      40.0,
-      38.2,
-      null,
-      null,
-      null,
+      36.6,
+      35.8,
+      37.8,
+      38.45,
+      34.4,
+      37.07,
       null,
       null,
       null,
@@ -2976,7 +2976,7 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      37.44,
+      37.6,
       null,
       null,
       null
@@ -3023,16 +3023,16 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      40.0,
+      39.1,
+      38.4,
+      39.28,
+      34.2,
       null,
+      37.0,
+      39.8,
+      36.0,
       null,
-      null,
-      null,
-      36.4,
-      40.0,
-      null,
-      null,
-      null
+      40.0
     ]
   },
   {
@@ -3076,14 +3076,14 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      37.18,
+      36.19,
       null,
+      37.9,
+      38.21,
+      35.6,
       38.2,
-      38.8,
-      35.8,
-      38.2,
-      34.95,
-      null,
+      36.15,
+      40.0,
       null,
       null
     ]
@@ -3129,16 +3129,16 @@ window.INITIAL_CONTRACTS = [
       "SH4(만료)"
     ],
     "safetyEvalScores": [
-      38.4,
+      38.95,
+      37.37,
+      37.47,
       null,
-      37.0,
+      37.75,
       null,
-      38.92,
-      null,
-      null,
-      39.4,
-      null,
-      37.0
+      34.7,
+      37.53,
+      34.7,
+      32.5
     ]
   },
   {
@@ -3185,16 +3185,16 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.4,
+      38.95,
       null,
       null,
-      37.0,
+      37.47,
+      37.37,
+      37.75,
+      34.7,
       null,
-      38.92,
-      null,
-      null,
-      37.0,
-      36.4,
+      32.5,
+      36.77,
       null
     ]
   },
@@ -3245,18 +3245,18 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
-      39.25,
+      39.24,
       37.6,
+      36.0,
+      38.8,
+      39.74,
+      38.99,
+      37.15,
+      38.66,
+      38.18,
+      31.3,
       null,
-      40.0,
-      40.0,
-      37.4,
-      null,
-      38.87,
-      38.4,
-      null,
-      null,
-      38.5
+      39.1
     ]
   },
   {
@@ -3309,19 +3309,19 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      38.98,
-      39.2,
+      38.62,
+      38.53,
       null,
       37.3,
       null,
       null,
       35.3,
-      34.1,
-      40.0,
+      35.33,
+      39.0,
       null,
-      37.5,
-      37.75,
-      37.3
+      38.72,
+      37.66,
+      35.95
     ]
   },
   {
@@ -3350,9 +3350,9 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      37.0,
-      null,
-      34.9,
+      38.12,
+      38.7,
+      37.87,
       null,
       null
     ]
@@ -3404,18 +3404,18 @@ window.INITIAL_CONTRACTS = [
       "SA1"
     ],
     "safetyEvalScores": [
-      35.05,
+      36.26,
+      39.7,
+      37.15,
+      38.3,
       null,
-      38.08,
-      36.9,
+      34.85,
+      38.71,
       null,
-      33.0,
-      39.2,
-      null,
-      39.16,
-      36.4,
-      40.0,
-      37.0
+      38.11,
+      37.73,
+      36.45,
+      37.07
     ]
   },
   {
@@ -3453,14 +3453,14 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      null,
-      35.17,
-      37.0,
-      27.9,
-      30.0,
-      36.4,
-      null,
-      37.0
+      35.85,
+      35.33,
+      35.35,
+      34.09,
+      34.24,
+      34.9,
+      35.5,
+      35.8
     ]
   },
   {
@@ -3504,8 +3504,8 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      34.9,
-      36.4
+      37.87,
+      36.75
     ]
   },
   {
@@ -3547,13 +3547,13 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      34.0,
+      35.95,
       null,
       null,
       null,
       29.2,
       null,
-      30.4,
+      35.4,
       null
     ]
   },
@@ -3604,18 +3604,18 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.8,
+      37.52,
       null,
-      36.3,
-      39.0,
+      37.01,
+      39.25,
+      37.4,
+      35.15,
+      37.93,
       null,
-      null,
-      null,
-      null,
-      37.6,
-      null,
-      null,
-      null
+      36.2,
+      36.0,
+      37.67,
+      36.0
     ]
   },
   {
@@ -3652,8 +3652,8 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      36.05,
-      34.9,
+      37.42,
+      34.18,
       null,
       null,
       null
@@ -3709,13 +3709,13 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
+      36.2,
       null,
+      37.28,
       null,
-      36.77,
+      36.88,
       null,
-      35.2,
-      null,
-      null,
+      32.6,
       null,
       null
     ]
@@ -3767,17 +3767,17 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.13,
+      37.15,
+      null,
+      32.0,
       null,
       null,
+      34.43,
+      null,
+      36.7,
       null,
       null,
-      36.4,
-      null,
-      37.6,
-      null,
-      null,
-      38.8,
+      37.94,
       null
     ]
   },
@@ -3813,13 +3813,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      36.1,
-      34.25,
+      35.09,
+      32.26,
       30.4,
-      32.4,
-      36.6,
+      31.2,
+      35.25,
       null,
-      null
+      39.0
     ]
   },
   {
@@ -3869,18 +3869,18 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      38.4,
-      38.2,
+      38.18,
+      38.5,
       40.0,
-      39.8,
+      38.48,
       null,
-      40.0,
+      39.74,
       null,
       37.6,
-      null,
-      null,
       37.7,
-      37.4
+      36.0,
+      37.61,
+      38.99
     ]
   },
   {
@@ -3933,19 +3933,19 @@ window.INITIAL_CONTRACTS = [
       "SA1"
     ],
     "safetyEvalScores": [
-      39.4,
-      null,
-      38.0,
-      40.0,
-      null,
-      null,
-      40.0,
+      36.03,
+      36.9,
+      37.66,
+      38.8,
       null,
       null,
-      38.4,
+      38.07,
       null,
-      40.0,
-      null
+      null,
+      37.53,
+      null,
+      39.8,
+      36.4
     ]
   },
   {
@@ -4021,20 +4021,20 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      36.77,
-      38.8,
+      37.28,
+      37.94,
       null,
       null,
+      39.6,
       null,
-      null,
-      36.45,
+      38.82,
       40.0,
-      36.8,
-      38.2,
-      39.4,
-      40.0,
+      38.05,
+      37.4,
+      38.77,
+      39.67,
       null,
-      37.5,
+      38.09,
       null
     ]
   },
@@ -4091,20 +4091,20 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      39.7,
-      36.45,
-      null,
+      38.83,
+      38.82,
+      38.33,
       40.0,
       null,
       40.0,
-      40.0,
-      40.0,
+      39.35,
+      38.73,
       null,
-      39.4,
-      40.0,
+      39.43,
+      37.6,
       null,
-      36.8,
-      37.6
+      38.05,
+      37.35
     ]
   },
   {
@@ -4121,7 +4121,7 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      35.6
+      35.73
     ]
   },
   {
@@ -4150,11 +4150,11 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      null,
-      null,
-      37.0,
-      36.4,
-      35.17
+      35.85,
+      35.5,
+      35.35,
+      34.9,
+      35.33
     ]
   },
   {
@@ -4208,18 +4208,18 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      39.25,
+      39.24,
       null,
-      38.5,
-      37.4,
-      38.87,
+      39.1,
+      38.99,
+      38.66,
       null,
-      37.7,
-      40.0,
+      37.61,
+      38.8,
+      37.67,
       null,
       null,
-      null,
-      38.8
+      34.83
     ]
   },
   {
@@ -4236,7 +4236,7 @@ window.INITIAL_CONTRACTS = [
       "SH3(만료)"
     ],
     "safetyEvalScores": [
-      34.8
+      36.46
     ]
   },
   {
@@ -4253,7 +4253,7 @@ window.INITIAL_CONTRACTS = [
       "SH3(만료)"
     ],
     "safetyEvalScores": [
-      34.8
+      36.46
     ]
   },
   {
@@ -4304,17 +4304,17 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      40.0,
+      38.8,
       null,
       null,
       null,
-      38.87,
-      38.5,
+      38.66,
+      39.1,
       null,
-      39.25,
-      37.7,
-      37.4,
-      38.8
+      39.24,
+      37.61,
+      38.99,
+      34.83
     ]
   },
   {
@@ -4397,16 +4397,16 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      40.0,
+      38.8,
+      38.25,
+      38.6,
       null,
-      null,
-      null,
-      38.08,
-      null,
-      40.0,
-      null,
-      38.3,
-      null,
+      38.37,
+      35.08,
+      38.16,
+      36.2,
+      35.52,
+      33.25,
       null,
       34.0
     ]
@@ -4439,7 +4439,7 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      36.4,
+      37.23,
       null,
       null
     ]
@@ -4488,17 +4488,17 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
+      37.67,
+      38.8,
       null,
-      40.0,
-      null,
-      38.87,
-      37.4,
+      38.66,
+      38.99,
       null,
       null,
-      39.25,
-      38.5,
-      37.7,
-      38.8
+      39.24,
+      39.1,
+      37.61,
+      34.83
     ]
   },
   {
@@ -4549,16 +4549,16 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       36.4,
-      39.0,
-      null,
-      null,
-      null,
-      null,
-      36.3,
+      39.25,
+      37.67,
+      37.93,
+      35.63,
+      37.6,
+      37.01,
       36.6,
+      35.5,
       null,
-      null,
-      null,
+      36.7,
       null
     ]
   },
@@ -4609,17 +4609,17 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      36.8,
-      38.92,
+      37.01,
+      37.75,
       null,
+      34.7,
+      38.95,
       null,
-      38.4,
+      37.53,
+      32.5,
+      37.37,
       null,
-      39.4,
-      37.0,
-      null,
-      null,
-      null,
+      34.7,
       null
     ]
   },
@@ -4643,9 +4643,9 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      37.0,
-      null,
-      null
+      35.8,
+      35.85,
+      35.5
     ]
   },
   {
@@ -4680,13 +4680,13 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.3,
+      37.46,
       null,
       null,
       null,
       null,
       null,
-      null
+      34.1
     ]
   },
   {
@@ -4703,7 +4703,7 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.05
+      37.42
     ]
   },
   {
@@ -4750,13 +4750,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      36.6,
+      36.85,
       null,
       null,
-      36.77,
+      37.28,
       null,
-      null,
-      35.2,
+      36.2,
+      36.88,
       null,
       null,
       null,
@@ -4844,16 +4844,16 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      38.42,
-      36.4,
-      37.0,
-      35.6,
-      38.8,
+      37.5,
+      39.04,
+      38.4,
+      35.73,
+      38.21,
       null,
       null,
       null,
       null,
-      36.68,
+      36.14,
       null
     ]
   },
@@ -4884,10 +4884,10 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      37.6,
-      35.6,
-      null,
-      37.9
+      38.5,
+      36.14,
+      34.2,
+      36.6
     ]
   },
   {
@@ -4937,18 +4937,18 @@ window.INITIAL_CONTRACTS = [
       "SH4(만료)"
     ],
     "safetyEvalScores": [
-      36.8,
-      39.4,
-      37.0,
+      37.01,
+      37.53,
+      37.47,
+      37.37,
+      34.7,
+      null,
+      34.7,
+      null,
+      36.77,
       null,
       null,
-      null,
-      null,
-      null,
-      36.4,
-      null,
-      null,
-      37.0
+      32.5
     ]
   },
   {
@@ -5071,7 +5071,7 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      40.0
+      36.16
     ]
   },
   {
@@ -5122,16 +5122,16 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       37.3,
-      37.6,
+      35.63,
       null,
+      36.2,
+      38.1,
       null,
-      40.0,
+      39.0,
       null,
-      40.0,
-      null,
-      38.98,
-      37.5,
-      39.2,
+      38.62,
+      38.72,
+      38.53,
       35.3
     ]
   },
@@ -5182,16 +5182,16 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      36.3,
+      37.01,
+      37.93,
+      37.67,
+      39.25,
       null,
-      null,
-      39.0,
-      null,
-      null,
-      null,
-      null,
-      null,
+      35.15,
+      38.0,
+      36.0,
       37.6,
+      36.2,
       null,
       null
     ]
@@ -5231,13 +5231,13 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      39.7,
-      35.75,
-      37.68,
-      37.43,
-      null,
-      39.4,
-      38.35,
+      39.03,
+      36.91,
+      37.12,
+      37.56,
+      37.9,
+      37.2,
+      38.76,
       null
     ]
   },
@@ -5282,16 +5282,16 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
-      39.25,
+      39.24,
       null,
-      null,
-      37.7,
+      37.15,
+      37.61,
       40.0,
       null,
-      null,
-      38.87,
-      null,
-      38.5
+      37.7,
+      38.66,
+      36.0,
+      39.1
     ]
   },
   {
@@ -5308,7 +5308,7 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      40.0
+      39.09
     ]
   },
   {
@@ -5339,7 +5339,7 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      37.44,
+      37.6,
       null,
       null
     ]
@@ -5358,7 +5358,7 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      38.92
+      37.75
     ]
   },
   {
@@ -5419,15 +5419,15 @@ window.INITIAL_CONTRACTS = [
       "SA3"
     ],
     "safetyEvalScores": [
-      35.6,
+      36.85,
       null,
-      null,
-      36.4,
+      34.5,
+      36.35,
       37.0,
+      33.95,
       null,
-      null,
+      38.42,
       40.0,
-      null,
       null
     ]
   },
@@ -5478,18 +5478,18 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      36.3,
+      37.46,
       null,
-      36.95,
-      null,
-      null,
-      39.7,
-      37.68,
-      38.8,
+      37.04,
       null,
       null,
+      39.03,
+      37.12,
+      38.2,
       null,
-      35.2
+      null,
+      null,
+      36.1
     ]
   },
   {
@@ -5539,17 +5539,17 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
+      37.4,
+      39.3,
       null,
-      null,
-      null,
-      null,
+      36.0,
       null,
       36.6,
       40.0,
       null,
       null,
       null,
-      null,
+      35.65,
       null
     ]
   },
@@ -5600,17 +5600,17 @@ window.INITIAL_CONTRACTS = [
       "SA1"
     ],
     "safetyEvalScores": [
-      38.0,
-      40.0,
-      40.0,
+      37.66,
+      38.07,
+      38.8,
+      36.9,
       null,
       null,
       null,
+      37.53,
+      39.8,
       null,
-      38.4,
-      40.0,
-      null,
-      null,
+      36.4,
       null
     ]
   },
@@ -5703,13 +5703,13 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      34.0,
-      34.9,
-      34.85,
+      31.75,
+      37.87,
+      35.31,
       null,
       null,
       null,
-      36.4
+      36.75
     ]
   },
   {
@@ -5759,18 +5759,18 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      36.12,
-      37.44,
+      35.64,
+      37.6,
       null,
       null,
       40.0,
+      39.9,
+      35.53,
+      39.02,
       null,
       null,
-      40.0,
-      null,
-      null,
-      36.4,
-      null
+      36.93,
+      30.8
     ]
   },
   {
@@ -5787,7 +5787,7 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.42
+      37.5
     ]
   },
   {
@@ -5837,16 +5837,16 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
+      38.33,
+      38.17,
+      38.82,
       null,
-      40.0,
-      36.45,
+      38.1,
       null,
-      38.8,
-      null,
-      38.2,
-      39.7,
-      null,
-      40.0,
+      38.12,
+      38.83,
+      37.95,
+      37.6,
       null,
       40.0
     ]
@@ -5881,7 +5881,7 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      37.44
+      37.6
     ]
   },
   {
@@ -5931,15 +5931,15 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      38.2,
-      40.0,
+      37.8,
+      35.8,
       null,
-      34.9,
+      34.12,
+      38.45,
+      37.07,
       null,
       null,
-      null,
-      null,
-      null,
+      35.4,
       null,
       null,
       null
@@ -5994,13 +5994,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      34.25,
-      32.4,
-      36.1,
+      32.26,
+      31.2,
+      35.09,
       30.4,
-      36.6,
+      35.25,
       null,
-      null
+      39.0
     ]
   },
   {
@@ -6038,13 +6038,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      34.9,
+      37.87,
       null,
-      34.85,
+      35.31,
       null,
-      34.0,
+      31.75,
       null,
-      36.4,
+      36.75,
       null
     ]
   },
@@ -6091,13 +6091,13 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      36.77,
-      36.6,
+      37.28,
+      36.85,
       null,
       null,
-      35.2,
+      36.88,
       null,
-      null,
+      32.6,
       null
     ]
   },
@@ -6151,16 +6151,16 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      39.25,
-      35.77,
+      39.24,
+      36.67,
+      31.3,
       null,
-      null,
-      null,
-      null,
+      37.67,
+      37.7,
+      39.74,
       40.0,
-      40.0,
-      null,
-      38.87,
+      36.0,
+      38.66,
       null,
       40.0,
       null
@@ -6214,17 +6214,17 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       40.0,
-      40.0,
-      40.0,
+      37.73,
+      37.59,
       null,
+      35.57,
+      38.9,
       null,
-      40.0,
+      38.69,
+      38.95,
+      37.62,
       null,
-      40.0,
-      null,
-      36.7,
-      null,
-      38.8
+      37.86
     ]
   },
   {
@@ -6275,15 +6275,15 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      35.6,
-      null,
+      36.85,
+      34.5,
       37.0,
       null,
       null,
-      36.4,
-      37.6,
+      36.35,
+      34.7,
       null,
-      null,
+      40.0,
       null,
       null
     ]
@@ -6333,16 +6333,16 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       40.0,
-      40.0,
+      39.02,
+      39.9,
+      37.6,
       null,
-      37.44,
+      36.93,
+      35.53,
       null,
-      36.4,
-      null,
-      null,
-      30.4,
-      null,
-      36.12
+      35.92,
+      30.8,
+      35.64
     ]
   },
   {
@@ -6437,13 +6437,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      30.4,
+      35.4,
       null,
       null,
-      34.0,
-      37.0,
-      38.4,
-      null,
+      35.95,
+      37.47,
+      38.95,
+      34.7,
       null
     ]
   },
@@ -6495,16 +6495,16 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      37.3,
+      35.95,
       null,
       null,
       null,
-      40.0,
+      39.73,
       null,
-      40.0,
+      39.4,
+      33.0,
       null,
-      null,
-      40.0,
+      39.09,
       null
     ]
   },
@@ -6546,15 +6546,15 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      36.9,
-      35.05,
+      38.3,
+      36.26,
       null,
-      39.2,
+      38.71,
       null,
-      33.0,
-      36.4,
+      34.85,
+      37.73,
       null,
-      40.0
+      36.45
     ]
   },
   {
@@ -6591,11 +6591,11 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      36.4,
+      36.75,
       null,
       null,
       null,
-      34.9
+      37.87
     ]
   },
   {
@@ -6631,12 +6631,12 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      36.4,
+      36.75,
       null,
       null,
       null,
       null,
-      34.9
+      37.87
     ]
   },
   {
@@ -6687,17 +6687,17 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      40.0,
-      38.5,
+      38.8,
+      39.1,
       null,
-      39.25,
-      38.87,
+      39.24,
+      38.66,
       null,
       null,
       null,
-      37.7,
-      37.4,
-      38.8
+      37.61,
+      38.99,
+      34.83
     ]
   },
   {
@@ -6735,8 +6735,8 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      34.0,
-      30.4,
+      35.95,
+      35.4,
       null,
       null,
       null,
@@ -6819,7 +6819,7 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      35.2,
+      36.55,
       null
     ]
   },
@@ -6870,18 +6870,18 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
-      null,
-      36.4,
-      38.2,
-      31.0,
-      37.9,
+      40.0,
+      38.13,
       37.8,
-      37.0,
-      35.1,
+      34.44,
+      37.9,
+      38.11,
+      38.37,
+      33.5,
       null,
       37.6,
-      34.9,
-      32.8
+      34.18,
+      33.27
     ]
   },
   {
@@ -6925,14 +6925,14 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      39.25,
+      39.24,
       null,
-      38.8,
-      37.4,
+      34.83,
+      38.99,
       null,
-      39.8,
+      38.48,
       40.0,
-      40.0,
+      39.74,
       null,
       null
     ]
@@ -6984,13 +6984,13 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      37.4,
+      38.99,
       null,
-      39.25,
-      38.8,
+      39.24,
+      34.83,
       40.0,
-      40.0,
-      39.8,
+      39.74,
+      38.48,
       null
     ]
   },
@@ -7026,9 +7026,9 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      34.85,
-      34.0,
-      34.9,
+      35.31,
+      31.75,
+      37.87,
       null,
       null,
       null,
@@ -7084,16 +7084,16 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       40.0,
       null,
-      37.44,
-      36.4,
-      36.12,
+      37.6,
+      36.93,
+      35.64,
       null,
+      33.0,
       null,
+      39.02,
+      35.53,
       null,
-      40.0,
-      null,
-      null,
-      null
+      30.8
     ]
   },
   {
@@ -7140,17 +7140,17 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      34.95,
-      38.8,
+      36.15,
+      38.21,
+      37.9,
+      36.19,
+      null,
+      null,
+      35.6,
       38.2,
-      37.18,
+      33.65,
       null,
-      null,
-      35.8,
-      38.2,
-      null,
-      null,
-      null
+      40.0
     ]
   },
   {
@@ -7194,14 +7194,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      38.98,
-      39.2,
-      40.0,
+      38.62,
+      38.53,
+      38.1,
+      35.95,
       37.3,
-      37.3,
-      null,
-      null,
-      40.0,
+      37.42,
+      36.2,
+      39.0,
       null,
       null
     ]
@@ -7220,7 +7220,7 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      40.0
+      38.66
     ]
   },
   {
@@ -7271,16 +7271,16 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      35.6,
+      36.85,
+      38.42,
+      null,
+      34.5,
+      36.35,
+      null,
+      33.95,
       40.0,
-      null,
-      null,
-      36.4,
-      null,
-      null,
-      null,
       37.0,
-      null,
+      39.15,
       null
     ]
   },
@@ -7335,18 +7335,18 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       37.3,
-      37.6,
-      34.1,
-      39.2,
+      35.63,
+      35.33,
+      38.53,
       null,
-      38.98,
-      37.75,
+      38.62,
+      37.66,
       null,
-      40.0,
+      39.0,
       null,
-      37.3,
-      null,
-      37.5
+      35.95,
+      37.42,
+      38.72
     ]
   },
   {
@@ -7378,7 +7378,7 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      37.44,
+      37.6,
       null
     ]
   },
@@ -7429,14 +7429,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.6,
+      36.85,
+      null,
+      32.6,
+      null,
+      36.88,
       null,
       null,
-      null,
-      35.2,
-      null,
-      null,
-      null,
+      36.2,
       null,
       null,
       null,
@@ -7490,18 +7490,18 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.6,
+      36.85,
       null,
       null,
-      36.77,
-      null,
-      null,
-      null,
-      null,
+      37.28,
+      36.2,
       null,
       null,
       null,
-      null
+      null,
+      null,
+      null,
+      32.6
     ]
   },
   {
@@ -7566,19 +7566,19 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      38.08,
+      37.15,
       null,
       null,
       null,
       null,
       null,
-      40.0,
-      39.2,
+      36.45,
+      38.71,
       null,
-      37.0,
-      36.9,
-      33.0,
-      36.4,
+      37.07,
+      38.3,
+      34.85,
+      37.73,
       null,
       null,
       null,
@@ -7626,16 +7626,16 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      34.95,
-      37.18,
+      36.15,
+      36.19,
       38.2,
-      38.8,
-      null,
-      35.8,
+      38.21,
+      40.0,
+      35.6,
       null,
       29.2,
-      null,
-      38.2
+      33.65,
+      37.9
     ]
   },
   {
@@ -7690,14 +7690,14 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      38.5,
-      38.2,
+      39.1,
+      37.4,
+      39.6,
+      37.95,
       null,
-      null,
-      null,
-      38.8,
-      40.0,
-      38.8,
+      38.1,
+      39.35,
+      37.94,
       null,
       null,
       null
@@ -7750,14 +7750,14 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      38.5,
-      38.2,
-      38.8,
-      38.8,
+      39.1,
+      37.4,
+      38.1,
+      37.94,
+      39.6,
+      39.35,
       null,
-      40.0,
-      null,
-      null,
+      37.95,
       null,
       null,
       null,
@@ -7811,17 +7811,17 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      null,
-      38.8,
-      38.8,
-      null,
-      null,
-      38.2,
+      39.6,
+      37.94,
+      38.1,
       null,
       null,
-      40.0,
+      37.4,
+      37.95,
       null,
-      38.5,
+      39.35,
+      null,
+      39.1,
       null
     ]
   },
@@ -7866,16 +7866,16 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.2,
+      36.39,
       null,
       null,
-      40.0,
-      37.9,
+      39.09,
+      36.31,
+      32.6,
       null,
-      null,
-      34.9,
-      38.8,
-      null
+      35.65,
+      38.7,
+      33.0
     ]
   },
   {
@@ -7926,17 +7926,17 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      36.4,
+      36.93,
       null,
-      37.44,
-      36.12,
-      null,
+      37.6,
+      35.64,
+      35.53,
       40.0,
+      30.8,
+      39.02,
       null,
-      40.0,
       null,
-      null,
-      null
+      33.0
     ]
   },
   {
@@ -7977,15 +7977,15 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.6,
-      37.0,
+      35.3,
+      38.12,
       null,
-      37.6,
+      37.5,
+      38.7,
+      38.95,
       null,
       null,
-      null,
-      null,
-      34.9
+      37.87
     ]
   },
   {
@@ -8029,16 +8029,16 @@ window.INITIAL_CONTRACTS = [
       "SH4(만료)"
     ],
     "safetyEvalScores": [
-      36.3,
+      37.01,
       null,
-      34.8,
+      34.57,
       null,
-      38.07,
-      35.6,
-      36.85,
+      37.91,
+      36.14,
+      36.98,
       null,
       null,
-      null
+      36.4
     ]
   },
   {
@@ -8076,14 +8076,14 @@ window.INITIAL_CONTRACTS = [
       "SA1"
     ],
     "safetyEvalScores": [
-      40.0,
+      37.44,
+      37.77,
       null,
       null,
+      38.8,
       null,
-      40.0,
       null,
-      null,
-      null
+      36.4
     ]
   },
   {
@@ -8124,14 +8124,14 @@ window.INITIAL_CONTRACTS = [
       "SH3(만료)"
     ],
     "safetyEvalScores": [
-      39.25,
+      39.24,
       null,
-      38.5,
+      39.1,
       null,
       40.0,
       37.2,
       null,
-      38.8,
+      34.83,
       null
     ]
   },
@@ -8167,13 +8167,13 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      37.68,
-      39.4,
+      37.12,
+      39.2,
       null,
-      37.43,
+      37.56,
       null,
-      38.35,
-      35.75
+      38.76,
+      36.91
     ]
   },
   {
@@ -8220,17 +8220,17 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      38.0,
-      40.0,
+      37.66,
+      37.77,
       null,
-      40.0,
+      38.07,
       null,
       null,
-      null,
-      36.95,
+      33.8,
+      38.13,
       37.97,
-      null,
-      38.4
+      36.4,
+      37.53
     ]
   },
   {
@@ -8280,17 +8280,17 @@ window.INITIAL_CONTRACTS = [
       "SH3(만료)"
     ],
     "safetyEvalScores": [
-      null,
-      38.8,
-      38.13,
-      null,
-      null,
+      32.0,
+      37.94,
+      37.15,
       null,
       null,
       null,
       null,
       null,
-      37.6,
+      null,
+      null,
+      36.7,
       null
     ]
   },
@@ -8335,16 +8335,16 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
-      31.0,
-      36.4,
-      null,
-      null,
-      32.5,
-      null,
-      null,
-      37.0,
-      34.9,
-      32.8
+      34.44,
+      38.13,
+      34.28,
+      28.95,
+      34.45,
+      40.0,
+      35.6,
+      38.37,
+      34.18,
+      33.27
     ]
   },
   {
@@ -8371,9 +8371,9 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      38.8,
+      39.3,
       null,
-      39.0
+      37.93
     ]
   },
   {
@@ -8420,17 +8420,17 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      36.8,
-      38.4,
+      37.01,
+      38.95,
+      34.7,
       null,
       null,
+      32.5,
       null,
-      37.0,
+      37.75,
+      37.53,
       null,
-      38.92,
-      39.4,
-      null,
-      36.4
+      36.77
     ]
   },
   {
@@ -8478,16 +8478,16 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       40.0,
+      37.87,
+      37.77,
+      37.28,
+      38.43,
       38.5,
-      null,
-      38.2,
-      37.6,
-      37.6,
-      null,
-      36.4,
+      40.0,
+      38.53,
       null,
       null,
-      37.55
+      37.82
     ]
   },
   {
@@ -8580,12 +8580,12 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      36.77,
+      37.28,
       null,
       null,
       null,
-      36.4,
-      null,
+      36.1,
+      36.2,
       null
     ]
   },
@@ -8624,14 +8624,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      37.18,
+      36.19,
       null,
       38.2,
-      35.8,
-      34.95,
-      38.2,
+      35.6,
+      36.15,
+      37.9,
       null,
-      38.8
+      38.21
     ]
   },
   {
@@ -8678,17 +8678,17 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      34.95,
+      36.15,
       null,
-      37.18,
+      36.19,
       null,
       38.2,
       29.2,
       null,
-      38.2,
-      35.8,
+      37.9,
+      35.6,
       null,
-      38.8
+      38.21
     ]
   },
   {
@@ -8739,11 +8739,11 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      38.13,
+      37.15,
       null,
+      32.0,
       null,
-      null,
-      36.4,
+      34.43,
       null,
       null,
       null,
@@ -8786,11 +8786,11 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       39.4,
       null,
-      36.45,
+      38.82,
+      38.33,
       null,
       null,
-      null,
-      40.0
+      39.35
     ]
   },
   {
@@ -8848,18 +8848,18 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       37.6,
       40.0,
-      40.0,
-      40.0,
-      39.7,
+      38.73,
+      37.6,
+      38.83,
+      38.33,
       null,
+      39.43,
+      38.05,
+      39.35,
+      38.77,
       null,
-      39.4,
-      36.8,
-      40.0,
-      39.4,
-      null,
-      38.2,
-      36.45
+      38.12,
+      38.82
     ]
   },
   {
@@ -8915,19 +8915,19 @@ window.INITIAL_CONTRACTS = [
       "SH3(만료)"
     ],
     "safetyEvalScores": [
-      32.0,
+      32.9,
       null,
-      36.4,
-      null,
-      37.5,
-      null,
-      40.0,
+      37.4,
+      37.95,
+      38.09,
+      38.33,
       37.6,
-      36.8,
-      36.45,
-      null,
-      39.7,
-      40.0,
+      37.6,
+      38.05,
+      38.82,
+      36.5,
+      38.83,
+      39.35,
       null
     ]
   },
@@ -8981,19 +8981,19 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      38.98,
-      37.5,
+      38.62,
+      38.72,
       null,
       null,
-      null,
-      null,
+      37.42,
+      36.2,
       35.3,
       null,
-      40.0,
-      39.2,
+      39.0,
+      38.53,
       null,
-      40.0,
-      37.75
+      38.1,
+      37.66
     ]
   },
   {
@@ -9028,12 +9028,12 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      30.4,
+      35.4,
       null,
       null,
       null,
       null,
-      null,
+      38.2,
       29.2
     ]
   },
@@ -9070,12 +9070,12 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      30.4,
+      35.4,
       null,
       null,
       null,
       29.2,
-      null
+      38.2
     ]
   },
   {
@@ -9167,12 +9167,12 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      39.25,
-      38.4,
+      39.24,
+      38.18,
       null,
-      37.4,
+      38.99,
       null,
-      38.5,
+      39.1,
       40.0
     ]
   },
@@ -9211,14 +9211,14 @@ window.INITIAL_CONTRACTS = [
       "SA2"
     ],
     "safetyEvalScores": [
-      36.0,
+      36.4,
       37.2,
       null,
-      38.5,
+      39.1,
       null,
       null,
       null,
-      40.0
+      39.7
     ]
   },
   {
@@ -9268,18 +9268,18 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      34.0,
-      36.4,
-      37.6,
+      35.1,
+      38.53,
+      38.5,
       null,
-      38.2,
-      37.6,
-      null,
-      null,
+      37.28,
+      38.43,
       null,
       null,
       null,
-      null
+      null,
+      null,
+      37.77
     ]
   },
   {
@@ -9329,17 +9329,17 @@ window.INITIAL_CONTRACTS = [
       "SH4(만료)"
     ],
     "safetyEvalScores": [
-      36.4,
+      36.35,
       null,
-      36.95,
-      null,
-      null,
+      35.58,
+      34.5,
       40.0,
+      38.42,
       null,
-      null,
-      null,
+      39.15,
+      40.0,
       37.0,
-      37.6,
+      34.7,
       null
     ]
   },
@@ -9376,11 +9376,11 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       30.4,
-      36.6,
-      32.4,
-      34.25,
-      36.1,
-      null,
+      35.25,
+      31.2,
+      32.26,
+      35.09,
+      39.0,
       null
     ]
   },
@@ -9416,13 +9416,13 @@ window.INITIAL_CONTRACTS = [
       "SA1"
     ],
     "safetyEvalScores": [
-      36.45,
+      38.82,
       null,
-      null,
+      38.33,
       null,
       39.4,
       null,
-      40.0
+      39.35
     ]
   },
   {
@@ -9461,13 +9461,13 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       38.2,
-      35.8,
-      34.95,
-      38.2,
+      35.6,
+      36.15,
+      37.9,
       null,
       29.2,
-      38.8,
-      37.18
+      38.21,
+      36.19
     ]
   },
   {
@@ -9517,15 +9517,15 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
+      35.4,
       null,
-      null,
-      40.0,
-      null,
-      34.9,
-      null,
-      null,
-      38.2,
-      null,
+      35.8,
+      38.45,
+      34.12,
+      36.6,
+      34.4,
+      37.8,
+      34.55,
       null,
       null,
       null
@@ -9570,14 +9570,14 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      39.2,
-      35.05,
-      40.0,
-      33.0,
+      38.71,
+      36.26,
+      36.45,
+      34.85,
       null,
-      36.9,
+      38.3,
       null,
-      37.0
+      37.07
     ]
   },
   {
@@ -9693,18 +9693,18 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      null,
-      34.3,
-      null,
-      null,
-      null,
       40.0,
+      36.48,
       null,
       null,
-      36.4,
-      38.5,
+      null,
+      39.7,
+      null,
+      null,
+      36.27,
+      39.1,
       37.2,
-      37.4
+      38.99
     ]
   },
   {
@@ -9754,18 +9754,18 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      40.0,
-      38.8,
+      39.09,
+      38.7,
       null,
       null,
-      38.2,
-      34.75,
-      37.9,
+      36.39,
+      36.62,
+      36.31,
+      32.6,
       null,
       null,
       null,
-      null,
-      null
+      33.0
     ]
   },
   {
@@ -9817,16 +9817,16 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
+      35.5,
       null,
+      34.2,
       null,
-      31.6,
+      32.3,
       null,
+      35.73,
       null,
-      null,
-      37.6,
-      null,
-      null,
-      36.3
+      32.45,
+      33.84
     ]
   },
   {
@@ -9864,14 +9864,14 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      null,
-      35.17,
-      null,
-      37.0,
-      27.9,
-      30.0,
-      37.0,
-      36.4
+      35.5,
+      35.33,
+      35.85,
+      35.8,
+      34.09,
+      34.24,
+      35.35,
+      34.9
     ]
   },
   {
@@ -9907,11 +9907,11 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       30.4,
-      36.6,
-      36.1,
-      34.25,
-      32.4,
-      null,
+      35.25,
+      35.09,
+      32.26,
+      31.2,
+      39.0,
       null
     ]
   },
@@ -9963,17 +9963,17 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       40.0,
-      38.5,
+      37.87,
       null,
-      38.2,
+      37.28,
+      37.77,
       null,
       null,
+      37.73,
+      38.43,
       null,
-      38.8,
-      37.6,
-      null,
-      34.0,
-      37.6
+      35.1,
+      38.5
     ]
   },
   {
@@ -9990,7 +9990,7 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.3
+      37.01
     ]
   },
   {
@@ -10034,9 +10034,9 @@ window.INITIAL_CONTRACTS = [
       "SH3(만료)"
     ],
     "safetyEvalScores": [
-      34.85,
-      36.4,
-      34.9,
+      35.31,
+      36.75,
+      37.87,
       null,
       null,
       null,
@@ -10093,18 +10093,18 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
+      37.42,
       null,
-      null,
-      null,
+      36.2,
       null,
       35.3,
-      37.5,
+      38.72,
       null,
-      40.0,
-      40.0,
-      39.2,
+      38.1,
+      39.0,
+      38.53,
       null,
-      37.75
+      37.66
     ]
   },
   {
@@ -10162,7 +10162,7 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      null,
+      33.9,
       null,
       null,
       null
@@ -10215,18 +10215,18 @@ window.INITIAL_CONTRACTS = [
       "SH5"
     ],
     "safetyEvalScores": [
-      40.0,
+      38.42,
+      39.15,
       null,
+      36.35,
+      34.5,
       null,
-      36.4,
-      null,
-      null,
-      36.95,
-      37.6,
+      35.58,
+      34.7,
       37.0,
       null,
-      null,
-      null
+      40.0,
+      40.0
     ]
   },
   {
@@ -10294,16 +10294,16 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      38.0,
-      35.1,
+      37.66,
+      34.8,
       null,
-      40.0,
-      40.0,
+      38.8,
+      37.77,
       null,
-      null,
-      39.0,
-      null,
-      40.0,
+      33.8,
+      37.3,
+      36.9,
+      37.44,
       37.97
     ]
   },
@@ -10345,13 +10345,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      37.18,
+      36.19,
       null,
       null,
       29.2,
       38.2,
-      38.2,
-      35.8,
+      37.9,
+      35.6,
       null,
       null
     ]
@@ -10403,18 +10403,18 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.2,
-      40.0,
+      37.8,
+      35.8,
+      34.4,
+      36.6,
+      38.45,
+      null,
+      34.55,
+      35.4,
       null,
       null,
       null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      33.1
+      36.37
     ]
   },
   {
@@ -10464,16 +10464,16 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
+      40.0,
       null,
+      36.85,
+      35.58,
       null,
-      35.6,
-      36.95,
-      null,
-      null,
-      null,
+      39.15,
+      40.0,
       37.0,
       null,
-      40.0,
+      38.42,
       null,
       null
     ]
@@ -10522,16 +10522,16 @@ window.INITIAL_CONTRACTS = [
       "SH4(만료)"
     ],
     "safetyEvalScores": [
-      36.95,
-      null,
-      null,
+      35.58,
+      34.5,
       null,
       40.0,
+      38.42,
       null,
-      null,
-      null,
+      39.15,
+      40.0,
       37.0,
-      37.6,
+      34.7,
       null
     ]
   },
@@ -10583,14 +10583,14 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       37.0,
-      35.6,
+      36.85,
+      38.42,
+      35.58,
+      null,
+      null,
       40.0,
-      36.95,
-      null,
-      null,
-      null,
-      null,
-      null,
+      40.0,
+      39.15,
       null,
       null,
       null
@@ -10644,17 +10644,17 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      39.2,
-      34.1,
-      40.0,
+      38.53,
+      35.33,
+      39.0,
       null,
       35.3,
-      38.98,
+      38.62,
+      37.42,
+      38.72,
       null,
-      37.5,
-      null,
-      37.6,
-      40.0
+      35.63,
+      38.1
     ]
   },
   {
@@ -10702,14 +10702,14 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      37.0,
+      37.07,
+      39.7,
+      37.15,
+      36.26,
+      38.11,
       null,
-      38.08,
-      35.05,
-      39.16,
       null,
-      null,
-      40.0,
+      36.45,
       null,
       null
     ]
@@ -10758,16 +10758,16 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      37.6,
-      38.8,
+      38.43,
+      37.73,
       null,
+      37.77,
+      40.0,
       null,
+      38.5,
       null,
-      null,
-      37.6,
-      null,
-      null,
-      38.2,
+      39.0,
+      37.28,
       null
     ]
   },
@@ -10819,15 +10819,15 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       40.0,
+      37.4,
+      35.35,
+      35.65,
+      38.0,
       null,
       null,
-      null,
+      39.3,
       38.2,
-      null,
-      null,
-      null,
-      36.4,
-      null,
+      39.5,
       null,
       38.8
     ]
@@ -10865,7 +10865,7 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      37.44,
+      37.6,
       null
     ]
   },
@@ -10903,7 +10903,7 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       36.4,
       null,
-      null,
+      40.0,
       null,
       null,
       null,
@@ -10957,17 +10957,17 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      35.8,
-      null,
+      35.6,
+      40.0,
       null,
       38.2,
       null,
       null,
-      34.95,
+      36.15,
       29.2,
       null,
-      37.18,
-      38.4,
+      36.19,
+      38.87,
       null
     ]
   },
@@ -11003,13 +11003,13 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      27.9,
-      null,
-      35.17,
-      37.0,
-      37.0,
-      null,
-      36.4
+      34.09,
+      35.85,
+      35.33,
+      35.35,
+      35.8,
+      35.5,
+      34.9
     ]
   },
   {
@@ -11053,16 +11053,16 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      38.8,
-      35.2,
+      38.2,
+      36.1,
       null,
       null,
-      37.68,
+      37.12,
       null,
-      36.3,
-      null,
-      null,
-      38.4
+      37.46,
+      37.5,
+      38.85,
+      36.39
     ]
   },
   {
@@ -11115,14 +11115,14 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      34.3,
+      36.48,
       null,
       null,
       null,
       null,
       null,
       40.0,
-      null,
+      38.5,
       null
     ]
   },
@@ -11175,13 +11175,13 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.4,
+      36.75,
       null,
       null,
       null,
       null,
       null,
-      34.9
+      37.87
     ]
   },
   {
@@ -11198,7 +11198,7 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      null
+      40.0
     ]
   },
   {
@@ -11250,13 +11250,13 @@ window.INITIAL_CONTRACTS = [
       "SA1"
     ],
     "safetyEvalScores": [
-      33.0,
-      36.9,
-      40.0,
+      34.85,
+      38.3,
+      36.45,
       null,
       null,
-      39.2,
-      37.0
+      38.71,
+      37.07
     ]
   },
   {
@@ -11306,14 +11306,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      39.8,
-      40.0,
-      36.0,
-      null,
-      null,
+      38.48,
+      39.7,
       36.4,
       null,
+      40.0,
+      36.27,
       null,
+      38.5,
       null,
       null,
       null,
@@ -11356,13 +11356,13 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      36.4,
+      38.41,
       null,
-      38.08,
+      38.37,
       34.0,
-      null,
-      null,
-      40.0
+      38.25,
+      38.6,
+      38.8
     ]
   },
   {
@@ -11409,17 +11409,17 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.08,
+      38.37,
       null,
-      36.4,
-      null,
-      null,
-      40.0,
+      38.41,
       null,
       null,
-      38.0,
+      38.16,
       null,
-      null
+      null,
+      37.21,
+      33.25,
+      38.6
     ]
   },
   {
@@ -11510,13 +11510,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      31.6,
+      34.2,
+      35.1,
+      34.03,
+      35.73,
       null,
       null,
-      37.6,
-      null,
-      null,
-      36.3,
+      33.84,
       null,
       null,
       null,
@@ -11573,13 +11573,13 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      35.8,
-      38.4,
-      37.18,
-      null,
+      35.6,
+      38.87,
+      36.19,
+      40.0,
       38.2,
       null,
-      34.95,
+      36.15,
       29.2,
       null,
       null
@@ -11599,7 +11599,7 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      null
+      38.2
     ]
   },
   {
@@ -11616,7 +11616,7 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      35.6
+      35.73
     ]
   },
   {
@@ -11633,7 +11633,7 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      35.6
+      35.73
     ]
   },
   {
@@ -11717,17 +11717,17 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      34.75,
+      36.62,
       null,
-      38.2,
+      36.39,
+      null,
+      35.5,
       null,
       null,
-      null,
-      null,
-      34.9,
-      38.8,
-      37.9,
-      40.0,
+      35.65,
+      38.7,
+      36.31,
+      39.09,
       null
     ]
   },
@@ -11759,7 +11759,7 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      34.9,
+      34.18,
       null,
       null
     ]
@@ -11811,18 +11811,18 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      40.0,
-      38.0,
-      null,
+      38.8,
+      37.66,
+      37.77,
       null,
       35.2,
-      null,
+      37.3,
       37.97,
-      40.0,
+      39.8,
       null,
       null,
       null,
-      38.4
+      37.53
     ]
   },
   {
@@ -11872,18 +11872,18 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      35.6,
-      37.6,
-      null,
-      36.4,
-      null,
+      36.85,
+      34.7,
+      34.5,
+      36.35,
+      40.0,
       null,
       null,
       null,
       37.0,
+      40.0,
       null,
-      null,
-      36.95
+      35.58
     ]
   },
   {
@@ -11930,17 +11930,17 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.4,
+      38.95,
+      37.37,
+      null,
+      37.75,
+      37.53,
       null,
       null,
-      38.92,
-      39.4,
       null,
-      null,
-      null,
-      36.4,
-      null,
-      36.8
+      36.77,
+      34.7,
+      37.01
     ]
   },
   {
@@ -11981,15 +11981,15 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      37.18,
+      36.19,
       null,
+      37.9,
       38.2,
-      38.2,
       null,
       null,
-      null,
-      35.8,
-      34.95
+      40.0,
+      35.6,
+      36.15
     ]
   },
   {
@@ -12036,16 +12036,16 @@ window.INITIAL_CONTRACTS = [
       "SA4(만료)"
     ],
     "safetyEvalScores": [
+      37.37,
+      37.01,
+      38.95,
       null,
-      36.8,
-      38.4,
-      null,
-      38.92,
-      39.4,
-      37.0,
+      37.75,
+      37.53,
+      37.47,
       null,
       null,
-      36.4,
+      36.77,
       null
     ]
   },
@@ -12096,17 +12096,17 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      37.6,
-      null,
+      34.7,
+      39.15,
       37.0,
-      36.4,
+      36.35,
       null,
       null,
-      35.6,
+      36.85,
       null,
+      38.42,
       40.0,
-      null,
-      null,
+      40.0,
       null
     ]
   },
@@ -12154,17 +12154,17 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      37.68,
-      39.4,
+      37.12,
+      39.2,
       null,
-      39.7,
-      37.9,
-      39.4,
+      39.03,
+      38.6,
+      37.2,
       null,
-      35.75,
-      37.43,
+      36.91,
+      37.56,
       null,
-      38.35
+      38.76
     ]
   },
   {
@@ -12217,18 +12217,18 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      38.98,
-      34.1,
+      38.62,
+      35.33,
       null,
+      36.2,
+      38.53,
+      38.72,
       null,
-      39.2,
-      37.5,
+      37.66,
       null,
-      37.75,
+      35.63,
       null,
-      37.6,
-      null,
-      40.0,
+      39.0,
       null
     ]
   },
@@ -12317,12 +12317,12 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      null,
-      39.0,
-      null,
-      null,
-      36.3,
-      null,
+      37.6,
+      39.25,
+      38.0,
+      39.05,
+      37.01,
+      35.5,
       null,
       36.4,
       null,
@@ -12375,17 +12375,17 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      36.12,
+      35.64,
+      null,
+      39.02,
+      37.6,
+      null,
+      36.93,
       null,
       40.0,
-      37.44,
-      null,
-      36.4,
-      null,
-      40.0,
-      30.4,
-      null,
-      null
+      35.92,
+      35.53,
+      39.9
     ]
   },
   {
@@ -12466,11 +12466,11 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      40.0,
+      37.47,
       null,
-      32.0,
-      38.2,
-      36.8,
+      32.9,
+      37.4,
+      38.05,
       null
     ]
   },
@@ -12488,7 +12488,7 @@ window.INITIAL_CONTRACTS = [
       "SA1"
     ],
     "safetyEvalScores": [
-      37.43
+      37.56
     ]
   },
   {
@@ -12538,16 +12538,16 @@ window.INITIAL_CONTRACTS = [
       "SH4(만료)"
     ],
     "safetyEvalScores": [
-      38.5,
-      38.2,
-      null,
-      null,
-      null,
-      38.8,
-      null,
-      37.6,
+      37.87,
+      37.28,
       40.0,
-      39.4,
+      null,
+      null,
+      37.73,
+      null,
+      38.5,
+      40.0,
+      38.63,
       null,
       null
     ]
@@ -12599,18 +12599,18 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
+      37.75,
+      null,
+      36.31,
+      32.6,
       null,
       null,
-      37.9,
+      36.62,
       null,
-      null,
-      null,
-      34.75,
-      null,
-      38.8,
-      40.0,
-      34.9,
-      null
+      38.7,
+      39.09,
+      35.65,
+      33.0
     ]
   },
   {
@@ -12661,16 +12661,16 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
+      33.8,
+      null,
+      37.53,
+      37.77,
       null,
       null,
-      38.4,
-      40.0,
       null,
-      null,
-      null,
-      40.0,
-      40.0,
-      40.0,
+      38.8,
+      38.07,
+      38.8,
       null
     ]
   },
@@ -12709,14 +12709,14 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      35.17,
-      null,
-      37.0,
-      30.0,
-      27.9,
-      37.0,
-      null,
-      36.4
+      35.33,
+      35.85,
+      35.35,
+      34.24,
+      34.09,
+      35.8,
+      35.5,
+      34.9
     ]
   },
   {
@@ -12754,14 +12754,14 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      36.6,
-      34.25,
+      35.25,
+      32.26,
       30.4,
       null,
-      null,
-      32.4,
-      36.1,
-      null
+      39.0,
+      31.2,
+      35.09,
+      33.5
     ]
   },
   {
@@ -12811,17 +12811,17 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      40.0,
-      34.1,
+      39.0,
+      35.33,
       null,
+      36.2,
+      38.72,
       null,
-      37.5,
+      35.63,
       null,
-      37.6,
+      37.66,
       null,
-      37.75,
-      null,
-      39.2,
+      38.53,
       null
     ]
   },
@@ -12886,17 +12886,17 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
+      37.5,
+      37.46,
+      38.2,
+      36.1,
+      36.39,
       null,
-      36.3,
-      38.8,
-      35.2,
-      38.4,
+      38.85,
       null,
+      37.12,
       null,
-      null,
-      37.68,
-      null,
-      36.95
+      37.04
     ]
   },
   {
@@ -12949,17 +12949,17 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      null,
-      38.5,
-      null,
+      36.0,
+      39.1,
+      37.7,
       40.0,
-      38.87,
+      38.66,
+      37.15,
+      39.74,
       null,
-      40.0,
+      39.24,
       null,
-      39.25,
-      null,
-      35.77,
+      36.67,
       37.6,
       null
     ]
@@ -13008,15 +13008,15 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      37.0,
+      36.27,
       null,
-      37.18,
-      35.2,
+      36.19,
+      36.55,
+      37.9,
+      36.15,
       38.2,
-      34.95,
-      38.2,
-      35.8,
-      null,
+      35.6,
+      40.0,
       null,
       null
     ]
@@ -13072,18 +13072,18 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      40.0,
-      37.6,
-      40.0,
+      37.59,
+      38.13,
+      37.73,
       36.4,
       null,
+      35.57,
       null,
       null,
       null,
-      null,
+      38.69,
       40.0,
-      40.0,
-      38.8
+      37.86
     ]
   },
   {
@@ -13115,7 +13115,7 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      36.5,
+      35.7,
       null
     ]
   },
@@ -13166,18 +13166,18 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      38.2,
+      37.82,
+      35.08,
+      36.8,
+      36.2,
       null,
       null,
+      38.25,
+      null,
+      33.25,
       null,
       null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      40.0
+      38.16
     ]
   },
   {
@@ -13227,17 +13227,17 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
+      36.8,
+      null,
+      35.08,
+      37.82,
+      36.2,
       null,
       null,
       null,
-      38.2,
+      38.16,
       null,
-      null,
-      null,
-      null,
-      40.0,
-      null,
-      38.08,
+      38.37,
       null
     ]
   },
@@ -13276,14 +13276,14 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      null,
-      null,
-      35.17,
-      27.9,
-      37.0,
-      30.0,
-      36.4,
-      37.0
+      35.85,
+      35.5,
+      35.33,
+      34.09,
+      35.8,
+      34.24,
+      34.9,
+      35.35
     ]
   },
   {
@@ -13318,9 +13318,9 @@ window.INITIAL_CONTRACTS = [
       "SH4(만료)"
     ],
     "safetyEvalScores": [
-      34.9,
+      37.87,
       null,
-      34.85,
+      35.31,
       null,
       null,
       null,
@@ -13371,17 +13371,17 @@ window.INITIAL_CONTRACTS = [
       "SA2"
     ],
     "safetyEvalScores": [
-      35.2,
+      36.1,
       null,
+      38.5,
       null,
+      36.39,
+      37.5,
       null,
-      38.4,
-      null,
-      null,
-      null,
-      36.95,
-      37.68,
-      38.8
+      38.85,
+      37.04,
+      37.12,
+      38.2
     ]
   },
   {
@@ -13431,17 +13431,17 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      38.2,
-      37.9,
+      36.39,
+      36.31,
       null,
-      34.75,
-      null,
-      null,
-      38.8,
-      40.0,
+      36.62,
       null,
       null,
+      38.7,
+      39.09,
       null,
+      null,
+      35.5,
       null
     ]
   },
@@ -13565,15 +13565,15 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      27.9,
-      30.0,
-      37.0,
-      37.0,
-      36.4,
+      34.09,
+      34.24,
+      35.35,
+      35.8,
+      34.9,
+      35.85,
       null,
-      null,
-      35.17,
-      null
+      35.33,
+      35.5
     ]
   },
   {
@@ -13623,18 +13623,18 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.08,
-      38.2,
+      38.37,
+      37.82,
+      null,
+      null,
+      36.2,
+      36.8,
+      null,
+      37.21,
       null,
       null,
       null,
-      null,
-      null,
-      38.0,
-      null,
-      null,
-      null,
-      null
+      38.25
     ]
   },
   {
@@ -13692,10 +13692,10 @@ window.INITIAL_CONTRACTS = [
       null,
       40.0,
       null,
+      38.0,
       38.2,
       36.4,
-      null,
-      null
+      35.65
     ]
   },
   {
@@ -13746,17 +13746,17 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      38.98,
+      38.62,
       null,
-      37.5,
-      34.1,
-      37.6,
+      38.72,
+      35.33,
+      35.63,
       null,
       null,
       37.3,
-      39.2,
-      null,
-      40.0
+      38.53,
+      37.42,
+      38.1
     ]
   },
   {
@@ -13840,17 +13840,17 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       40.0,
-      38.5,
+      37.87,
       null,
       null,
-      38.2,
+      37.28,
+      39.0,
       null,
       null,
+      37.77,
       null,
       null,
-      null,
-      null,
-      37.6
+      38.5
     ]
   },
   {
@@ -13900,18 +13900,18 @@ window.INITIAL_CONTRACTS = [
       "SH3(만료)"
     ],
     "safetyEvalScores": [
-      38.2,
+      37.82,
+      36.2,
       null,
       null,
+      36.8,
       null,
+      38.37,
+      38.25,
       null,
+      38.16,
       null,
-      38.08,
-      null,
-      null,
-      40.0,
-      null,
-      null
+      35.08
     ]
   },
   {
@@ -13963,16 +13963,16 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       35.3,
       null,
-      37.5,
+      38.72,
       null,
-      37.6,
-      39.2,
-      38.98,
+      35.63,
+      38.53,
+      38.62,
       null,
       37.3,
-      34.1,
-      40.0,
-      null
+      35.33,
+      39.0,
+      37.42
     ]
   },
   {
@@ -14009,7 +14009,7 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      37.44,
+      37.6,
       null,
       null,
       null,
@@ -14063,18 +14063,18 @@ window.INITIAL_CONTRACTS = [
       "SH4(만료)"
     ],
     "safetyEvalScores": [
-      39.4,
-      38.92,
-      36.8,
-      37.0,
-      38.4,
+      37.53,
+      37.75,
+      37.01,
+      32.5,
+      38.95,
+      37.37,
+      34.45,
       null,
+      37.47,
       null,
-      null,
-      37.0,
-      null,
-      36.4,
-      null
+      36.77,
+      34.7
     ]
   },
   {
@@ -14124,13 +14124,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.42,
+      37.5,
+      37.63,
+      36.14,
+      39.04,
+      null,
+      35.73,
       38.2,
-      36.68,
-      36.4,
-      null,
-      35.6,
-      null,
       null,
       null,
       null,
@@ -14226,13 +14226,13 @@ window.INITIAL_CONTRACTS = [
       "SH1(만료)"
     ],
     "safetyEvalScores": [
-      37.6,
+      38.13,
       null,
-      36.7,
-      40.0,
-      40.0,
+      37.62,
+      37.73,
+      37.59,
       null,
-      null,
+      38.95,
       null
     ]
   },
@@ -14289,20 +14289,20 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.3,
+      37.46,
+      null,
+      38.6,
+      null,
+      34.45,
       null,
       37.9,
       null,
       null,
+      39.2,
+      37.12,
       null,
-      null,
-      null,
-      null,
-      39.4,
-      37.68,
-      null,
-      38.8,
-      null
+      38.2,
+      33.9
     ]
   },
   {
@@ -14355,14 +14355,14 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      null,
-      null,
-      38.2,
-      null,
+      36.0,
+      39.3,
+      38.0,
+      35.35,
       null,
       40.0,
-      null,
-      null,
+      35.65,
+      37.4,
       38.8
     ]
   },
@@ -14401,14 +14401,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      null,
-      27.9,
-      37.0,
-      36.4,
-      37.0,
-      30.0,
-      null,
-      35.17
+      35.5,
+      34.09,
+      35.35,
+      34.9,
+      35.8,
+      34.24,
+      35.85,
+      35.33
     ]
   },
   {
@@ -14458,16 +14458,16 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      35.2,
-      35.8,
+      36.55,
+      35.6,
       null,
       null,
       38.2,
       null,
-      null,
-      38.2,
-      34.95,
-      37.18,
+      40.0,
+      37.9,
+      36.15,
+      36.19,
       29.2,
       null
     ]
@@ -14525,9 +14525,9 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      40.0,
+      37.77,
       null,
-      39.4,
+      36.03,
       null,
       null,
       null
@@ -14582,15 +14582,15 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       37.3,
       null,
-      34.1,
-      36.7,
-      37.6,
-      40.0,
+      35.33,
+      38.16,
+      35.63,
+      38.1,
       null,
-      38.98,
-      39.2,
-      37.5,
-      40.0,
+      38.62,
+      38.53,
+      38.72,
+      39.0,
       null
     ]
   },
@@ -14644,18 +14644,18 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.08,
+      38.37,
+      36.2,
+      null,
+      38.16,
+      38.25,
       null,
       null,
+      35.08,
+      37.21,
+      null,
+      37.82,
       40.0,
-      null,
-      null,
-      null,
-      null,
-      38.0,
-      null,
-      38.2,
-      null,
       null
     ]
   },
@@ -14691,7 +14691,7 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      36.4,
+      36.3,
       null,
       null,
       null,
@@ -14726,10 +14726,10 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.4,
-      34.85,
+      36.75,
+      35.31,
       null,
-      34.9,
+      37.87,
       null
     ]
   },
@@ -14779,15 +14779,15 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       38.2,
       null,
-      37.18,
-      34.95,
-      35.2,
+      36.19,
+      36.15,
+      36.55,
       null,
-      35.8,
+      35.6,
+      40.0,
+      37.9,
       null,
-      38.2,
-      null,
-      38.4
+      38.87
     ]
   },
   {
@@ -14837,18 +14837,18 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      36.4,
-      null,
-      36.12,
+      36.93,
+      35.53,
+      35.64,
+      33.0,
+      39.02,
       null,
       40.0,
       null,
-      40.0,
+      35.92,
       null,
-      30.4,
-      null,
-      null,
-      37.44
+      39.9,
+      37.6
     ]
   },
   {
@@ -14892,16 +14892,16 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      37.68,
+      37.12,
       null,
       null,
-      null,
-      35.2,
-      null,
-      38.4,
-      36.95,
-      36.3,
-      null
+      37.5,
+      36.1,
+      38.85,
+      36.39,
+      37.04,
+      37.46,
+      38.5
     ]
   },
   {
@@ -14954,18 +14954,18 @@ window.INITIAL_CONTRACTS = [
       "SH2(만료)"
     ],
     "safetyEvalScores": [
-      38.8,
-      36.95,
+      38.2,
+      37.04,
       null,
-      39.4,
-      35.75,
+      39.2,
+      36.91,
       null,
       null,
-      39.4,
-      38.35,
-      null,
-      39.7,
+      37.2,
+      38.76,
       37.9,
+      39.03,
+      38.6,
       null
     ]
   },
@@ -15018,15 +15018,15 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      36.3,
+      33.84,
+      35.1,
+      34.2,
       null,
-      31.6,
+      34.03,
+      35.73,
       null,
       null,
-      37.6,
-      null,
-      null,
-      37.6,
+      35.73,
       null
     ]
   },
@@ -15060,7 +15060,7 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      37.44,
+      37.6,
       null,
       null,
       null,
@@ -15114,17 +15114,17 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
+      39.3,
+      37.4,
       null,
       null,
-      null,
-      null,
-      38.2,
+      38.0,
       40.0,
       null,
+      35.35,
       null,
-      null,
-      null,
-      null,
+      37.4,
+      35.65,
       38.8
     ]
   },
@@ -15172,16 +15172,16 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
+      37.4,
+      35.15,
       null,
-      null,
-      null,
-      39.0,
+      39.25,
       36.6,
       null,
       null,
+      38.0,
       null,
-      null,
-      null,
+      36.0,
       null
     ]
   },
@@ -15223,15 +15223,15 @@ window.INITIAL_CONTRACTS = [
       "SA1"
     ],
     "safetyEvalScores": [
-      40.0,
-      37.15,
+      39.93,
+      37.55,
       null,
-      36.85,
-      null,
-      null,
+      36.98,
       null,
       null,
-      37.43
+      null,
+      null,
+      37.56
     ]
   },
   {
@@ -15281,18 +15281,18 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      40.0,
+      39.74,
       null,
       null,
-      null,
+      37.7,
       37.6,
-      38.87,
+      38.66,
       null,
-      null,
-      37.4,
+      31.3,
+      38.99,
       40.0,
       null,
-      35.77
+      36.67
     ]
   },
   {
@@ -15345,17 +15345,17 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
+      37.63,
+      35.73,
       38.2,
-      35.6,
-      null,
-      36.68,
-      null,
-      36.4,
+      36.14,
+      34.63,
+      39.04,
       null,
       null,
       null,
-      36.4,
-      38.42,
+      36.72,
+      37.5,
       null,
       null
     ]
@@ -15408,17 +15408,17 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      null,
+      35.65,
       null,
       36.6,
       38.8,
+      35.35,
       null,
-      null,
-      38.2,
+      38.0,
       40.0,
-      null,
-      null,
-      null
+      39.3,
+      39.5,
+      37.4
     ]
   },
   {
@@ -15456,13 +15456,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      null,
-      36.6,
-      32.4,
-      36.1,
+      39.0,
+      35.25,
+      31.2,
+      35.09,
       30.4,
-      34.25,
-      null,
+      32.26,
+      33.5,
       null
     ]
   },
@@ -15495,9 +15495,9 @@ window.INITIAL_CONTRACTS = [
       "SH4(만료)"
     ],
     "safetyEvalScores": [
-      34.85,
+      35.31,
       null,
-      34.9,
+      37.87,
       null,
       null,
       null
@@ -15539,8 +15539,8 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      34.85,
-      34.9,
+      35.31,
+      37.87,
       null,
       null,
       null,
@@ -15595,17 +15595,17 @@ window.INITIAL_CONTRACTS = [
       "SA4"
     ],
     "safetyEvalScores": [
-      39.0,
-      null,
-      null,
-      null,
-      null,
+      39.25,
+      38.0,
+      37.93,
+      36.0,
+      36.7,
       36.4,
       null,
       null,
-      null,
+      35.15,
       36.6,
-      null,
+      37.6,
       null
     ]
   },
@@ -15656,16 +15656,16 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      36.8,
-      38.92,
-      38.4,
-      null,
-      null,
-      39.4,
-      null,
-      37.0,
-      36.4,
-      37.0,
+      37.01,
+      37.75,
+      38.95,
+      34.7,
+      37.37,
+      37.53,
+      34.45,
+      32.5,
+      36.77,
+      37.47,
       null,
       null
     ]
@@ -15719,15 +15719,15 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      36.95,
+      37.04,
       null,
-      37.68,
-      38.4,
-      38.8,
-      39.7,
-      39.4,
-      38.35,
-      35.75,
+      37.12,
+      36.39,
+      38.2,
+      39.03,
+      39.2,
+      38.76,
+      36.91,
       null
     ]
   },
@@ -15775,17 +15775,17 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      39.0,
+      39.25,
       null,
       null,
-      null,
+      38.0,
       36.6,
       null,
+      36.0,
       null,
       null,
-      null,
-      null,
-      null
+      35.15,
+      37.4
     ]
   },
   {
@@ -15853,7 +15853,7 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      37.3,
+      35.95,
       null,
       null
     ]
@@ -15893,13 +15893,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
+      34.45,
+      37.75,
+      38.95,
       null,
-      38.92,
-      38.4,
-      null,
-      null,
-      null,
-      37.0,
+      34.7,
+      37.37,
+      37.47,
       null
     ]
   },
@@ -15952,14 +15952,14 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       37.3,
       null,
-      40.0,
-      38.98,
-      34.1,
-      39.2,
-      36.7,
+      39.0,
+      38.62,
+      35.33,
+      38.53,
+      38.16,
       null,
-      37.6,
-      37.5,
+      35.63,
+      38.72,
       35.3,
       null
     ]
@@ -16011,16 +16011,16 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
+      35.08,
+      null,
+      38.41,
+      36.2,
+      38.25,
+      38.37,
+      38.16,
       null,
       null,
-      36.4,
-      null,
-      null,
-      38.08,
-      40.0,
-      null,
-      null,
-      38.2,
+      37.82,
       null,
       null
     ]
@@ -16056,10 +16056,10 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
+      37.4,
       null,
       null,
-      null,
-      null
+      36.0
     ]
   },
   {
@@ -16143,15 +16143,15 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      36.77,
-      36.6,
+      37.28,
+      36.85,
       null,
-      35.2,
-      null,
-      null,
+      36.88,
       null,
       null,
       null,
+      null,
+      36.2,
       null,
       null
     ]
@@ -16237,7 +16237,7 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      38.2,
+      37.9,
       null,
       null
     ]
@@ -16289,11 +16289,11 @@ window.INITIAL_CONTRACTS = [
       "SH4(만료)"
     ],
     "safetyEvalScores": [
-      37.18,
-      38.4,
-      35.8,
-      34.95,
-      35.2,
+      36.19,
+      38.87,
+      35.6,
+      36.15,
+      36.55,
       null,
       38.2,
       null,
@@ -16350,18 +16350,18 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      37.44,
+      37.6,
       40.0,
-      36.12,
+      35.64,
       null,
       null,
-      40.0,
-      36.4,
+      39.02,
+      36.93,
+      null,
+      33.0,
       null,
       null,
-      null,
-      null,
-      null
+      35.53
     ]
   },
   {
@@ -16411,15 +16411,15 @@ window.INITIAL_CONTRACTS = [
       "SA3"
     ],
     "safetyEvalScores": [
-      37.5,
-      35.6,
+      35.83,
+      36.85,
       37.0,
-      39.4,
+      38.54,
       null,
-      null,
-      null,
+      39.15,
       40.0,
-      null,
+      38.42,
+      40.0,
       null,
       null,
       null
@@ -16455,8 +16455,8 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      null,
-      39.0,
+      36.0,
+      39.25,
       null,
       36.6,
       null
@@ -16509,17 +16509,17 @@ window.INITIAL_CONTRACTS = [
       "SH5"
     ],
     "safetyEvalScores": [
+      35.1,
+      null,
+      null,
+      34.03,
+      null,
+      35.9,
       null,
       null,
       null,
       null,
-      null,
-      35.2,
-      null,
-      null,
-      null,
-      null,
-      37.6,
+      35.73,
       null
     ]
   },
@@ -16571,17 +16571,17 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      37.6,
-      38.2,
+      38.43,
+      37.28,
+      37.77,
+      39.0,
       null,
-      null,
-      null,
+      37.87,
+      38.63,
       38.5,
-      39.4,
-      37.6,
       null,
-      38.8,
-      40.0
+      37.73,
+      38.77
     ]
   },
   {
@@ -16617,7 +16617,7 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      34.9,
+      34.18,
       null
     ]
   },
@@ -16705,17 +16705,17 @@ window.INITIAL_CONTRACTS = [
       "SA5"
     ],
     "safetyEvalScores": [
-      37.6,
+      34.7,
       37.0,
-      37.5,
+      35.83,
       null,
-      35.6,
-      39.4,
+      36.85,
+      38.54,
+      38.42,
       40.0,
       null,
-      null,
-      null,
-      null,
+      40.0,
+      39.15,
       null
     ]
   },
@@ -16751,13 +16751,13 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      39.25,
+      39.24,
       null,
-      38.5,
-      null,
+      39.1,
+      38.95,
       37.2,
       40.0,
-      38.8
+      34.83
     ]
   },
   {
@@ -16808,15 +16808,15 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      36.6,
+      36.85,
+      null,
+      32.6,
+      null,
+      36.2,
       null,
       null,
-      null,
-      null,
-      null,
-      null,
-      36.77,
-      35.2,
+      37.28,
+      36.88,
       null,
       null
     ]
@@ -16868,18 +16868,18 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      37.5,
+      38.72,
       37.3,
-      34.1,
-      37.75,
-      36.7,
+      35.33,
+      37.66,
+      38.16,
+      36.2,
+      38.53,
+      39.0,
       null,
-      39.2,
-      40.0,
+      38.62,
       null,
-      38.98,
-      null,
-      37.6
+      35.63
     ]
   },
   {
@@ -16923,16 +16923,16 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
-      39.2,
-      40.0,
-      35.05,
+      38.71,
+      36.45,
+      36.26,
       null,
-      36.9,
+      38.3,
       null,
-      37.0,
-      33.0,
+      37.07,
+      34.85,
       null,
-      36.4
+      37.73
     ]
   },
   {
@@ -17009,7 +17009,7 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      38.2,
+      38.33,
       null
     ]
   },
@@ -17060,14 +17060,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
+      33.0,
       null,
       null,
       null,
-      null,
-      40.0,
-      38.2,
-      null,
-      34.75,
+      39.09,
+      36.39,
+      37.75,
+      36.62,
       null,
       null,
       null,
@@ -17121,16 +17121,16 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      35.6,
-      36.68,
+      35.73,
+      36.14,
+      38.2,
+      34.63,
       null,
       null,
+      39.04,
+      36.72,
       null,
-      null,
-      36.4,
-      36.4,
-      null,
-      38.42,
+      37.5,
       null,
       null
     ]
@@ -17162,10 +17162,10 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      34.8,
-      null,
-      32.1,
-      null
+      36.46,
+      31.92,
+      33.25,
+      39.7
     ]
   },
   {
@@ -17261,7 +17261,7 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      38.2,
+      38.33,
       null,
       null
     ]
@@ -17346,14 +17346,14 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      37.0,
-      null,
-      27.9,
-      36.4,
-      37.0,
-      35.17,
-      null,
-      30.0
+      35.35,
+      35.5,
+      34.09,
+      34.9,
+      35.8,
+      35.33,
+      35.85,
+      34.24
     ]
   },
   {
@@ -17391,14 +17391,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.68,
+      36.14,
       null,
-      37.0,
+      36.7,
       null,
       null,
       null,
-      38.42,
-      null
+      37.5,
+      38.2
     ]
   },
   {
@@ -17435,8 +17435,8 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      38.5,
-      38.8,
+      39.1,
+      34.83,
       null,
       null,
       null
@@ -17478,13 +17478,13 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      34.95,
-      37.18,
+      36.15,
+      36.19,
       null,
       null,
-      34.0,
-      35.8,
-      35.2
+      35.95,
+      35.6,
+      36.55
     ]
   },
   {
@@ -17525,13 +17525,13 @@ window.INITIAL_CONTRACTS = [
       "SA5"
     ],
     "safetyEvalScores": [
-      37.5,
+      35.83,
       37.0,
-      35.6,
+      36.85,
+      38.42,
+      null,
       40.0,
-      null,
-      null,
-      39.4,
+      38.54,
       null,
       null
     ]
@@ -17571,13 +17571,13 @@ window.INITIAL_CONTRACTS = [
       "SA2"
     ],
     "safetyEvalScores": [
-      38.87,
-      39.25,
+      38.66,
+      39.24,
       null,
-      37.7,
-      40.0,
+      37.61,
+      39.74,
       null,
-      38.4,
+      38.18,
       null
     ]
   },
@@ -17619,10 +17619,10 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      37.0,
+      36.7,
       null,
       null,
-      null,
+      38.2,
       null
     ]
   },
@@ -17663,11 +17663,11 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
+      40.0,
       null,
       null,
-      null,
-      null,
-      null,
+      37.42,
+      39.4,
       null
     ]
   },
@@ -17706,14 +17706,14 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
-      null,
-      36.3,
-      null,
-      null,
+      38.85,
+      37.46,
       null,
       null,
       null,
-      36.95
+      null,
+      38.5,
+      37.04
     ]
   },
   {
@@ -17748,13 +17748,13 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      40.0,
+      39.93,
       null,
-      39.4,
-      39.4,
+      37.2,
+      39.2,
       null,
-      38.35,
-      40.0
+      38.76,
+      39.8
     ]
   },
   {
@@ -17795,15 +17795,15 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
-      40.0,
-      37.0,
-      35.05,
-      36.9,
+      36.45,
+      37.07,
+      36.26,
+      38.3,
       null,
-      33.0,
+      34.85,
       null,
       null,
-      36.4
+      37.73
     ]
   },
   {
@@ -17841,10 +17841,10 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      35.6,
-      null,
+      36.85,
       40.0,
-      37.5,
+      38.42,
+      35.83,
       null,
       null,
       37.0,
@@ -17887,13 +17887,13 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       40.0,
-      36.8,
-      32.0,
-      39.4,
-      39.4,
-      38.2,
-      37.6,
-      null
+      38.05,
+      32.9,
+      39.43,
+      38.77,
+      37.4,
+      37.35,
+      36.5
     ]
   },
   {
@@ -17931,11 +17931,11 @@ window.INITIAL_CONTRACTS = [
       "SA3"
     ],
     "safetyEvalScores": [
-      36.4,
+      39.04,
+      38.2,
+      35.73,
       null,
-      35.6,
-      null,
-      38.42,
+      37.5,
       null,
       null,
       null
@@ -18021,9 +18021,9 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      34.85,
-      null,
-      34.9,
+      35.31,
+      34.87,
+      37.87,
       null,
       null,
       null,
@@ -18066,14 +18066,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      38.2,
-      36.8,
-      40.0,
+      37.4,
+      38.05,
+      37.6,
+      38.33,
       null,
-      null,
-      39.7,
-      38.2,
-      32.0
+      38.83,
+      38.12,
+      32.9
     ]
   },
   {
@@ -18111,13 +18111,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.2,
-      34.9,
+      36.39,
+      35.65,
       null,
       null,
       null,
-      40.0,
-      null,
+      39.09,
+      37.75,
       null
     ]
   },
@@ -18157,13 +18157,13 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      40.0,
-      35.6,
+      38.42,
+      36.85,
       37.0,
       null,
       null,
-      39.4,
-      null
+      38.54,
+      40.0
     ]
   },
   {
@@ -18201,14 +18201,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      null,
       40.0,
+      38.77,
       40.0,
       null,
-      37.6,
-      34.0,
-      null,
-      38.5
+      38.5,
+      35.1,
+      39.0,
+      37.87
     ]
   },
   {
@@ -18247,10 +18247,10 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
+      39.05,
       null,
-      null,
-      39.0,
-      null,
+      39.25,
+      37.6,
       null,
       null,
       null
@@ -18282,7 +18282,7 @@ window.INITIAL_CONTRACTS = [
       "SA3(만료)"
     ],
     "safetyEvalScores": [
-      38.5,
+      38.46,
       null,
       40.0,
       null,
@@ -18369,11 +18369,11 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
-      37.0,
-      35.05,
-      36.9,
-      36.4,
-      33.0,
+      37.07,
+      36.26,
+      38.3,
+      37.73,
+      34.85,
       null,
       null,
       null
@@ -18403,9 +18403,9 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      37.8,
-      34.8,
-      34.8
+      37.2,
+      35.7,
+      33.77
     ]
   },
   {
@@ -18467,11 +18467,11 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      null,
-      39.0,
+      37.93,
+      39.25,
       36.4,
-      null,
-      null
+      37.6,
+      35.5
     ]
   },
   {
@@ -18530,14 +18530,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.95,
-      38.35,
+      37.04,
+      38.76,
+      38.85,
+      37.5,
       null,
       null,
       null,
-      null,
-      null,
-      null
+      38.5
     ]
   },
   {
@@ -18575,14 +18575,14 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      38.4,
+      38.18,
       null,
-      38.87,
-      null,
-      40.0,
+      38.66,
       37.7,
-      39.25,
-      38.8
+      40.0,
+      37.61,
+      39.24,
+      34.83
     ]
   },
   {
@@ -18621,12 +18621,12 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      38.2,
+      37.8,
+      37.07,
+      38.45,
       null,
       null,
-      null,
-      null,
-      null,
+      35.4,
       null
     ]
   },
@@ -18665,13 +18665,13 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.8,
-      37.0,
-      38.4,
+      37.01,
+      32.5,
+      38.95,
       null,
-      38.92,
+      37.75,
       null,
-      39.4,
+      37.53,
       null
     ]
   },
@@ -18710,14 +18710,14 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
+      36.9,
       null,
+      38.95,
       null,
+      37.5,
+      38.1,
       null,
-      null,
-      37.6,
-      null,
-      null,
-      36.6
+      35.3
     ]
   },
   {
@@ -18756,9 +18756,9 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      38.3,
+      35.52,
       null,
-      null,
+      36.8,
       null,
       36.4,
       null,
@@ -18845,14 +18845,14 @@ window.INITIAL_CONTRACTS = [
       "SA3"
     ],
     "safetyEvalScores": [
+      29.0,
       null,
+      36.31,
       null,
-      37.9,
-      null,
-      null,
-      null,
-      40.0,
-      34.9
+      32.6,
+      37.75,
+      39.09,
+      35.65
     ]
   },
   {
@@ -18890,14 +18890,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      34.9,
-      34.75,
+      35.65,
+      36.62,
       null,
+      29.0,
       null,
-      null,
-      37.9,
-      40.0,
-      null
+      36.31,
+      39.09,
+      37.75
     ]
   },
   {
@@ -18932,8 +18932,8 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      37.15,
-      36.85,
+      37.55,
+      36.98,
       null,
       null,
       null,
@@ -19009,10 +19009,10 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      null,
-      null,
-      null,
-      null
+      40.0,
+      39.0,
+      39.4,
+      36.5
     ]
   },
   {
@@ -19051,11 +19051,11 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      36.3,
-      34.5,
-      36.95,
+      37.46,
+      36.67,
+      37.04,
       null,
-      null,
+      37.9,
       null,
       null
     ]
@@ -19092,9 +19092,9 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      35.2,
+      36.88,
       null,
-      34.9
+      33.67
     ]
   },
   {
@@ -19138,14 +19138,14 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
+      34.03,
       null,
       null,
       null,
+      32.3,
+      33.84,
       null,
-      null,
-      36.3,
-      null,
-      null,
+      35.5,
       null,
       null
     ]
@@ -19185,14 +19185,14 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.2,
+      37.8,
       null,
+      34.4,
       null,
+      35.4,
+      36.6,
       null,
-      null,
-      null,
-      null,
-      null
+      38.45
     ]
   },
   {
@@ -19226,7 +19226,7 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      null,
+      38.2,
       null,
       29.2,
       null
@@ -19260,7 +19260,7 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      null,
+      34.87,
       null,
       null
     ]
@@ -19294,11 +19294,11 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      36.4,
-      40.0,
-      37.44,
+      36.93,
+      39.02,
+      37.6,
       null,
-      30.4,
+      35.92,
       null
     ]
   },
@@ -19384,12 +19384,12 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      36.05,
+      37.42,
       null,
       null,
-      null,
-      null,
-      38.2
+      33.0,
+      32.6,
+      36.39
     ]
   },
   {
@@ -19427,14 +19427,14 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      null,
-      40.0,
-      36.45,
-      39.4,
-      39.7,
-      38.2,
-      36.8,
-      40.0
+      38.33,
+      39.35,
+      38.82,
+      38.77,
+      38.83,
+      37.4,
+      38.05,
+      37.6
     ]
   },
   {
@@ -19473,13 +19473,13 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       36.4,
-      40.0,
+      37.73,
+      35.57,
       null,
       null,
       null,
-      null,
-      40.0,
-      36.7
+      37.59,
+      37.62
     ]
   },
   {
@@ -19517,13 +19517,13 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      38.98,
+      38.62,
       37.3,
-      39.7,
-      39.2,
-      null,
-      37.5,
-      null,
+      38.9,
+      38.53,
+      36.2,
+      38.72,
+      37.42,
       null
     ]
   },
@@ -19565,13 +19565,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      35.8,
+      35.6,
       null,
-      38.2,
-      38.8,
-      35.2,
-      37.18,
-      34.95,
+      37.9,
+      38.21,
+      36.55,
+      36.19,
+      36.15,
       null,
       null
     ]
@@ -19614,11 +19614,11 @@ window.INITIAL_CONTRACTS = [
       "SH3(만료)"
     ],
     "safetyEvalScores": [
-      38.92,
+      37.75,
       null,
-      36.8,
-      38.4,
-      37.0,
+      37.01,
+      38.95,
+      32.5,
       null,
       null,
       null,
@@ -19698,14 +19698,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      40.0,
+      39.74,
       null,
-      35.77,
+      36.67,
       null,
-      null,
-      40.0,
       37.7,
-      38.87
+      40.0,
+      37.61,
+      38.66
     ]
   },
   {
@@ -19745,11 +19745,11 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      null,
+      36.0,
       null,
       36.6,
       null,
-      null,
+      39.5,
       null
     ]
   },
@@ -19788,11 +19788,11 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
+      38.85,
+      36.39,
+      38.2,
       null,
-      38.4,
-      38.8,
-      null,
-      36.95,
+      37.04,
       null,
       null,
       null
@@ -19834,12 +19834,12 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      null,
+      40.0,
       37.0,
-      39.4,
+      38.54,
       null,
-      37.5,
-      37.6,
+      35.83,
+      34.7,
       null
     ]
   },
@@ -19878,12 +19878,12 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      38.4,
-      36.8,
+      38.95,
+      37.01,
+      37.37,
+      37.75,
       null,
-      38.92,
-      null,
-      37.0,
+      32.5,
       null,
       null
     ]
@@ -19968,14 +19968,14 @@ window.INITIAL_CONTRACTS = [
       "SH5"
     ],
     "safetyEvalScores": [
+      35.5,
+      36.85,
       null,
-      35.6,
-      null,
-      37.5,
-      37.6,
-      null,
-      null,
-      39.4
+      35.83,
+      34.7,
+      40.0,
+      40.0,
+      38.54
     ]
   },
   {
@@ -20007,11 +20007,11 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
-      38.35,
+      38.76,
+      33.9,
+      37.04,
       null,
-      36.95,
-      null,
-      36.6,
+      37.92,
       null
     ]
   },
@@ -20051,13 +20051,13 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      40.0,
+      35.8,
+      35.4,
+      38.45,
       null,
       null,
       null,
-      null,
-      null,
-      34.9
+      34.12
     ]
   },
   {
@@ -20095,10 +20095,10 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
+      34.45,
+      37.77,
       null,
-      40.0,
-      null,
-      38.4,
+      37.53,
       null,
       null,
       null,
@@ -20140,14 +20140,14 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      36.4,
+      38.41,
+      35.08,
+      38.37,
       null,
-      38.08,
       null,
       null,
-      null,
-      40.0,
-      null
+      38.16,
+      36.8
     ]
   },
   {
@@ -20185,13 +20185,13 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.4,
+      38.2,
       null,
-      null,
-      null,
+      39.5,
+      36.0,
       36.6,
       null,
-      null,
+      36.0,
       null
     ]
   },
@@ -20230,14 +20230,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.45,
-      39.7,
-      39.4,
+      38.82,
+      38.83,
+      38.77,
       null,
-      40.0,
-      40.0,
-      38.2,
-      36.8
+      39.35,
+      38.17,
+      37.4,
+      38.05
     ]
   },
   {
@@ -20278,11 +20278,11 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      36.3,
-      36.95,
-      35.75,
+      37.46,
+      37.04,
+      36.91,
       null,
-      null
+      37.9
     ]
   },
   {
@@ -20320,14 +20320,14 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.4,
+      37.53,
       null,
       null,
-      40.0,
-      40.0,
+      37.44,
+      37.77,
       null,
-      39.4,
-      39.4
+      36.03,
+      39.1
     ]
   },
   {
@@ -20365,14 +20365,14 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
-      38.5,
-      null,
-      null,
+      39.1,
+      37.15,
+      37.67,
       40.0,
-      null,
-      38.87,
-      40.0,
-      null
+      36.0,
+      38.66,
+      39.74,
+      37.7
     ]
   },
   {
@@ -20455,14 +20455,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      38.08,
-      38.3,
-      36.4,
+      38.37,
+      35.52,
+      38.41,
       null,
       null,
-      null,
-      null,
-      40.0
+      33.25,
+      35.08,
+      38.16
     ]
   },
   {
@@ -20500,12 +20500,12 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      37.18,
-      35.2,
+      36.19,
+      36.55,
       null,
-      34.95,
-      38.8,
-      38.2,
+      36.15,
+      38.21,
+      37.9,
       null,
       null
     ]
@@ -20546,10 +20546,10 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      36.8,
+      37.01,
       null,
-      38.4,
-      37.0,
+      38.95,
+      32.5,
       null,
       null,
       null
@@ -20592,12 +20592,12 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      39.25,
-      null,
+      39.24,
+      37.15,
       37.6,
+      36.0,
       null,
-      null,
-      38.2
+      37.77
     ]
   },
   {
@@ -20642,7 +20642,7 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      34.8
+      35.7
     ]
   },
   {
@@ -20680,14 +20680,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      34.9,
-      34.85,
-      34.0,
+      37.87,
+      35.31,
+      31.75,
+      34.87,
       null,
+      37.93,
       null,
-      37.8,
-      null,
-      36.4
+      36.75
     ]
   },
   {
@@ -20726,10 +20726,10 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      36.4,
-      null,
-      34.9,
-      34.85,
+      36.75,
+      34.87,
+      37.87,
+      35.31,
       null,
       null,
       null
@@ -20770,12 +20770,12 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      35.6,
-      37.6,
-      37.5,
-      39.4,
-      null,
-      null,
+      36.85,
+      34.7,
+      35.83,
+      38.54,
+      40.0,
+      40.0,
       null,
       null
     ]
@@ -20815,14 +20815,14 @@ window.INITIAL_CONTRACTS = [
       "SH5"
     ],
     "safetyEvalScores": [
-      37.6,
+      34.7,
       null,
-      35.6,
-      37.5,
-      39.4,
+      36.85,
+      35.83,
+      38.54,
+      40.0,
       null,
-      null,
-      null
+      40.0
     ]
   },
   {
@@ -20860,14 +20860,14 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      39.4,
-      38.4,
+      37.53,
+      38.95,
       null,
-      37.0,
+      32.5,
       null,
-      38.92,
-      null,
-      null
+      37.75,
+      37.1,
+      37.37
     ]
   },
   {
@@ -20905,13 +20905,13 @@ window.INITIAL_CONTRACTS = [
       "SH5"
     ],
     "safetyEvalScores": [
+      34.4,
       null,
       null,
       null,
       null,
       null,
-      null,
-      34.9,
+      34.12,
       null
     ]
   },
@@ -20950,13 +20950,13 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.4,
-      38.0,
+      38.41,
+      37.21,
       null,
-      38.08,
+      38.37,
       null,
       null,
-      null,
+      35.08,
       null
     ]
   },
@@ -20998,10 +20998,10 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
+      40.0,
       null,
       null,
-      null,
-      38.8,
+      38.87,
       null
     ]
   },
@@ -21040,13 +21040,13 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      38.4,
-      36.95,
-      39.4,
+      36.39,
+      37.04,
+      39.2,
       null,
       null,
       null,
-      38.35,
+      38.76,
       null
     ]
   },
@@ -21064,7 +21064,7 @@ window.INITIAL_CONTRACTS = [
       "SA1"
     ],
     "safetyEvalScores": [
-      37.0
+      37.07
     ]
   },
   {
@@ -21081,7 +21081,7 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
-      36.95
+      37.04
     ]
   },
   {
@@ -21116,12 +21116,12 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
+      32.0,
+      39.0,
+      36.5,
       null,
-      null,
-      null,
-      null,
-      null,
-      null,
+      39.4,
+      40.0,
       null
     ]
   },
@@ -21160,9 +21160,9 @@ window.INITIAL_CONTRACTS = [
       "SA3"
     ],
     "safetyEvalScores": [
-      37.44,
-      40.0,
-      null,
+      37.6,
+      39.02,
+      39.9,
       null,
       null,
       null,
@@ -21205,14 +21205,14 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
-      37.7,
+      37.61,
       40.0,
       null,
       null,
+      36.0,
+      39.74,
       null,
-      40.0,
-      null,
-      null
+      37.7
     ]
   },
   {
@@ -21250,13 +21250,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      null,
-      34.25,
+      33.5,
+      32.26,
       30.4,
-      36.6,
-      32.4,
-      null,
-      36.1,
+      35.25,
+      31.2,
+      39.0,
+      35.09,
       null
     ]
   },
@@ -21287,7 +21287,7 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      37.44,
+      37.6,
       null,
       null,
       null
@@ -21331,15 +21331,15 @@ window.INITIAL_CONTRACTS = [
       "SA4"
     ],
     "safetyEvalScores": [
-      36.8,
+      37.01,
       null,
-      38.4,
+      38.95,
+      37.37,
+      37.53,
+      37.75,
       null,
-      39.4,
-      38.92,
       null,
-      null,
-      null
+      37.1
     ]
   },
   {
@@ -21372,8 +21372,8 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      null,
-      null,
+      34.55,
+      35.4,
       null,
       null,
       null
@@ -21414,13 +21414,13 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      38.08,
-      36.4,
+      38.37,
+      38.41,
+      35.08,
       null,
       null,
-      null,
-      40.0,
-      40.0,
+      38.8,
+      38.16,
       null
     ]
   },
@@ -21459,13 +21459,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      36.9,
+      38.3,
       null,
       null,
       null,
-      35.05,
-      33.0,
-      40.0,
+      36.26,
+      34.85,
+      36.45,
       null
     ]
   },
@@ -21504,13 +21504,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      34.25,
+      32.26,
+      39.0,
+      35.09,
       null,
-      36.1,
-      null,
-      36.6,
-      32.4,
-      null,
+      35.25,
+      31.2,
+      33.5,
       30.4
     ]
   },
@@ -21548,7 +21548,7 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      40.0
+      39.73
     ]
   },
   {
@@ -21611,12 +21611,12 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      36.6,
-      34.25,
-      32.4,
-      null,
-      36.1,
-      null,
+      35.25,
+      32.26,
+      31.2,
+      33.5,
+      35.09,
+      39.0,
       null,
       30.4
     ]
@@ -21656,14 +21656,14 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      35.2,
-      36.6,
+      36.88,
+      36.85,
       null,
       null,
       null,
       null,
       null,
-      null
+      36.2
     ]
   },
   {
@@ -21703,7 +21703,7 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      37.3,
+      35.95,
       null
     ]
   },
@@ -21743,13 +21743,13 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      37.5,
-      38.98,
-      36.7,
+      38.72,
+      38.62,
+      38.16,
       37.3,
-      39.2,
-      40.0,
-      39.7
+      38.53,
+      39.0,
+      38.9
     ]
   },
   {
@@ -21787,13 +21787,13 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      39.0,
+      39.25,
+      36.0,
       null,
       null,
-      null,
-      null,
-      null,
-      null,
+      37.6,
+      37.4,
+      37.93,
       null
     ]
   },
@@ -21830,10 +21830,10 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      36.95,
-      null,
-      36.4,
+      35.58,
       40.0,
+      36.35,
+      38.42,
       null,
       null
     ]
@@ -21876,10 +21876,10 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      40.0,
-      null,
-      39.25,
-      37.7,
+      39.74,
+      37.15,
+      39.24,
+      37.61,
       null
     ]
   },
@@ -21918,11 +21918,11 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      null,
-      35.6,
-      36.4,
-      36.68,
-      38.42,
+      38.2,
+      35.73,
+      39.04,
+      36.14,
+      37.5,
       null,
       null,
       null
@@ -21963,14 +21963,14 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      null,
-      36.4,
-      37.0,
-      35.17,
-      null,
-      37.0,
-      27.9,
-      30.0
+      35.5,
+      34.9,
+      35.35,
+      35.33,
+      35.85,
+      35.8,
+      34.09,
+      34.24
     ]
   },
   {
@@ -22008,13 +22008,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
+      37.75,
+      36.62,
       null,
-      34.75,
+      35.65,
       null,
-      34.9,
-      null,
-      37.9,
-      40.0,
+      36.31,
+      39.09,
       null
     ]
   },
@@ -22053,14 +22053,14 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      null,
-      null,
-      27.9,
-      37.0,
-      37.0,
-      36.4,
-      35.17,
-      30.0
+      35.85,
+      35.5,
+      34.09,
+      35.8,
+      35.35,
+      34.9,
+      35.33,
+      34.24
     ]
   },
   {
@@ -22099,12 +22099,12 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
+      36.2,
+      36.85,
       null,
-      36.6,
+      32.6,
       null,
-      null,
-      null,
-      35.2,
+      36.88,
       null
     ]
   },
@@ -22141,12 +22141,12 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      36.95,
+      38.13,
       null,
       null,
       null,
       null,
-      null
+      32.4
     ]
   },
   {
@@ -22216,11 +22216,11 @@ window.INITIAL_CONTRACTS = [
       null,
       null,
       null,
-      40.0,
-      34.75,
-      34.9,
-      null,
-      37.9
+      39.09,
+      36.62,
+      35.65,
+      37.75,
+      36.31
     ]
   },
   {
@@ -22259,13 +22259,13 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      38.92,
-      39.4,
-      38.4,
+      37.75,
+      37.53,
+      38.95,
       null,
+      37.37,
       null,
-      null,
-      null
+      37.1
     ]
   },
   {
@@ -22303,14 +22303,14 @@ window.INITIAL_CONTRACTS = [
       "SH3(만료)"
     ],
     "safetyEvalScores": [
-      39.2,
+      38.53,
       35.3,
-      38.98,
+      38.62,
       37.3,
-      37.75,
-      37.5,
-      null,
-      39.7
+      37.66,
+      38.72,
+      37.42,
+      38.9
     ]
   },
   {
@@ -22365,14 +22365,14 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      36.1,
-      32.4,
+      35.09,
+      31.2,
       30.4,
-      34.25,
+      32.26,
       null,
-      36.6,
-      null,
-      null
+      35.25,
+      39.0,
+      33.5
     ]
   },
   {
@@ -22412,10 +22412,10 @@ window.INITIAL_CONTRACTS = [
     "safetyEvalScores": [
       null,
       null,
-      36.95,
+      37.04,
       null,
       null,
-      38.8,
+      38.2,
       null,
       null
     ]
@@ -22455,14 +22455,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
+      35.35,
       null,
+      39.5,
       null,
-      null,
-      null,
-      null,
+      36.0,
       null,
       36.6,
-      null
+      36.4
     ]
   },
   {
@@ -22500,13 +22500,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      32.4,
-      36.6,
-      34.25,
-      null,
-      36.1,
+      31.2,
+      35.25,
+      32.26,
+      39.0,
+      35.09,
       30.4,
-      null,
+      33.5,
       null
     ]
   },
@@ -22545,10 +22545,10 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      35.2,
+      36.88,
+      36.2,
       null,
-      null,
-      36.6,
+      36.85,
       null,
       null,
       null,
@@ -22578,10 +22578,10 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
-      35.2,
-      37.9,
-      null,
-      40.0
+      37.5,
+      36.97,
+      36.2,
+      35.72
     ]
   },
   {
@@ -22620,10 +22620,10 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      40.0,
-      36.4,
+      38.8,
+      36.27,
       37.6,
-      39.25,
+      39.24,
       null,
       null,
       null
@@ -22664,12 +22664,12 @@ window.INITIAL_CONTRACTS = [
       "SA2"
     ],
     "safetyEvalScores": [
-      36.3,
+      37.01,
       null,
+      35.63,
+      39.25,
       null,
-      39.0,
-      null,
-      37.6,
+      37.35,
       null,
       null
     ]
@@ -22710,12 +22710,12 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      36.6,
+      36.85,
       null,
-      36.77,
-      null,
-      null,
-      35.2,
+      37.28,
+      32.6,
+      36.2,
+      36.88,
       null
     ]
   },
@@ -22754,13 +22754,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      32.4,
-      null,
-      34.25,
+      31.2,
+      39.0,
+      32.26,
       30.4,
-      36.1,
-      36.6,
-      null,
+      35.09,
+      35.25,
+      33.5,
       null
     ]
   },
@@ -22800,13 +22800,13 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
+      38.53,
+      null,
+      38.5,
+      39.8,
       36.4,
       null,
-      37.6,
-      40.0,
-      38.8,
-      null,
-      null
+      37.77
     ]
   },
   {
@@ -22838,11 +22838,11 @@ window.INITIAL_CONTRACTS = [
       ""
     ],
     "safetyEvalScores": [
+      38.42,
+      null,
+      35.58,
       40.0,
-      null,
-      36.95,
-      null,
-      36.4,
+      36.35,
       null
     ]
   },
@@ -22881,14 +22881,14 @@ window.INITIAL_CONTRACTS = [
       "SA1"
     ],
     "safetyEvalScores": [
-      40.0,
-      40.0,
+      39.8,
+      37.77,
       null,
       null,
       35.2,
       null,
-      38.4,
-      null
+      37.53,
+      36.4
     ]
   },
   {
@@ -22927,12 +22927,12 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      37.5,
+      38.72,
+      39.4,
       null,
       null,
       null,
-      null,
-      40.0,
+      39.93,
       null
     ]
   },
@@ -22968,13 +22968,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.2,
-      null,
-      31.0,
-      36.4,
       37.8,
-      37.0,
-      null
+      null,
+      34.44,
+      38.13,
+      38.11,
+      38.37,
+      40.0
     ]
   },
   {
@@ -23021,13 +23021,13 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      38.42,
-      36.4,
-      37.0,
+      37.5,
+      39.04,
+      38.4,
+      34.63,
       null,
-      null,
-      38.8,
-      35.6,
+      38.21,
+      35.73,
       null,
       null,
       null,
@@ -23079,16 +23079,16 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       37.9,
-      37.0,
-      36.4,
-      32.5,
+      38.37,
+      38.13,
+      34.45,
       null,
-      35.1,
+      33.5,
       37.6,
-      31.0,
-      32.8,
-      38.2,
-      34.9
+      34.44,
+      33.27,
+      37.8,
+      34.18
     ]
   },
   {
@@ -23141,19 +23141,19 @@ window.INITIAL_CONTRACTS = [
       "SH5"
     ],
     "safetyEvalScores": [
-      36.4,
-      40.0,
-      40.0,
-      null,
-      38.2,
+      38.41,
+      38.8,
+      38.16,
+      35.08,
+      37.82,
       null,
       34.0,
-      38.08,
+      38.37,
+      null,
+      38.6,
       null,
       null,
-      null,
-      null,
-      38.3
+      35.52
     ]
   },
   {
@@ -23200,17 +23200,17 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.4,
+      38.41,
+      null,
+      35.08,
+      38.16,
+      38.37,
+      null,
+      33.25,
       null,
       null,
-      40.0,
-      38.08,
-      null,
-      null,
-      null,
-      null,
-      null,
-      38.0
+      38.6,
+      37.21
     ]
   },
   {
@@ -23245,12 +23245,12 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      37.8,
-      32.8,
-      34.9,
-      35.1,
-      32.5,
-      31.0,
+      38.11,
+      33.27,
+      34.18,
+      33.5,
+      34.45,
+      34.44,
       37.9
     ]
   },
@@ -23302,14 +23302,14 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      36.6,
+      36.85,
+      36.2,
       null,
+      37.28,
       null,
-      36.77,
+      36.88,
       null,
-      35.2,
-      null,
-      null,
+      32.6,
       null,
       null,
       null
@@ -23416,17 +23416,17 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.2,
-      null,
-      40.0,
-      40.0,
+      37.82,
+      35.08,
+      38.16,
+      38.8,
       34.0,
       null,
       null,
       null,
       null,
-      null,
-      38.08
+      38.6,
+      38.37
     ]
   },
   {
@@ -23461,13 +23461,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      34.25,
+      32.26,
       30.4,
-      36.1,
-      36.6,
-      32.4,
+      35.09,
+      35.25,
+      31.2,
       null,
-      null
+      39.0
     ]
   },
   {
@@ -23511,15 +23511,15 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      37.0,
+      37.47,
+      37.37,
+      null,
+      34.7,
+      37.75,
       null,
       null,
-      null,
-      38.92,
-      null,
-      null,
-      37.0,
-      36.4,
+      32.5,
+      36.77,
       null
     ]
   },
@@ -23570,16 +23570,16 @@ window.INITIAL_CONTRACTS = [
       "SA4"
     ],
     "safetyEvalScores": [
-      38.2,
-      35.6,
-      36.4,
-      38.42,
+      37.63,
+      35.73,
+      39.04,
+      37.5,
       null,
-      37.0,
+      38.4,
       null,
-      38.8,
+      38.21,
       null,
-      36.68,
+      36.14,
       null,
       null
     ]
@@ -23631,16 +23631,16 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.68,
+      36.14,
       null,
       null,
-      38.8,
-      36.4,
+      38.21,
+      39.04,
       null,
-      35.6,
-      37.0,
+      35.73,
+      38.4,
       null,
-      38.42,
+      37.5,
       null,
       null
     ]
@@ -23677,13 +23677,13 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      32.8,
-      37.8,
-      34.9,
-      35.1,
+      33.27,
+      38.11,
+      34.18,
+      33.5,
       37.9,
-      32.5,
-      31.0
+      34.45,
+      34.44
     ]
   },
   {
@@ -23727,14 +23727,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.4,
+      39.04,
       null,
-      38.8,
+      38.21,
       null,
-      35.6,
-      38.42,
+      35.73,
+      37.5,
       null,
-      37.0,
+      38.4,
       null,
       null
     ]
@@ -23787,17 +23787,17 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      37.44,
+      37.6,
       null,
-      36.12,
+      35.64,
+      39.9,
+      39.02,
       null,
+      35.53,
       40.0,
-      null,
-      null,
-      40.0,
-      36.4,
-      30.4,
-      null
+      36.93,
+      35.92,
+      30.8
     ]
   },
   {
@@ -23847,18 +23847,18 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
+      38.25,
       null,
-      null,
-      null,
-      38.2,
+      36.2,
+      37.82,
       34.0,
-      40.0,
+      38.16,
+      35.08,
+      33.25,
       null,
+      35.52,
       null,
-      null,
-      38.3,
-      null,
-      null
+      36.8
     ]
   },
   {
@@ -23908,17 +23908,17 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.68,
-      38.2,
-      35.6,
+      36.14,
+      37.63,
+      35.73,
       null,
-      38.8,
-      38.42,
+      38.21,
+      37.5,
       null,
       null,
       null,
-      36.4,
-      37.0,
+      39.04,
+      38.4,
       null
     ]
   },
@@ -23954,13 +23954,13 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      37.0,
-      34.9,
+      38.37,
+      34.18,
       37.9,
-      null,
-      37.8,
-      36.4,
-      32.5
+      40.0,
+      38.11,
+      38.13,
+      34.45
     ]
   },
   {
@@ -24013,18 +24013,18 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      38.2,
-      38.4,
-      38.87,
-      39.8,
-      null,
-      39.25,
+      38.5,
+      38.18,
+      38.66,
+      38.48,
+      37.7,
+      39.24,
       40.0,
-      40.0,
+      38.8,
+      37.15,
+      31.3,
       null,
-      null,
-      null,
-      null,
+      36.0,
       40.0
     ]
   },
@@ -24072,16 +24072,16 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      38.87,
-      38.4,
+      38.66,
+      38.18,
+      38.8,
+      37.7,
       40.0,
+      38.48,
+      37.15,
+      39.24,
       null,
-      40.0,
-      39.8,
-      null,
-      39.25,
-      null,
-      null,
+      36.0,
       40.0
     ]
   },
@@ -24120,14 +24120,14 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      34.25,
-      32.4,
+      32.26,
+      31.2,
       30.4,
+      39.0,
+      35.25,
+      35.09,
       null,
-      36.6,
-      36.1,
-      null,
-      null
+      33.5
     ]
   },
   {
@@ -24180,19 +24180,19 @@ window.INITIAL_CONTRACTS = [
       "SA2"
     ],
     "safetyEvalScores": [
-      38.2,
+      37.4,
       null,
-      39.7,
+      38.83,
       null,
-      40.0,
-      39.4,
-      40.0,
-      36.45,
-      36.8,
-      38.2,
-      32.0,
+      37.6,
+      38.77,
+      39.35,
+      38.82,
+      38.05,
+      38.12,
+      32.9,
       null,
-      36.4
+      37.4
     ]
   },
   {
@@ -24248,20 +24248,20 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.4,
-      39.4,
+      37.4,
+      38.77,
       null,
-      40.0,
-      null,
-      36.45,
-      36.8,
-      38.8,
-      null,
-      32.0,
       37.6,
-      40.0,
-      38.2,
-      39.7
+      38.33,
+      38.82,
+      38.05,
+      38.1,
+      null,
+      32.9,
+      37.35,
+      39.35,
+      38.12,
+      38.83
     ]
   },
   {
@@ -24311,18 +24311,18 @@ window.INITIAL_CONTRACTS = [
       "SH1"
     ],
     "safetyEvalScores": [
+      37.5,
+      null,
+      36.1,
+      38.2,
       null,
       null,
-      35.2,
-      38.8,
+      36.39,
+      38.5,
       null,
       null,
-      38.4,
-      null,
-      null,
-      null,
-      37.68,
-      36.95
+      37.12,
+      37.04
     ]
   },
   {
@@ -24360,14 +24360,14 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      39.7,
+      38.83,
       null,
+      38.33,
+      38.12,
+      32.9,
+      38.05,
       null,
-      38.2,
-      32.0,
-      36.8,
-      null,
-      40.0
+      37.6
     ]
   },
   {
@@ -24453,15 +24453,15 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      40.0,
-      36.45,
-      40.0,
+      38.73,
+      38.82,
+      37.6,
+      38.33,
+      39.67,
       null,
-      40.0,
-      null,
-      38.2,
-      32.0,
-      39.7
+      38.12,
+      32.9,
+      38.83
     ]
   },
   {
@@ -24502,15 +24502,15 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
+      39.74,
+      37.61,
+      null,
       40.0,
       37.7,
-      null,
-      40.0,
-      null,
-      38.4,
-      38.87,
-      39.25,
-      38.8
+      38.18,
+      38.66,
+      39.24,
+      34.83
     ]
   },
   {
@@ -24554,10 +24554,10 @@ window.INITIAL_CONTRACTS = [
       "SA3"
     ],
     "safetyEvalScores": [
-      38.42,
-      35.6,
-      36.4,
-      null,
+      37.5,
+      35.73,
+      39.04,
+      38.2,
       null,
       null,
       null,
@@ -24604,13 +24604,13 @@ window.INITIAL_CONTRACTS = [
       "SA3"
     ],
     "safetyEvalScores": [
+      36.2,
       null,
+      37.82,
+      35.08,
       null,
-      38.2,
-      null,
-      null,
-      40.0,
-      38.08,
+      38.16,
+      38.37,
       null,
       null
     ]
@@ -24650,13 +24650,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      36.4,
-      38.3,
-      null,
-      null,
-      38.08,
-      40.0,
-      38.2,
+      38.41,
+      35.52,
+      36.2,
+      35.08,
+      38.37,
+      38.16,
+      37.82,
       null
     ]
   },
@@ -24696,10 +24696,10 @@ window.INITIAL_CONTRACTS = [
     ],
     "safetyEvalScores": [
       null,
-      33.1,
+      36.37,
       null,
-      null,
-      null,
+      38.45,
+      35.4,
       null,
       null,
       null
@@ -24740,14 +24740,14 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.45,
-      38.2,
-      40.0,
-      32.0,
+      38.82,
+      38.12,
+      37.6,
+      32.9,
+      38.33,
       null,
-      null,
-      40.0,
-      39.7
+      39.67,
+      38.83
     ]
   },
   {
@@ -24788,12 +24788,12 @@ window.INITIAL_CONTRACTS = [
       "SA3"
     ],
     "safetyEvalScores": [
-      36.4,
+      39.04,
       null,
       null,
-      35.6,
+      35.73,
       null,
-      null,
+      38.2,
       null,
       null,
       null
@@ -24834,13 +24834,13 @@ window.INITIAL_CONTRACTS = [
       "SH2"
     ],
     "safetyEvalScores": [
-      null,
+      36.0,
       40.0,
       null,
-      null,
-      38.87,
-      40.0,
-      null,
+      37.7,
+      38.66,
+      39.74,
+      37.15,
       null
     ]
   },
@@ -24882,13 +24882,13 @@ window.INITIAL_CONTRACTS = [
       "SH4(만료)"
     ],
     "safetyEvalScores": [
+      32.88,
+      37.5,
+      36.14,
+      35.73,
       null,
-      38.42,
-      36.68,
-      35.6,
-      null,
-      36.4,
-      null,
+      39.04,
+      38.2,
       null,
       null
     ]
@@ -24925,12 +24925,12 @@ window.INITIAL_CONTRACTS = [
       "SA3"
     ],
     "safetyEvalScores": [
-      38.2,
+      37.82,
       null,
+      35.08,
+      38.16,
       null,
-      40.0,
-      null,
-      38.08,
+      38.37,
       null
     ]
   },
@@ -24966,13 +24966,13 @@ window.INITIAL_CONTRACTS = [
       "SH3"
     ],
     "safetyEvalScores": [
-      36.68,
-      36.4,
+      36.14,
+      39.04,
       null,
-      35.6,
+      35.73,
       null,
       null,
-      null
+      38.2
     ]
   },
   {
@@ -25010,12 +25010,12 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      36.4,
+      38.41,
+      35.08,
+      38.37,
       null,
-      38.08,
       null,
-      null,
-      40.0,
+      38.16,
       null,
       null
     ]
@@ -25055,13 +25055,13 @@ window.INITIAL_CONTRACTS = [
       "SH4"
     ],
     "safetyEvalScores": [
-      38.42,
-      36.4,
-      36.68,
+      37.5,
+      39.04,
+      36.14,
       null,
-      null,
-      35.6,
-      36.4,
+      38.2,
+      35.73,
+      36.72,
       null
     ]
   },
@@ -25145,14 +25145,14 @@ window.INITIAL_CONTRACTS = [
       "SA3"
     ],
     "safetyEvalScores": [
-      null,
       37.7,
+      37.61,
       null,
       40.0,
+      36.0,
+      39.74,
       null,
-      40.0,
-      null,
-      36.4
+      36.27
     ]
   }
 ];
